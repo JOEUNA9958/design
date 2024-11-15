@@ -1,0 +1,14 @@
+@import url(default.css);
+@import url(fonts.css);
+body {
+    font-family: "Pretendard", sans-serif;
+    font-size: 17px;
+    font-weight: 400; /*두께 400 regular*/
+    color:##555555;
+    line-height: 1.4; 
+    
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
