@@ -4,11 +4,67 @@ body {
     font-family: "Pretendard", sans-serif;
     font-size: 17px;
     font-weight: 400; /*두께 400 regular*/
-    color:##555555;
+    color:#555555;
     line-height: 1.4; 
+    word-break: keep-all; /* 단어별로(공백기준) 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 강제 줄바꿈 */
+    box-sizing: border-box;
     
 }
 .wrapper {
     width: 1260px;
     margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+}
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between; 
+}
+header .logo {
+    margin: 26px 0 0 0;
+}
+header .gnb ul {
+    display: flex; 
+}
+header .gnb ul li a {
+    display: block;
+    padding: 35px 20px 35px 20px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #1d1d1d;
+    letter-spacing: -0.05em;
+    position: relative; /*after 정렬의 기준 */
+}
+header .gnb ul li a:hover { /* a에게 마우스를 올렸을때*/
+    font-weight: 700;
+    color: #0D0B9D;
+}
+header .gnb ul li a:hover::after { /*a에게 마우스를 올렸을때 가상선택자 */
+    content: "" ;
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 10px;
+    bottom: 0;
+    width: calc(100% - 20px);
+    height: 2px;
+    background-color: #0D0B9D;
+}
+
+.visual {
+    height: 600px;
+    background: url(../images/visual_bg.jpg) no-repeat center center /cover;
+    color: #ffff;
+}
+.visual strong {
+    padding: 297px 0 5px 0;
+    display: block;
+}
+.visual h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
 }
