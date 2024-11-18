@@ -233,12 +233,18 @@ header .gnb ul li a:hover::after { /*a에게 마우스를 올렸을때 가상선
 .pr .video .list ul li {
     width: 404px;
 }
-.pr .video .list ul li .photo {
+.pr .video .list ul li a .photo {
     border-radius: 20px;
     border: 1px solid #0D0B9D;
     overflow: hidden;
     font-size: 0;
     line-height: 0;
+}
+.pr .video .list ul li a .photo img {
+    transition: 0.5s; /* 0.5초 동안 부드럽게 처리해*/
+}
+.pr .video .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /* 가로세로*/
 }
 .pr .video .list ul li a {
     display: block;
