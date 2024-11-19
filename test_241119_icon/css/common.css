@@ -1,0 +1,8 @@
+body, html {
+    font-family: "Pretendard", sans-serif ; /*sans-serif 고딕서체 */
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4; /*배수 - 글자크기에 몇배 */
+    letter-spacing: 0; /* 자간 */
+}
