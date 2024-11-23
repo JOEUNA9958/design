@@ -1,78 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-body {
-    font-family: "Noto Sans KR", serif;
-    /* body에는 기본 글자스타일 입력 - p의 스타일 */
-    font-size: 17px;
-    color: #3d3d3d;
-    font-weight: 400;
-    line-height: 1.4;
-}
-.wrapper {
-    /* 홈페이지 넓이를 지정하고 브라우저 가운데 정렬*/
-    width: 1260px;
-    margin: 0 auto;
-}
-/* 브라우저가 주는 태그의 기본 여백 삭제*/
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
 
-h1{
-    margin: 14px 0 12px 0;
-    font-size: 40px;
-    font-weight: 700;
-    color: #1d1d1d;
-    line-height: 1.4;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*모든 태그의 기본 여백 삭제*/
+}
+ol, ul, li {
+    list-style: none; /* 태그의 옆에 동그라미 삭제*/
+}
+h1, h2, h3, h4, h5, h6{
+    font-size:  inherit;
+    font-weight: inherit; /*heading 태그의 글자크기, 두께 변경 초기화*/
 }
 strong {
-    font-size: 25px;
-    font-weight: 400;
-    color: #8D07C1;
+    font-weight: inherit;
 }
 a {
-    font-style: inherit;
+    color: inherit;
+    text-decoration: none; /*a태그는 기본적으로 글자색이 파란색, 밑줄이 생성되는데 그걸 초기화*/
 }
-.ocean .list ul {
-    display: flex;
-    justify-content: space-between;
+body {
+    color: #3d3d3d;
+    line-height: 1.4;
+    font-family: 'noto sans kr' , sans-serif ;
+    font-size: 17px;
+    font-weight: 400; /*문자의 기본 스타일*/
 }
-.ocean .list ul li {
+.wrapper {
     width: 1260px;
+    margin: 0 auto; /*콘텐츠 영역*/
 }
-.ocean .list ul li a {
-    display: block;
-}
-.ocean .list ul li a {
-    margin: 9px 0 10px 0;
-    color: #1d1d1d;
-    font-size: 17px;
-    font-weight: 400;
-}
-.ocean .list ul li a .more {
-    position: relative; /* bedore / after 정렬의 기준 */
-    display: inline-block;
-    padding-right: 28px; 
-    /*글자의 오른쪽에 아이콘으 들어가면 그 아이콘이 들어갈 영역까지
-        padding으로 늘려놓음 */
-    margin: 16px 0 0 0;
-    color: #555;
-    font-size: 17px;
-}
-.ocean .list ul li a .photo {
-    overflow: hidden;
-    line-height: 0;
-}
-.eie {
-    background-image: url(../images/ele_bg.jpg);
-}
-.eie .tit h2 {
-    margin: 33px 12px;
+.ocean h1 {
     font-size: 40px;
     font-weight: 700;
-    color: #fff;
+    margin: 17px 0 12px 0;
+    color: #1d1d1d;
 }
-.eie .tit h2 p {
-    font-style: normal;
-    font-size: 17px;
-    font-weight: 400;
-    color: #fff;
-    line-height: 1.4;
+.ocean .prg {
+    color: #8D07C1;
+    margin: 0 0 18px 0;
 }
-
+.ocean .more {
+    margin: 20px 0 46px 0; 
+}
+.ocean .more a {
+    display: inline-block;
+    padding: 9px 27px 10px 30px;
+    border:  1px solid #1d1d1d;
+    color: #1d1d1d;
+}
+.ocean .more a.purple {
+    border: 1px solid #8D07C1; /*a.purple 여백없이 입력할경우 a태그중에서 purple 클래스명을 갖은 a태그를 호출하는 선택자입니다.*/
+    color: #8D07C1;
+    padding: 9px 28px 10px 28px;
+    margin: 0 46px 0 0;
+}
+.eie {
+    margin: 33px 0 0 0 ;
+    background: url(../images/ele_bg.jpg) no-repeat center center / cover;
+    height: 540px;
+    text-align: center;
+    color: #fff;
+    /*eie 영역에 배경 이미지르 삽입하고, 이렇게 배경 이미지를 삽입하는 경우 흔히 height 값도 준다. 그리고 eie영역안에모든 텍스트가 흰색에 가운데 정렬이라 color:#fff,text-align 스타일을 줬습니다 */
+}
+.eie h1 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 33px 0 12px 0;
+} 
+.eie .more {
+    margin: 20px 0 78px ;
+}
+.eie .more a {
+    display: inline-block;
+    padding: 9px 26px 10px 29px;
+    border: 1px solid #fff;
+}
