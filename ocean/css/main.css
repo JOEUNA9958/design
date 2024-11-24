@@ -5,76 +5,74 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /*모든 태그의 기본 여백 삭제*/
+    box-sizing: border-box;
 }
-ol, ul, li {
-    list-style: none; /* 태그의 옆에 동그라미 삭제*/
-}
-h1, h2, h3, h4, h5, h6{
-    font-size:  inherit;
-    font-weight: inherit; /*heading 태그의 글자크기, 두께 변경 초기화*/
+ol ul li {
+    list-style: none;
 }
 strong {
     font-weight: inherit;
 }
 a {
     color: inherit;
-    text-decoration: none; /*a태그는 기본적으로 글자색이 파란색, 밑줄이 생성되는데 그걸 초기화*/
+    text-decoration: none;
 }
 body {
-    color: #3d3d3d;
-    line-height: 1.4;
-    font-family: 'noto sans kr' , sans-serif ;
+    font-family: "noto sans-serif";
     font-size: 17px;
-    font-weight: 400; /*문자의 기본 스타일*/
+    color: #1d1d1d;
+    line-height: 1.4;
+    font-weight: 400;
 }
 .wrapper {
-    width: 1260px;
-    margin: 0 auto; /*콘텐츠 영역*/
+    width: 1300px;
+    margin: 0 auto;
 }
+
 .ocean h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 17px 0 12px 0;
+    font-size: 45px;
+    font-weight: 800;
     color: #1d1d1d;
+    margin: 37px 0 6px 0;
 }
 .ocean .prg {
-    color: #8D07C1;
-    margin: 0 0 18px 0;
+    color: #1471FD;
+    margin: 0 0 26px 0;
 }
 .ocean .more {
-    margin: 20px 0 46px 0; 
+    margin: 20px 0 26px 0;
 }
 .ocean .more a {
     display: inline-block;
-    padding: 9px 27px 10px 30px;
-    border:  1px solid #1d1d1d;
-    color: #1d1d1d;
+    padding: 9px 36px 10px 38px;
+    border: 1px solid #555;
+    color: #555;
 }
-.ocean .more a.purple {
-    border: 1px solid #8D07C1; /*a.purple 여백없이 입력할경우 a태그중에서 purple 클래스명을 갖은 a태그를 호출하는 선택자입니다.*/
-    color: #8D07C1;
-    padding: 9px 28px 10px 28px;
-    margin: 0 46px 0 0;
+.ocean .more a.blue {
+    border: 1px solid #1471FD;
+    color: #1471FD;
+    padding: 9px 38px 10px 30px; 
+    margin: 0 0 26px 0;
 }
 .eie {
-    margin: 33px 0 0 0 ;
-    background: url(../images/ele_bg.jpg) no-repeat center center / cover;
-    height: 540px;
-    text-align: center;
     color: #fff;
-    /*eie 영역에 배경 이미지르 삽입하고, 이렇게 배경 이미지를 삽입하는 경우 흔히 height 값도 준다. 그리고 eie영역안에모든 텍스트가 흰색에 가운데 정렬이라 color:#fff,text-align 스타일을 줬습니다 */
+    margin: 73px 0 0 0;
+    background: url(../images/ele_bg.jpg) no-repeat center center / cover;
+    height: 517px;
+    text-align: center;
 }
 .eie h1 {
-    font-size: 40px;
-    font-weight: 700;
-    padding: 33px 0 12px 0;
-} 
+    color: #fff;
+    font-size: 45px;
+    font-weight: 800;
+    padding: 46px 0 6px 0;
+}
 .eie .more {
-    margin: 20px 0 78px ;
+    padding: 20px 0 42px 0;
+    color: #fff;
 }
 .eie .more a {
     display: inline-block;
-    padding: 9px 26px 10px 29px;
+    padding: 9px 37px 10px 28px;
     border: 1px solid #fff;
 }
