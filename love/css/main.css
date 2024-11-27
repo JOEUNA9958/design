@@ -31,7 +31,7 @@ header .gnb ul li a {
 /*header 끝*/
 
 .visual {
-    background:  url(../images/visual_img.png) no-repeat center center /cover;
+    background:  url(../images/hug_bg.jpg) no-repeat center center /cover;
     border-bottom-right-radius: 190px;
 }
 .visual .wrapper {
