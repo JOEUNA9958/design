@@ -29,10 +29,10 @@ header .gnb ul li a {
     line-height: 100px;
     /* 메뉴가 정확한 높이를 갖고 위아래 가운데 정렬이 됨
        하위에 메뉴로 이동할때 정확한 높이가 안잡히면 out됨*/
-       font-size: 22px;
-       font-family: 'Gmarket Sans';
-       font-weight: 500;
-       padding: 0 27px 0 27px ;
+    font-size: 22px;
+    font-family: 'Gmarket Sans';
+    font-weight: 500;
+    padding: 0 27px 0 27px ;
 }
 header .tnb {
     display: flex;

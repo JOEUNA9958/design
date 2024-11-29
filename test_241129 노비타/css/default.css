@@ -11,25 +11,7 @@ ul, li ol {
     /* width / height를 늘리는 속성이 있는데 이를 적용 x
         -width와 height를 준 경우 그 값을 유지하는 값 */
 }
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit; /* 브라우저가 주는 글자크기 적용x */
-    font-weight: inherit;
-}
 a {
     color:inherit; /*브라우저가 지정해준 글자색 적용안함 */
     text-decoration: none; /* 밑줄삭제*/
-}
-strong {
-    font-weight: inherit;
-}
-address, em {
-    font-style:  normal; 
-}
-button {
-    border: none;
-    background-color: transparent; /*투명*/
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
 }
