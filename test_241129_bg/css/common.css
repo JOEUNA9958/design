@@ -16,4 +16,5 @@ body, html {
 #wrap {
     min-width: 1300px;
     /* 콘테츠 영역이 1260px 좌우여백 20px씩 1260+ 20 + 20 1300 */
+    overflow: hidden;
 }

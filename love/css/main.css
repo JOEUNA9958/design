@@ -16,7 +16,7 @@ header .wrapper {
     justify-content: space-between;
 }
 header .logo {
-    margin: 28px;
+    margin-top: 28px;
 }
 header .gnb ul {
     display: flex;
@@ -38,4 +38,24 @@ header .gnb ul li a {
     height: 100vh;
     position: relative;
 }
-
+.visual h2 {
+    padding-top:  calc(80vh - 90px);
+    text-align: center;
+}
+.visual .pic {
+    position: absolute;
+    right: -129px;
+    bottom: -89px;
+}
+.visual .pic  a {
+    display: block;
+    width: 190px;
+    height: 187px;
+    border-radius:  50%;
+    background-color: #0143F7;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 104px;
+    line-height: 1.2;
+}

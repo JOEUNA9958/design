@@ -6,8 +6,8 @@
 }
 
 h1, h2, h3, h4, h5 h6 {
-    font-weight: inherit; /* 브라우저가 주는 속성 무시하고 내가 주는 것만 받아라 */
-    font-size: inherit;
+    /* font-weight: inherit; 브라우저가 주는 속성 무시하고 내가 주는 것만 받아라
+    font-size: inherit; */
 }
 strong {
     font-weight: inherit; 
