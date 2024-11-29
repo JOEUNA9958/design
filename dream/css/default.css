@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
 }
 a {
-     color:inherit; /*브라우저가 지정해준 글자색 적용안함 */
+    color:inherit; /*브라우저가 지정해준 글자색 적용안함 */
     text-decoration: none; /* 밑줄삭제*/
 }
 strong {
