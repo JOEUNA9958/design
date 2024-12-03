@@ -1,0 +1,239 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(fonts.css);
+@import url(common.css);
+
+.introduce .photo {
+    margin: 106px 0 0 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/* 이미지가 안짤리고 모두 보임 - 넓이/높이가 계속 바뀜*/
+.introduce .photo.case1 {
+    /* 이미지 하단에 행간이 적용되서 여백이 생기는데 이를 삭제
+        img사이즈와 photo사이즈를 동일하게*/
+    font-size: 0;
+    line-height: 0;
+} 
+.introduce .photo.case1 img {
+    width: 100%; /* img를 감싸는 photo의 넓이에 100%*/
+}
+.introduce .photo.case2 {
+    /* 넓이는 변경되지만 높이가 고정 - 이미지는 짤려도됨 
+        1. 넓이와 높이를 고정 - 넓이는 이미 block 태그라서 100%
+        2. 이미지에 width/height,  object-fit: cover 줌*/
+    height: 348px;
+}
+.introduce .photo.case2 img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.introduce .group {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 106px 0;
+}
+.introduce .group h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+}
+.introduce .group h2 span {
+    display: block; /*줄바꿈용*/
+}
+.introduce .group p {
+    width: 831px;
+}
+.introduce .group p strong {
+    font-weight: 800;
+    color: #3d3d3d;
+}
+@media screen and (max-width:640px){ 
+            .introduce .photo {
+                margin: 50px 0 0 0;
+                border-radius: 10px;
+            }
+            .introduce .photo.case1 img {
+                width: 100%; /* img를 감싸는 photo의 넓이에 100%*/
+            }
+            .introduce .photo.case2 {
+                height: 90px;
+            }
+            .introduce .group {
+                display: block;
+                /* flex 해제 */
+                /*justify-content: space-between; 이 값은 flex일때만 적용되기 때문에 나눠도 됨*/
+                margin: 20px 0 50px 0;
+            }
+            .introduce .group h2 {
+                font-size: 20px;
+                margin: 0 0 25px 0;
+            }
+            .introduce .group h2 span {
+                display: inline; /*줄바꿈용*/
+            }
+            .introduce .group h2 br {
+                display: none; /*줄바꿈 삭제*/
+            }
+            .introduce .group p {
+                width: auto; /* */
+            }
+            .introduce .group p strong {
+                font-weight: 700;
+            }
+}/*media*/
+
+.news {
+    margin: 150px 0 ; /* 값을 두개를 쓰면 앞은 위아래, 두뒤는 좌우값*/
+}
+.news h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+.news .news_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.news .news_wrap .notice {
+    width: 618px;
+    background-color: #F4F7FD;
+    padding: 30px 48px 0 48px;
+}
+.news .news_wrap .notice h3 {
+    display: none; /*h3 안보이게 하려고,삭제처럼 */
+}
+.news .news_wrap .notice ul li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.news .news_wrap .notice ul li:last-child {
+    border-bottom: 0;
+}
+.news .news_wrap .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 0 16px 0;
+}
+.news .news_wrap .notice ul li a strong {
+    color: #1d1d1d;
+    width: calc(100% - 91px);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 너무 길어서 짤리면 ... 붙여줘*/
+}
+.news .news_wrap .notice ul li a:hover strong {
+    font-weight: 700;
+    text-decoration: underline;
+
+}
+.news .news_wrap .notice ul li a span {
+    font-size: 15px;
+    color: #666;
+}
+.news .news_wrap .gallery {
+    width: 604px;
+}
+.news .news_wrap .gallery h3 {
+    display: none; /*h3 안보이게 하려고,삭제처럼 */
+}
+.news .news_wrap .gallery ul {
+    display: flex;
+    flex-wrap: wrap; /*여러줄 허용*/
+    gap:42px 24px;
+}
+.news .news_wrap .gallery ul li {
+    width: calc(50% - 12px); 
+}
+.news .news_wrap .gallery ul li a {
+    display: block;
+}
+.news .news_wrap .gallery ul li a .photo {
+    height: 151px;
+    overflow: hidden; /*마우스를 오버하면 이미지를 확대할껀데,이미지 그 이상으로 나가지말라고 쓰는 거다 하지만 막 쓰면 안되는 애 */
+}
+.news .news_wrap .gallery ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+.news .news_wrap .gallery ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2,1);
+}
+.news .news_wrap .gallery ul li a strong {
+    display: block; /* margin 적용되라고*/
+    color: #1d1d1d;
+    margin: 12px 0 0 0;
+    /*
+        1줄 제한
+        1. 넓이가 있어야함 (block 태그이거나)
+        2. 제목을 무조건 한줄로 나타나게 white - spave:nowrap
+        3. 글자가 영역을 넘치면 잘라버림 overflow: hidden;
+        4. 짤린 글자 뒤에 ... 추가 text - overflow:elliosis;
+    */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:640px){ 
+            .news {
+                margin: 75px 0 ; /* 값을 두개를 쓰면 앞은 위아래, 두뒤는 좌우값*/
+            }
+            .news h2 {
+                font-size: 30px;
+                margin: 0 0 16px 0;
+            }
+            .news .news_wrap {
+                display: block; /* flex해제 */
+            }
+            .news .news_wrap .notice {
+                width: auto;
+                padding: 15px 19px 20px 19px;
+            }
+            .news .news_wrap .notice ul li {
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+
+            .news .news_wrap .notice ul li a {
+                padding: 14px 0 1px 0;
+            }
+            .news .news_wrap .notice ul li a strong {
+                width: calc(100% - 91px);
+            }
+            .news .news_wrap .notice ul li a span {
+                font-size: 15px;
+            }
+            .news .news_wrap .gallery {
+                width: auto;
+                margin: 25px 0 0 0;
+            }
+            .news .news_wrap .gallery ul {
+                gap: 13px 15px; /* 위아래, 좌우*/
+            }
+            .news .news_wrap .gallery ul li {
+                width: calc(50% - 8px); 
+            }
+            .news .news_wrap .gallery ul li a .photo {
+                height: 115px;
+            }
+            .news .news_wrap .gallery ul li a strong {
+                margin: 8px 0 0 0;
+                /*
+                    1줄 제한
+                    1. 넓이가 있어야함 (block 태그이거나)
+                    2. 제목을 무조건 한줄로 나타나게 white - spave:nowrap
+                    3. 글자가 영역을 넘치면 잘라버림 overflow: hidden;
+                    4. 짤린 글자 뒤에 ... 추가 text - overflow:elliosis;
+                */
+                white-space: normal;
+                overflow: visible;
+            }
+       
+}/*mesia*/
+
