@@ -1,5 +1,5 @@
 @import url(default.css);
-@import url(fonts.css);
+@import url(font.css);
 @import url(common.css);
 
 header {
@@ -9,7 +9,7 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(85,85,85, 0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 header .wrapper {
     display: flex;
@@ -47,7 +47,7 @@ header .gnb ul li a {
     right: -129px;
     bottom: -89px;
 }
-.visual .pic  a {
+.visual .pic a {
     display: block;
     width: 190px;
     height: 187px;
@@ -59,3 +59,189 @@ header .gnb ul li a {
     padding-top: 104px;
     line-height: 1.2;
 }
+.visual .pic  a::before {
+    content: "";
+    position: absolute;
+    top: 57px;
+    left: 93px;
+    transform: translateX(-50%);
+    width: 41px;
+    height: 41px;
+    background-image: url("data:image/svg+xml,%3Csvg width='41' height='41' viewBox='0 0 41 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.83334 36.7292C6.47032 36.7292 6.16609 36.6063 5.92066 36.3606C5.67495 36.1149 5.55209 35.8105 5.55209 35.4475C5.55209 35.0842 5.67495 34.78 5.92066 34.5348C6.16609 34.2894 6.47032 34.1667 6.83334 34.1667H17.0833C17.4464 34.1667 17.7506 34.2895 17.996 34.5352C18.2417 34.7809 18.3646 35.0853 18.3646 35.4483C18.3646 35.8116 18.2417 36.1159 17.996 36.361C17.7506 36.6064 17.4464 36.7292 17.0833 36.7292H6.83334ZM29.0477 35.0537C28.2137 35.0537 27.5005 34.7548 26.908 34.1568C26.3155 33.5589 26.0192 32.8448 26.0192 32.0146H21.2226C20.7936 32.0146 20.429 31.8796 20.1289 31.6097C19.8288 31.3398 19.6787 30.9963 19.6787 30.5792C19.6656 28.3233 20.4492 26.3883 22.0294 24.7742C23.6096 23.1602 25.5199 22.2031 27.7604 21.903V6.39001C27.7604 6.02699 27.8833 5.72263 28.129 5.47691C28.3747 5.23148 28.6791 5.10876 29.0421 5.10876C29.4054 5.10876 29.7096 5.23148 29.9548 5.47691C30.2002 5.72263 30.3229 6.02699 30.3229 6.39001V21.903C32.5919 22.2031 34.512 23.1602 36.0834 24.7742C37.6551 26.3883 38.4342 28.3233 38.4208 30.5792C38.4208 30.9963 38.2709 31.3398 37.9711 31.6097C37.671 31.8796 37.3063 32.0146 36.8769 32.0146H32.0804C32.0804 32.8448 31.7898 33.5589 31.2087 34.1568C30.6273 34.7548 29.9069 35.0537 29.0477 35.0537ZM11.9579 32.0312C11.5946 32.0312 11.2904 31.9084 11.0452 31.6627C10.7998 31.4172 10.6771 31.113 10.6771 30.75V18.7917H4.32038C3.8056 18.7917 3.39375 18.5902 3.08483 18.1873C2.77619 17.7842 2.6875 17.3396 2.81876 16.8536L5.64434 6.27513C5.73631 5.93773 5.91853 5.66169 6.19101 5.44701C6.46377 5.23233 6.78195 5.12499 7.14554 5.12499H16.7959C17.1561 5.12499 17.472 5.23233 17.7436 5.44701C18.0152 5.66169 18.197 5.93773 18.289 6.27513L21.1142 16.8536C21.2457 17.3396 21.157 17.7842 20.8481 18.1873C20.5394 18.5902 20.1277 18.7917 19.613 18.7917H13.2396V30.75C13.2396 31.113 13.1167 31.4172 12.871 31.6627C12.6253 31.9084 12.3209 32.0312 11.9579 32.0312ZM22.3792 29.4687H35.7042C35.4391 27.9093 34.6681 26.6654 33.3911 25.7369C32.1141 24.8081 30.663 24.3437 29.0378 24.3437C27.4417 24.3437 26.0034 24.8081 24.723 25.7369C23.4429 26.6654 22.6616 27.9093 22.3792 29.4687ZM5.63751 16.2292H18.2792L16.0156 7.68749H7.94376L5.63751 16.2292Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .pic a:hover {
+    background-color: #82F302;
+}
+.wedding {
+    margin: 149px 0 0 0;
+}
+.wedding .wrapper {
+    position: relative;
+}
+.wedding h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 149px 0 29px 0;
+}
+.wedding .list {
+    margin: 53px 0 0 0;
+}
+.wedding .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.wedding .list ul li {
+    width: 404px;
+}
+.wedding .list ul li a {
+    display: block;
+}
+.wedding .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.wedding .list ul li a .photo img {
+    transition: 0.5s;
+}
+.wedding .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.wedding .list ul li a h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 35px 0 4px 0;
+}
+.wedding .list ul li a span {
+    position: relative;
+    display: inline-block;
+    padding-right: 34px;
+    margin: 12px 0 0 0;
+    color: #555;
+    font-size:22px 0 0 0 ;
+}
+.wedding .list ul li a span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3687 19.55L19.0708 17.777C18.991 17.6333 18.8752 17.5095 18.7234 17.4057C18.5717 17.3019 18.4 17.25 18.2083 17.25H13.3687C12.9375 17.25 12.5941 17.234 12.3385 17.202C12.083 17.1701 11.8194 17.1062 11.5479 17.0104L10.1823 16.5552C9.92672 16.4753 9.74304 16.3156 9.63123 16.076C9.51942 15.8364 9.50345 15.5888 9.58331 15.3333C9.66317 15.0777 9.8189 14.8901 10.0505 14.7703C10.2821 14.6505 10.5257 14.6305 10.7812 14.7104L11.7875 15.0458C12.059 15.1257 12.3665 15.1895 12.7099 15.2375C13.0533 15.2854 13.5205 15.3173 14.1114 15.3333H14.375C14.375 15.1576 14.3231 14.9899 14.2193 14.8302C14.1154 14.6704 13.9916 14.5666 13.8479 14.5187L8.24165 12.4583H6.70831V17.7291L13.3687 19.55ZM12.8656 21.4187L6.70831 19.6937C6.58054 20.109 6.32897 20.4444 5.95363 20.7C5.57828 20.9555 5.19095 21.0833 4.79165 21.0833H2.87498C2.3479 21.0833 1.89668 20.8956 1.52133 20.5203C1.14599 20.1449 0.958313 19.6937 0.958313 19.1666V12.4583C0.958313 11.9312 1.14599 11.48 1.52133 11.1046C1.89668 10.7293 2.3479 10.5416 2.87498 10.5416H8.24165C8.35345 10.5416 8.46526 10.5536 8.57706 10.5776C8.68887 10.6015 8.79269 10.6295 8.88852 10.6614L14.5187 12.7458C15.0458 12.9375 15.4731 13.2729 15.8005 13.752C16.1279 14.2312 16.2916 14.7583 16.2916 15.3333H18.2083C19.0069 15.3333 19.6857 15.5968 20.2448 16.1239C20.8038 16.651 21.0833 17.3458 21.0833 18.2083C21.0833 18.5597 20.9915 18.8352 20.8078 19.0349C20.6241 19.2345 20.3406 19.3982 19.9573 19.526L13.9677 21.3948C13.792 21.4586 13.6083 21.4906 13.4166 21.4906C13.225 21.4906 13.0413 21.4666 12.8656 21.4187ZM2.87498 19.1666H4.79165V12.4583H2.87498V19.1666ZM15.3333 11.6916C15.0937 11.6916 14.8581 11.6477 14.6265 11.5599C14.3949 11.472 14.1833 11.3402 13.9916 11.1645L11.3562 8.57704C10.8611 8.09788 10.4418 7.5668 10.0984 6.98381C9.75501 6.40083 9.58331 5.76593 9.58331 5.07913C9.58331 4.20065 9.89078 3.45395 10.5057 2.83902C11.1206 2.22409 11.8673 1.91663 12.7458 1.91663C13.2569 1.91663 13.7361 2.02444 14.1833 2.24006C14.6305 2.45569 15.0139 2.74718 15.3333 3.11454C15.6528 2.74718 16.0361 2.45569 16.4833 2.24006C16.9305 2.02444 17.4097 1.91663 17.9208 1.91663C18.7993 1.91663 19.546 2.22409 20.1609 2.83902C20.7758 3.45395 21.0833 4.20065 21.0833 5.07913C21.0833 5.76593 20.9156 6.40083 20.5802 6.98381C20.2448 7.5668 19.8295 8.09788 19.3344 8.57704L16.675 11.1645C16.4833 11.3402 16.2717 11.472 16.0401 11.5599C15.8085 11.6477 15.5729 11.6916 15.3333 11.6916ZM15.3333 9.77496L17.9448 7.21142C18.2482 6.90795 18.5278 6.58451 18.7833 6.24111C19.0389 5.8977 19.1666 5.51038 19.1666 5.07913C19.1666 4.72774 19.0469 4.43225 18.8073 4.19267C18.5677 3.95308 18.2722 3.83329 17.9208 3.83329C17.6972 3.83329 17.4856 3.87722 17.2859 3.96506C17.0863 4.05291 16.9146 4.18468 16.7708 4.36038L16.076 5.19892C15.8844 5.42253 15.6368 5.53433 15.3333 5.53433C15.0298 5.53433 14.7823 5.42253 14.5906 5.19892L13.8958 4.36038C13.7521 4.18468 13.5804 4.05291 13.3807 3.96506C13.1811 3.87722 12.9694 3.83329 12.7458 3.83329C12.3944 3.83329 12.0989 3.95308 11.8594 4.19267C11.6198 4.43225 11.5 4.72774 11.5 5.07913C11.5 5.51038 11.6278 5.8977 11.8833 6.24111C12.1389 6.58451 12.4184 6.90795 12.7219 7.21142L15.3333 9.77496Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.wedding .more {
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+.wedding .more a {
+    display: block;
+    padding: 5px 25px 5px 5px;
+    font-size: 15px;
+    color: #555;
+}
+.wedding .more a::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+}
+.wedding .more a:hover {
+    color: #82F302;
+}
+.wedding .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%2382F302'/%3E%3C/svg%3E%0A");
+    transform: rotate(180deg);
+}
+.married {
+    padding: 147px 0 167px 0;
+    margin: 88px 0 0 0;
+    background-color: #F7F7F7;
+}
+.married .wrapper {
+    position: relative;
+}
+.married h2 {
+    margin-bottom: 11px;
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+
+}
+.married .list {
+    margin: 53px 0 0 0;
+}
+.married .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.married .list ul li {
+    width: 190px;
+}
+.married .list ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 242px 0 0 0;
+    height: 318px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.married .list ul li.bg1 a {
+    background-image: url(../images/couple_1.jpg);
+}
+.married .list ul li.bg2 a {
+    background-image: url(../images/couple_2.jpg);
+}
+.married .list ul li.bg3 a {
+    background-image: url(../images/couple_3.jpg);
+}
+.married .list ul li.bg4 a {
+    background-image: url(../images/couple_4.jpg);
+}
+.married .list ul li a h3 {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.married .list ul li a p {
+    margin: 15px 0;
+    display: none;
+}
+.married .list ul li a span {
+    padding: 0 29px 0 0;
+    position: relative;
+    display: none;
+}
+.married .list ul li a span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%235F6368'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
