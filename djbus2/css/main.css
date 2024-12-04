@@ -1,0 +1,194 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 26px 0 0 0;
+} 
+header .gnb .gnb_open, header .gnb .gnb_close  {
+    display: none; /*모바일에서만 나타남*/
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+} 
+header .gnb .gnb_wrap ul li a {
+    color: #1d1d1d;
+    font-size: 20px;
+    display: block;
+    line-height: 100px;
+    padding: 0 21px ;
+}
+header .gnb .gnb_wrap ul li a span {
+    position: relative; /* after 정렬의 기준*/
+}
+header .gnb .gnb_wrap ul li a span::after {
+    content: "";
+    position: absolute; /* span태그 기준으로 정렬*/
+    left: 0;
+    bottom: -34px;
+    width: 100%;
+    height: 2px;
+    background-color: #0D0B9D;
+    display: none; /*숨김*/
+}
+header .gnb .gnb_wrap ul li a:hover {
+    color: #0D0B9D;
+    font-weight: 800;
+}
+header .gnb .gnb_wrap ul li a:hover span::after  {
+    display: block; /*none를 해제하기*/
+}
+
+@media screen and (max-width:640px){ 
+                header {
+                    height: 50px;
+                    position: relative; /* gnb_open 정렬의 기준*/
+                }
+                header .logo {
+                    margin: 13px 0 0 0;
+                } 
+                header .logo a img {
+                    width: 85px; /*모바일에서 이미지의 사이즈가 변경될때 넓이/높이 하나만 주면 나머지는 비율에 맞게 들어감 */
+                }
+                header .gnb .gnb_open {
+                    display: block; /*모바일에서만 나타남*/
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    height: 50px;
+                    font-size: 0;
+                    line-height: 0;  
+                }
+                header .gnb .gnb_open::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%; /* 감싸는 요소가 사이즈가 지정되어 있을때*/
+                    height: 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.667' height='10.445' viewBox='0 0 15.667 10.445'%3E%3Cpath id='menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M120.87-709.555a.842.842,0,0,1-.62-.25.842.842,0,0,1-.25-.62.842.842,0,0,1,.25-.62.842.842,0,0,1,.62-.25H134.8a.842.842,0,0,1,.62.25.842.842,0,0,1,.25.62.842.842,0,0,1-.25.62.843.843,0,0,1-.62.25Zm0-4.352a.842.842,0,0,1-.62-.25.842.842,0,0,1-.25-.62.842.842,0,0,1,.25-.62.842.842,0,0,1,.62-.25H134.8a.842.842,0,0,1,.62.25.842.842,0,0,1,.25.62.842.842,0,0,1-.25.62.843.843,0,0,1-.62.25Zm0-4.352a.842.842,0,0,1-.62-.25.843.843,0,0,1-.25-.62.842.842,0,0,1,.25-.62.842.842,0,0,1,.62-.25H134.8a.842.842,0,0,1,.62.25.842.842,0,0,1,.25.62.842.842,0,0,1-.25.62.842.842,0,0,1-.62.25Z' transform='translate(-120 720)' fill='%238e8e8e'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 16px;
+                }
+                header .gnb .gnb_wrap {
+                    display: none; /*모바일에서 숨김*/
+                }
+}/*media*/
+.visual {
+    height: 688px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+}
+.visual strong {
+    padding: 347px 0 0 0; 
+    display: block;
+}
+.visual h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 5px 0 0 0;
+}
+
+@media screen and (max-width:640px){ 
+                .visual {
+                    height: auto;
+                    padding: 0 0 29px 0;
+                }
+                .visual strong {
+                    padding: 124px 0 0 0; 
+                }
+                .visual h2 {
+                    font-size: 20px;
+                    margin: 3px 0 0 0;
+                }
+}/*media*/
+
+.int {
+    margin: 246px 0 0 0;
+}
+.int .txt_left {
+    display: flex;
+    justify-content: space-between;
+}
+.int .txt_right {
+    display: flex;
+    flex-direction: row-reverse ; /* 좌우 순서 반전*/
+    justify-content: space-between;
+}
+.int .inner {
+    width: 572px;
+    margin: 69px 0 0 0;
+}
+.int strong {
+    color: #0D0B9D;
+}
+.int h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 5px 0 12px 0;
+    color: #1d1d1d;
+}
+.int h2 em {
+    color: #0D0B9D;
+}
+.int .sub_tit {
+    font-size: 20px;
+    margin: 0 0 29px 0;
+}
+.int .btn_wrap {
+    margin: 40px 0 0 0;
+    display: flex;
+    gap: 10px;
+}
+.int .btn_wrap a {
+    border: 1px solid #0D0B9D;
+    border-radius: 26px;
+    display: block;
+    padding: 13px 31px;
+    color: #0D0B9D;
+}
+.int .btn_wrap a.point {
+    background-color: #0D0B9D;
+    color: #fff;
+}
+.int .btn_wrap a:hover {
+    background-color: #E39A4D;
+    color: #fff;
+    border-color: #E39A4D;
+}
+.int .photo {
+    height: 570px;
+    border-radius: 20px;
+    overflow: hidden; /* border-radius 안들어가서, 적용하기 위헤 */
+}
+.int .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.int .btn_wrap a.point_1 {
+    background-color: #0D0B9D;
+    color: #fff;
+}
+.int .btn_wrap a:hover {
+    background-color: #E39A4D;
+    color: #fff;
+    border-color: #E39A4D;
+}
+
+
+header .gnb footer {
+    margin-top: 500px;
+}
