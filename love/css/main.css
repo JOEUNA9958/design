@@ -11,7 +11,7 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(225,225,225,0.5);
 }
 header .wrapper {
     display: flex;
@@ -229,16 +229,16 @@ header .gnb ul li a:hover span::after {
     background-size: cover;
 }
 .married .list ul li.bg1 a {
-    background-image: url(../images/couple_1.jpg);
+    background-image: url(../images/kiss_1.jpg);
 }
 .married .list ul li.bg2 a {
-    background-image: url(../images/couple_2.jpg);
+    background-image: url(../images/kiss_2.jpg);
 }
 .married .list ul li.bg3 a {
-    background-image: url(../images/couple_3.jpg);
+    background-image: url(../images/kiss_3.jpg);
 }
 .married .list ul li.bg4 a {
-    background-image: url(../images/couple_4.jpg);
+    background-image: url(../images/kiss_5.jpg);
 }
 .married .list ul li a h3 {
     font-size: 17px;
@@ -276,7 +276,7 @@ header .gnb ul li a:hover span::after {
 .married .list ul li.on a h3 {
     font-size: 20px;
 }
-.married .list ul li.on a h3 p {
+.married .list ul li.on a p {
     display: block;
 }
 .married .list ul li a span {
@@ -287,3 +287,86 @@ header .gnb ul li a:hover span::after {
     right: 0;
     top: 85px;
 }
+.married .more a {
+    display: block;
+    padding: 5px 27px 5px 5px ;
+}
+.married .more a::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%235F6368'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+}
+.married .more a:hover {
+    color: #82F302;
+}
+.married .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%2382F302'/%3E%3C/svg%3E ");
+    transform: rotate(180deg);
+}
+
+.community {
+    height: 809px;
+    background: url(../images/Group_1.jpg);
+    color: #fff;
+}
+.communit strong {
+    padding: 190px 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ededed;
+}
+.community h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ededed;
+}
+
+footer {
+    background-color:  #2d2d2d;
+    color: rgba(225,225,225,0.8);
+    padding: 57px 0 72px 0;
+}
+footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 41px;
+}
+footer .f_nav ul li {
+    position: relative; /*after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(225,225,225,0.3);
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .f_nav ul li.privacy a {
+    color: #0143F7;
+}
+footer .f_nav ul li.privacy a:hover {
+    color: #82F302;
+    font-weight: 700;
+}
+
+footer .f_info {
+    margin: 45px 0 32px 0;
+}
+footer .copyright {
+    color: rgba(225,225,225,0.5);
+}
+
