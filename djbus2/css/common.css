@@ -25,7 +25,7 @@ body, html {
 @media screen and (max-width:640px){ 
             /* 브라우저 넓이기준 640px이하에서만 실행*/
             body, html {
-                font-size: 13px;
+                font-size: 14px;
             }
             .wrapper {
                 /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영억을 제한하고 브라우저에 가운데 정렬 */
