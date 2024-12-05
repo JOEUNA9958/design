@@ -119,11 +119,13 @@ header .gnb .gnb_wrap ul li a:hover span::after  {
 .int .txt_left {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .int .txt_right {
     display: flex;
     flex-direction: row-reverse ; /* 좌우 순서 반전*/
     justify-content: space-between;
+    align-items: center;
 }
 .int .inner {
     width: 572px;
@@ -188,9 +190,47 @@ header .gnb .gnb_wrap ul li a:hover span::after  {
     border-color: #E39A4D;
 }
 
-body {
-    background-color:green;
-}
+@media screen and (max-width:640px){ 
+                .int {
+                    margin: 60px 0 0 0;
+                }
+                .int .txt_left {
+                    display: block; /* flex 해제*/
+                }
+                .int .txt_right {
+                    display: block; /* flex 해제*/
+                    margin: 62px 0 0 0;
+                }
+                .int .inner {
+                    width: auto; /*넓이 제한 풀고, 원래 넓이대로 들어가렴*/
+                    margin: 0 0 24px 0;
+                }
+                .int strong {
+                    font-size: 13px;
+                }
+                .int h2 {
+                    font-size: 20px;
+                    margin: 3px 0 8px 0;
+                }
+                .int .sub_tit {
+                    font-size: 15px;
+                    margin: 0 0 15px 0;
+                }
+                .int .btn_wrap {
+                    margin: 15px 0 0 0;
+                    gap: 5px;
+                }
+                .int .btn_wrap a {
+                    padding: 7px 19px;
+                }
+                .int .photo {
+                    height: 125px;
+                    border-radius: 10px;
+                }
+}/*media*/
+
+
+
 footer {
     margin-top: 500px;
 }
