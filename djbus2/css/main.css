@@ -188,7 +188,9 @@ header .gnb .gnb_wrap ul li a:hover span::after  {
     border-color: #E39A4D;
 }
 
-
-header .gnb footer {
+body {
+    background-color: #E39A4D;
+}
+footer {
     margin-top: 500px;
 }
