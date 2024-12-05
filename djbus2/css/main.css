@@ -515,7 +515,7 @@ header .gnb .gnb_wrap ul li a:hover span::after  {
                     top: 12px;
                     width: 7px;
                     height: 7px;
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.406' height='7.5' viewBox='0 0 4.406 7.5'%3E%3Cpath id='chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M339.808-699.25l-2.623-2.623a.638.638,0,0,1-.185-.471.638.638,0,0,1,.185-.471.638.638,0,0,1,.471-.185.638.638,0,0,1,.471.185l3.094,3.094a.59.59,0,0,1,.143.219.744.744,0,0,1,.042.252.744.744,0,0,1-.042.252.589.589,0,0,1-.143.219l-3.094,3.094a.638.638,0,0,1-.471.185.638.638,0,0,1-.471-.185.638.638,0,0,1-.185-.471.638.638,0,0,1,.185-.471Z' transform='translate(-337 703)' fill='%23fff'/%3E%3C/svg%3E%0A");
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.406' height='7.5' viewBox='0 0 4.406 7.5'%3E%3Cpath id='chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M339.808-699.25l-2.623-2.623a.638.638,0,0,1-.185-.471.638.638,0,0,1,.185-.471.638.638,0,0,1,.471-.185.638.638,0,0,1,.471.185l3.094,3.094a.59.59,0,0,1,.143.219.744.744,0,0,1,.042.252.744.744,0,0,1-.042.252.589.589,0,0,1-.143.219l-3.094,3.094a.638.638,0,0,1-.471.185.638.638,0,0,1-.471-.185.638.638,0,0,1-.185-.471.638.638,0,0,1,.185-.471Z' transform='translate(-337 703)' fill='%23E39A4D'/%3E%3C/svg%3E%0A");
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: contain;
