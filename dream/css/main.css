@@ -214,6 +214,7 @@ header .tnb .global button::before {
 .biz .list ul li a:hover span {
     display: inline-block;
 }
+
 .news .wrapper {
     position: relative; /*more 정렬의기준*/
 }
