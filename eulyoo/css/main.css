@@ -30,7 +30,7 @@ header .gnb .gnb_wrap ul {
 }
 header .gnb .gnb_wrap ul li a {
     font-family: 'eulyo';
-    font-family: 400;
+    font-weight: 400;
     font-size: 20px;
     line-height: 100px; /* header 높이만큼*/
     padding: 0 25px;
@@ -216,6 +216,240 @@ header .tnb .mypage::before {
                 }
 }/*media*/
 
+.book {
+    margin: 145px 0 0 0;
+}
+.book .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1333px;
+    /*flex는 flex를 준 요소의 넓이보다 내부의 넓이를 바꿈, 넓이를 유지하려면 flex를 준요소에 넓이를 고정값으로 주면됨 */
+    position: relative;
+    left:calc(50% - 630px);
+}
+
+.book .tit h2 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.book .list  ul {
+    display: flex;
+    gap: 24px;
+}
+.book .list  ul li {
+    width: 200px;
+    /*pc와 모바일 모두 브라우저의 넓이에 따라서 책의 넓이가 바뀌지 않고 보이는 책을 수만 달라짐*/
+}
+.book .list  ul li a {
+    display: block;
+}
+.book .list  ul li a .photo {
+    overflow: hidden;
+    font-size: 0; /* 이미지 하단에 여백 삭제*/
+    line-height: 0;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+}
+.book .list  ul li a .photo img {
+    width: 100%;
+}
+.book .list ul li a h3 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding: 20px 0 10px 0;
+
+    /*1줄 제한*/
+    white-space: nowrap ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .list ul li a h3 span {
+    position: relative; /*after 정렬의 기준*/
+}
+.book .list ul li a h3 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: #1d1d1d;
+    transition: 1s;
+}
+.book .list ul li a:hover h3 span::after {
+    width: 100%;
+}
+.book .list ul li a .name {
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.4;
+}
+.book .more {
+    position: absolute; /*inner 를 기준으로 정렬*/
+    left: 0;
+    top: 195px;
+}
+.book .more a {
+    display: block;
+    padding: 6px 62px 6px 23px;
+    background-color: #CEC4C3;
+    border-radius: 40px;
+    color: #1d1d1d;
+}
+.book .more a::after {
+    content: ""; 
+    position: absolute; /*more를 기준으로 정렬*/
+    right: 18px;
+    top: 15px;
+    width: 27px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='8' viewBox='0 0 29 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 7H27.5L19.5 1' stroke='%231D1D1D'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.book .more a:hover {
+    background-color: #5D4141;
+    color: #FADEDE;
+    border-color: #5D4141;
+}
+.book .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='8' viewBox='0 0 29 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 7H27.5L19.5 1' stroke='%23FADEDE'/%3E%3C/svg%3E ");
+    animation-name: more_ani ;
+    animation-timing-function: linear; /* 가속도 없음,빼야함*/
+    animation-duration: 2s; /* 애니메이션 1번 실행 시간*/
+    animation-iteration-count: infinite; /* 무한반복*/
+}
+/* 화살표가 좌우로 움직이닌 애니메이션*/
+@keyframes more_ani {
+    0% {right:18px;}
+    50% {right:25px;}
+    100% {right:18px;}
+}
+
+@media screen and (max-width:640px){ 
+                .book {
+                    margin: 50px 0 0 0;
+                }
+                .book .inner {
+                    display: block;
+                    width: auto;
+                    left: auto;/* 원래 안준 것 처럼*/
+                    margin: 0 0 0 20px; /* 왼쪽에만 */
+                }
+                .book .tit h2 {
+                    font-size: 25px;
+                    margin: 0 0 10px 0;
+                }
+                .book .tit h2 br {
+                    display: none; /* 줄바꿈 삭제*/
+                }
+                .book .list {
+                    margin: 25px 0 0 0;
+                    overflow-x: auto;
+                    /* x는 좌우, 좌우면 내부 컨텐츠의 길이가 나보다 더 길면 콘텐츠를 좌우 스크롤 한다.*/
+                }
+                .book .list  ul {
+                    gap: 16px;
+                    width: 1014px;
+                    /* 186 *5 = 930
+                       16 * (5-1) =64
+                       930+ 54= 1014 */
+                }
+                .book .list  ul li {
+                    width: 186px;
+                    /*pc와 모바일 모두 브라우저의 넓이에 따라서 책의 넓이가 바뀌지 않고 보이는 책을 수만 달라짐*/
+                }
+                .book .list ul li a h3 {
+                    font-size: 17px;
+                    padding: 10px 0 5px 0;
+                }
+                .book .more {
+                    left: auto;
+                    right: 20px; /* left:0; 이었는데 right:0으로 변경시 반드시 left:auto; 로 바꿔주고, right 줘야함.*/
+                    top: 3px;
+                }
+                .book .more a {
+                    width: 38px;
+                    height: 38px;
+                    padding: 0;
+                    font-size: 0;
+                    line-height: 0;
+                    background-color: #5D4141;
+                }
+                .book .more a::after {
+                    display: none; /* 숨김*/
+                }
+                .book .more a::before {
+                    content: "";
+                    position: absolute;/*more를 기준으로 정렬*/
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23fff'/%3E%3C/svg%3E ");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 21px;
+                }
+                .book .more a:hover::before {
+                    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23FADEDE'/%3E%3C/svg%3E ");
+                }
+
+}/*media*/
+
+.interview {
+    background-color: #CEC4C3;
+    margin: 120px 0 0 0;
+    padding: 150px 0 145px 0;
+}
+.interview .tit {
+    text-align: center;
+}
+.interview .tit h2 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding: 0 0 10px 0;
+}
+.interview .list {
+    margin:47px 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 403px;
+}
+.interview .list ul li:nth-child(2) {
+    margin: 37px 0 0 0;
+}
+.interview .list ul li a {
+    display: block;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    height: 406px;
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
 
 
 footer {
