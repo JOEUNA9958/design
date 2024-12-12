@@ -1,0 +1,115 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 167px;
+    height: 26px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/logo.svg) no-repeat center center /contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /*모바일에서만 나타남 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 li a {
+    display: block;
+    line-height: 100px;
+    padding: 0 22px;
+    font-size: 22px;
+    font-weight: 700;
+}
+/*********마우스 오버 했을 때 , 스크롤 내렸을 때*********/
+header.on {
+    background-color: #fff;
+    color: #1d1d1d;
+    border-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+header.on .logo a {
+    background-image: url(../images/logo_b.svg); /* 로고 이미지만 교체*/
+}
+
+
+
+@media screen and (max-width:640px){ 
+                    header {
+                        height: 56px;
+                    }
+                    header .wrapper {
+                        margin-right: 0;
+                        /* margin: 0 20px; - 원래 이 값인데 오른쪽 여백만 0으로 변경*/
+                    }
+                    header .logo a {
+
+                        width: 152px; /* 로고 크기 */
+                        height: 23px;
+                    }
+                    header .gnb .gnb_open {
+                        display: block; /*모바일에서만 나타남 */
+                        width: 60px;
+                        height: 56px;
+                        font-size: 0; /* 글자 숨김*/
+                        line-height: 0;
+                        position: relative; /* before 정렬의 기준*/
+                    }
+                    header .gnb .gnb_open::before {
+                        content: "";
+                        position: absolute; /* gnb_open 정렬의 기준*/
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 24V21.3333H28V24H4ZM4 17.3333V14.6667H28V17.3333H4ZM4 10.6667V8H28V10.6667H4Z' fill='white'/%3E%3C/svg%3E%0A");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: 32px;
+                    }
+                    header .gnb .gnb_wrap {
+                        display: none; /* 메뉴를 클릭해야 나타남 */
+                    }
+                    /* header 고정 또는 오버*/
+                    header.on .gnb .gnb_open::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 24V21.3333H28V24H4ZM4 17.3333V14.6667H28V17.3333H4ZM4 10.6667V8H28V10.6667H4Z' fill='%231d1d1d'/%3E%3C/svg%3E%0A");
+                    }
+}/*media*/
+
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center  /cover;
+}
+
+aside {
+    margin: 1000px 20px 200px 0;
+    text-align: right;
+}
+aside .top {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    background-color: #8A15A1;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
