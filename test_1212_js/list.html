@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/list.css"> <!--1-->
+    <script src="js/jquery-3.7.1.min.js"></script><!--2-->
+    <script src="js/list.js"></script><!--3-->
+    <title>오버하면 커지는 리스트 스타일</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="tour">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <!--1개가 열려있는 상태 (html에 한개에active )-->
+                            <li class="bg1 active">
+                                <a href="#n">
+                                    <h3>1경 항도귀범</h3>
+                                    <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
+                                </a>
+                            </li>
+                            <li class="bg2">
+                                <a href="#n">
+                                    <h3>2경 오산낙조</h3>
+                                    <p>멀리 두섬에 붉게 물든 낙조가 바다길을 열도다.</p>
+                                </a>
+                            </li>
+                            <li class="bg3">
+                                <a href="#n">
+                                    <h3>3경 대봉연사</h3>
+                                    <p>이른아침 백련사에서 목탁소리가 대봉산 자락을 휘감는다.</p>
+                                </a>
+                            </li>
+                            <li class="bg4">
+                                <a href="#n">
+                                    <h3>4경 대성아우</h3>
+                                    <p>밤에 내리는 비가 대성산의 높은 산봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                </div><!--wrapper-->
+            </section><!--tour-->
+
+            <section class="biz">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <li class="active">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img1.jpg" alt="봄"></div>
+                                    <h3>1경 항도귀범</h3>
+                                    <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img2.jpg" alt="여름"></div>
+                                    <h3>2경 오산낙조</h3>
+                                    <p>멀리 두섬에 붉게 물든 낙조가 바다길을 열도다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img3.jpg" alt="가을"></div>
+                                    <h3>3경 대봉연사</h3>
+                                    <p>이른아침 백련사에서 목탁소리가 대봉산 자락을 휘감는다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img4.jpg" alt="겨울"></div>
+                                    <h3>4경 대성아우</h3>
+                                    <p>밤에 내리는 비가 대성산의 높은 산봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                </div><!--wrapper-->
+            </section><!--biz-->
+
+            <section class="banner">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <!--마우스를 오버한 li에는 on클래스가 추가 오버하지 않은 li에는 off-->
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img1.jpg" alt="봄"></div>
+                                    <h3>1경 항도귀범</h3>
+                                    <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img2.jpg" alt="여름"></div>
+                                    <h3>2경 오산낙조</h3>
+                                    <p>멀리 두섬에 붉게 물든 낙조가 바다길을 열도다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img3.jpg" alt="가을"></div>
+                                    <h3>3경 대봉연사</h3>
+                                    <p>이른아침 백련사에서 목탁소리가 대봉산 자락을 휘감는다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img4.jpg" alt="겨울"></div>
+                                    <h3>4경 대성아우</h3>
+                                    <p>밤에 내리는 비가 대성산의 높은 산봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                </div><!--wrapper-->
+            </section><!--banner-->
+
+            <section class="slide">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <!--마우스를 오버한 li에는 on클래스가 추가 오버하지 않은 li에는 off-->
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img1.jpg" alt="봄"></div>
+                                    <h3>1경 항도귀범</h3>
+                                    <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img2.jpg" alt="여름"></div>
+                                    <h3>2경 오산낙조</h3>
+                                    <p>멀리 두섬에 붉게 물든 낙조가 바다길을 열도다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img3.jpg" alt="가을"></div>
+                                    <h3>3경 대봉연사</h3>
+                                    <p>이른아침 백련사에서 목탁소리가 대봉산 자락을 휘감는다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list_img4.jpg" alt="겨울"></div>
+                                    <h3>4경 대성아우</h3>
+                                    <p>밤에 내리는 비가 대성산의 높은 산봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                </div><!--wrapper-->
+            </section><!--slide-->
+        </main><!--container-->
+    </div>
+</body>
+</html>
