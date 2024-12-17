@@ -1,3 +1,239 @@
 @import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
 @import url(fonts.css);
 @import url(common.css);
+
+.news {
+    margin: 100px 0;
+}
+.news .wrapper {
+    position: relative; /*more 정렬의 기준*/
+}
+.news .tab_list ul {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.news .tab_list ul li button {
+    padding: 15px 35px ;
+    font-size: 25px;
+    position: relative; /* after 정렬의 기준*/
+}
+.news .tab_list ul li.active button  {
+    color: #0C266A;
+    font-weight: 800;
+}
+.news .tab_list ul li.active button::before {
+    content: "";
+    position: absolute; /*button 기준으로 정렬*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #0C266A;
+}
+.news .tab_contents {
+    padding: 37px 39px;
+    margin: 19px 0 0 0;
+    background-color: #f4f4f4;
+}
+.news .tab_contents .tab_pannel {
+    display: none; /* 숨김*/
+}
+
+.news .tab_contents .tab_pannel.active {
+    display: block; /*나타남*/
+}
+.news .tab_contents .tab_pannel h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.news .tab_contents .tab_pannel .more {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+.news .tab_contents .tab_pannel .more a {
+    background-color: #f4f4f4;
+    padding: 12px 42px 10px 19px ;
+    display: block;
+}
+.news .tab_contents .tab_pannel .more a::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+@media screen and (max-width:640px){ 
+                .news .tab_list ul li button {
+                    padding: 14px 20px ;
+                    font-size: 17px;
+                }
+                .news .tab_contents {
+                    padding: 20px 15px;
+                }
+                .news .tab_contents .tab_pannel h3 {
+                    font-size: 20px;
+                }
+                .news .tab_contents .tab_pannel .more {
+                    top: 26px;
+                }
+                .news .tab_contents .tab_pannel .more a {
+                    padding:0 ;
+                    width: 24px; /* 아이콘크키*/
+                    height: 24px;
+                    font-size: 0; /* 글자숨김*/
+                    line-height: 0;
+                    background-color: transparent; /*투명*/
+                }
+                .news .tab_contents .tab_pannel .more a::after {
+                    right: 0;
+                    top: -14px;
+                    width: 100%;
+                    height: 100%;
+                }
+} /*media*/
+
+.notice {
+    margin: 100px 0;
+}
+.notice .list ul {
+    display: flex;
+    position: relative; /*tab_contents 정렬의 기준 */
+    height: 467px;
+    /* tab_contents가 absolute라서 공간을 차지 하지 않음*/
+}
+.notice .list ul li {
+    width: calc(33.33% - 60px) ;
+    /* 옆에 더보기 180px 
+       100%에서 190px 빼서 3등분
+       100% / li갯수 = 33.33
+       180 / li갯수 = 60px*/
+}
+.notice .list ul li button {
+    display: block; /*display: block 요소로 바꿔도 넓이 100%가 안됨 */
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc ;
+    border-left-width: 0;
+}
+.notice .list ul li:first-child button {
+    border-left-width: 1px;
+    border-top-left-radius: 20px;
+}
+.notice .list ul li.active button  {
+    background-color: #fff;
+    color: #1d1d1d;
+    font-weight: 800;
+    border-bottom-width: 0;
+}
+.notice .list ul li .tab_contents {
+    display: none; /* 숨김*/
+    position: absolute;
+    left: 0;
+    top: 70px; /*tab 높이*/
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-radius: 0 0 20px 20px;
+} 
+.notice .list ul li .tab_contents .inner {
+    padding: 40px 25px;
+}
+.notice .list ul li .tab_contents h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.notice .list ul li .tab_contents .more {
+    position: absolute; /* tab_contents 를 기준으로 정렬*/ 
+    right: 0;
+    top: -70px;
+}
+.notice .list ul li .tab_contents .more a {
+    display: block;
+    width: 180px;
+    height: 70px;
+    background-color: #3058DA;
+    color: #fff;
+    border-top-right-radius: 20px;
+    padding: 24px 0 0 24px;
+}
+.notice .list ul li .tab_contents .more a::after {
+    content: "";
+    position: absolute;
+    right: 19px;
+    top: 22px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.notice .list ul li.active .tab_contents {
+    display: block;
+}
+
+@media screen and (max-width:640px){ 
+                .notice .list ul {
+                    height: 467px;
+                    /* tab_contents가 absolute라서 공간을 차지 하지 않음*/
+                }
+                .notice .list ul li {
+                    width: calc(33.33% - 14px);
+                    /* 옆에 더보기 42px 
+                    100%에서 42px 빼서 3등분
+                    100% / li갯수 = 33.33
+                    42px / li갯수 = 14px*/
+                }
+                .notice .list ul li button {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 15px;
+                }
+                .notice .list ul li:first-child button {
+                    border-top-left-radius: 10px;
+                }
+                .notice .list ul li .tab_contents {
+                    top: 40px; /*tab 높이*/
+                    border-radius: 0 0 10px 10px;
+                    padding: 20px 15px;
+                } 
+                .notice .list ul li .tab_contents h3 {
+                    font-size: 20px;
+                }
+                .notice .list ul li .tab_contents .more {
+                    top: -40px;
+                }
+                .notice .list ul li .tab_contents .more a {
+                    display: block;
+                    width: 42px;
+                    height: 40px;
+                    border-top-right-radius: 10px;
+                    padding:0;
+                    font-size: 0; /* 글자숨김*/
+                    line-height: 0;
+                }
+                .notice .list ul li .tab_contents .more a::after {
+                    right:0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-size: 18px;
+                }
+} /*media*/
+
+.etc {
+    margin: 100px 0;
+}
