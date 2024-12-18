@@ -211,7 +211,7 @@ header .tnb .mypage::before {
 
 .book {
     background-color: #FFFBF6;
-    padding: 124px 0 0 0;
+    padding: 124px 0 176px 0;
 }
 .book .inner {
     display: flex;
@@ -323,7 +323,7 @@ header .tnb .mypage::before {
 
 @media screen and (max-width:640px){ 
             .book { 
-                padding: 50px 0 0 0;
+                padding: 50px 0 50px 0;
             }
             .book .inner {
                 display: block;
@@ -389,3 +389,544 @@ header .tnb .mypage::before {
                 background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23DFCFC0'/%3E%3C/svg%3E ");
             }
 }
+
+.interview {
+    padding: 127px 0 152px 0;
+}
+.interview .tit {
+    text-align: center;
+}
+.interview .tit h2 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding: 0 0 15px 0;
+}
+.interview .list {
+    margin:42px 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 403px;
+}
+.interview .list ul li:nth-child(2) {
+    margin: 30px 0 0 0;
+}
+.interview .list ul li a {
+    display: block;
+    position: relative; /* inner 정렬의 기준*/
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    height: 413px;
+    border-radius: 50px 0 50px 0;
+    position: relative; /*before 정렬의 기준*/
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo::before {
+    content: "";
+    position: absolute; /*photo를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 1; /* 순서를 위로*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.interview .list ul li a .inner {
+    position: absolute; /* a를 기준으로 정렬*/
+    left: 33px;
+    bottom: 31px;
+    width: calc(100% - 66px);
+    /**/
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.interview .list ul li a .inner h3 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.2;
+}
+.interview .list ul li a .inner p {
+    display: none ;
+}
+.interview .list ul li a .inner span {
+    width: 57px; /* 아이콘 크기*/
+    height: 57px;
+    font-size: 0; /* 글자 안보이게*/
+    line-height: 0;
+    position: relative; /* before 정렬의 기준*/
+}
+.interview .list ul li a .inner span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='57' height='58' viewBox='0 0 57 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.6691 30.294H15.7941C15.5586 30.294 15.3611 30.2141 15.2016 30.0542C15.0425 29.8946 14.9629 29.6967 14.9629 29.4604C14.9629 29.2245 15.0425 29.0274 15.2016 28.869C15.3611 28.7107 15.5586 28.6315 15.7941 28.6315H27.6691V16.7565C27.6691 16.521 27.7491 16.3237 27.909 16.1646C28.0685 16.0051 28.2665 15.9253 28.5028 15.9253C28.7387 15.9253 28.9358 16.0051 29.0941 16.1646C29.2525 16.3237 29.3316 16.521 29.3316 16.7565V28.6315H41.2066C41.4422 28.6315 41.6395 28.7115 41.7986 28.8714C41.9581 29.0309 42.0379 29.2289 42.0379 29.4652C42.0379 29.7011 41.9581 29.8982 41.7986 30.0565C41.6395 30.2149 41.4422 30.294 41.2066 30.294H29.3316V42.169C29.3316 42.4046 29.2517 42.6021 29.0918 42.7616C28.9322 42.9207 28.7343 43.0003 28.498 43.0003C28.2621 43.0003 28.065 42.9207 27.9066 42.7616C27.7483 42.6021 27.6691 42.4046 27.6691 42.169V30.294Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 오버 스타일 -- 브라우저 넓이 641 이상에서만 적용 */
+@media screen and (min-width:641px){ 
+                .interview .list ul li a:hover .photo::before {
+                    display: none; /* 숨김*/
+                }
+                .interview .list ul li a:hover .photo img {
+                    filter: grayscale(0);
+                }
+                .interview .list ul li a:hover .inner {
+                    left: 0;
+                    bottom: -80px;
+                    width: calc(100% - 43px);
+                    /**/
+                    color: #fff;
+                    display: block;
+                    background-color: #DFCFC0;
+                    padding: 49px 36px 41px 39px ;
+                    border-radius: 50px 0 50px 0;
+                }
+                .interview .list ul li:nth-child(2) a:hover .inner {
+                    border-radius:  0 40px 0 40px;
+                }
+                .interview .list ul li a:hover .inner h3 {
+                    font-weight: 800;
+                    font-size: 25px;
+                    color: #956034;
+                }
+                .interview .list ul li a:hover .inner h3 br {
+                    display: none; /*줄바꿈*/
+                }
+                .interview .list ul li a:hover .inner p {
+                    display: block; /* 나타남*/
+                    font-size: 15px;
+                    margin: 18px 0 22px 0;
+                    /* 2줄로 제한*/
+                    line-height: 1.4; /* 행간*/
+                    height: 2.8em; /* 행간 * 줄수 = 단위는 em */
+                    overflow: hidden; /* 영역 밖 글자 숨김*/
+                }
+                .interview .list ul li a:hover .inner span {
+                    width: auto; /* 아이콘 크기*/
+                    height: auto;
+                    font-size: 15px; /* 글자 안보이게*/
+                    line-height: 1.4;
+                    color: rgba(255,255,255,0.8);
+                    display: block;
+                    /**/
+                    text-align: right;
+                    padding: 0 34px 0 0;
+                }
+                .interview .list ul li a:hover .inner span::before {
+                    left: auto;
+                    right: 10px; /* 변경하려면 반드시 다시 취소해야함*/
+                    top: 1px;
+                    width: 18px;
+                    height: 18px;
+                } 
+} /*media*/
+
+@media screen and (max-width:640px){ 
+            .interview {
+                padding: 50px 0 50px 0;
+            }
+            .interview .tit {
+                text-align: left;
+            }
+            .interview .tit h2 {
+                font-size: 25px;
+                line-height: 1.2;
+                padding: 0 0 7px 0;
+            }
+            .interview .tit p {
+                display: none;
+            }
+            .interview .list {
+                margin: 28px 0 0 0;
+            }
+            .interview .list ul {
+                display: block; /*flex해제*/
+            }
+            .interview .list ul li {
+                width: auto; /* 있는 그대로*/
+            }
+            .interview .list ul li:nth-child(2),
+            .interview .list ul li:nth-child(3) {
+                display: none;  
+            }
+            .interview .list ul li a .photo {
+                height: 283px;
+                border-radius: 10px;
+            }
+            .interview .list ul li a .photo::before {
+                display: none; /* 숨김*/
+            }
+            .interview .list ul li a .photo img {
+                filter: grayscale(0);
+            }
+            .interview .list ul li a .inner {
+                position: relative; /* absoiute 해제*/
+                left: auto;
+                bottom: auto;
+                width: auto;
+                /* 전체를 꽉 채우는 넓이 100%에서 왼쪽여백과 오른쪽 여백을 뺌*/
+                background-color: #DFCFC0;
+                border-radius: 30px 0;
+                color: #fff;
+                display: block;
+                margin: -70px 0 0 0;
+                padding: 36px 32px 22px 32px ;
+
+            }
+            .interview .list ul li a .inner h3 {
+                font-size: 20px;
+                margin: 0 0 10px 0;
+                color: #956034;
+            }
+            .interview .list ul li a .inner h3 br {
+                display: none; /*보임*/ 
+            }
+            .interview .list ul li a .inner p {
+                display: block ;
+                /*2줄로 제한*/
+                line-height: 1.4;
+                height: 2.8em;
+                overflow: hidden;
+                font-size: 13px;
+                font-weight: 400;
+                margin: 0 0 10px 0;
+            }
+            .interview .list ul li a .inner span {
+                width: auto; /* 아이콘 크기*/
+                height: auto;
+                font-size: 13px; /* 글자 안보이게*/
+                line-height: 1.4;
+                display: block;
+                text-align: right;
+                padding: 0 18px 0 0;
+            }
+            .interview .list ul li a .inner span::before {
+                left: auto;
+                right: 0;
+                top: 0;
+                width: 14px;
+                height: 14px;
+            }
+}/*media*/
+
+.sroty {
+    margin: 150px 0 0 0;
+    padding: 130px 0 205px 0 ;
+    background-color: #FFFBF6;
+}
+.sroty .wrapper {
+    position: relative; /*more 정렬의 기준 */
+}
+.sroty .tit h2 {
+    font-family: 'eulyo';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.sroty .tit p {
+    display: none;
+}
+.sroty .list {
+    margin: 32px 0 0 0;
+} 
+.sroty .list ul {
+    display: flex;
+    gap: 24px;
+    width: 1581px;
+    /* li의 사이즈 297 * li 갯수 5 = 1485 
+       li 사이 여백 24 * li갯수 - 1 4 = 96
+       1485 + 96 = 1581*/
+}
+.sroty .list ul li {
+    width: 297px;
+}
+.sroty .list ul li a {
+    display: block;
+}
+.sroty .list ul li a .photo {
+    overflow: hidden;
+    height: 251px;
+}
+.sroty .list ul li.long a .photo {
+    height: 348px;
+}
+.sroty .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.sroty .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.sroty .list ul li a .inner strong {
+    color: #956034;
+    margin: 15px 0 10px 0;
+    display: block;
+    font-size: 15px;
+    /*1줄 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sroty .list ul li a .inner h3 {
+    font-family: 'eulyo';
+    font-size: 25px;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+    /*2줄제한*/
+    line-height: 1.2;
+    height: 2.4em; /* 행간 * 줄수 = 단위는 em */
+    overflow: hidden;
+}
+.sroty .list ul li a .inner p {
+    /* 5줄 제한*/
+    line-height: 1.4;
+    height: 8.4em;
+    overflow: hidden;
+}
+.sroty .list ul li.long a .inner p {
+    height: 2.8em;
+}
+.sroty .more {
+    position: absolute; /*inner 를 기준으로 정렬*/
+    right: 0;
+    top: 8px;
+}
+.sroty .more a {
+    display: block;
+    padding: 6px 62px 6px 23px;
+    background-color: #DFCFC0;
+    border-radius: 40px;
+    color: #1d1d1d;
+}
+.sroty .more a::after {
+    content: ""; 
+    position: absolute; /*more를 기준으로 정렬*/
+    right: 18px;
+    top: 15px;
+    width: 27px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='8' viewBox='0 0 29 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 7H27.5L19.5 1' stroke='%231D1D1D'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media screen and (min-width:641px){
+    /* 브라우저 사이즈 641 이상에서만 적용 */
+    .sroty .more a:hover {
+        background-color: #956034;
+        color: #DFCFC0;
+    }
+    .sroty .more a:hover::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23956034'/%3E%3C/svg%3E ");
+        animation-name: more_ani ;
+        animation-timing-function: linear; /* 가속도 없음,빼야함*/
+        animation-duration: 2s; /* 애니메이션 1번 실행 시간*/
+        animation-iteration-count: infinite; /* 무한반복*/
+    }
+} /**media*/
+
+@media screen and (max-width:640px){
+            .sroty {
+                margin: 15px 0 0 0;
+                padding: 45px 0 50px 0;
+            }
+            .sroty .tit h2 {
+                font-size: 25px;
+                margin: 0 0 5px 0;
+            }
+            .sroty .tit p {
+                display: none;
+            }
+            .sroty .list {
+                margin: 28px 0 0 0;
+            } 
+            .sroty .list ul {
+                display: block;
+                width: auto;
+            }
+            .sroty .list ul li {
+                width: auto;
+                border-bottom: 1px solid rgba(204,204,204,0.8);
+            }
+            .sroty .list ul li:first-child {
+                border-top: 1px solid rgba(204,204,204,0.8);
+            }
+
+            .sroty .list ul li a {
+                display: flex;
+                flex-direction: row-reverse ;/* 좌우 순서 변경 */
+                justify-content: space-between;
+                padding: 5px 0 5px 0;
+            }
+            .sroty .list ul li:nth-child(4),
+            .sroty .list ul li:nth-child(5) {
+                display: none;
+            }
+            .sroty .list ul li a .photo {
+                height: 68px;
+                width: 30%;
+            }
+            .sroty .list ul li.long a .photo {
+                height: 68px;
+            }
+            .sroty .list ul li a .inner {
+            width: calc(100% - 120px );
+            }
+            .sroty .list ul li a .inner strong {
+                margin: 0 0 3px 0;
+                font-size: 13px;
+            }
+            .sroty .list ul li a .inner h3 {
+                font-size: 17px;
+                margin: 0;
+            }
+            .sroty .list ul li a .inner p {
+                display: none;
+            }
+            .sroty .more {
+                top: 3px;
+            }
+            .sroty .more a {
+                width: 37px ;
+                height: 37px;
+                padding: 0;
+                font-size: 0;
+                line-height: 0;
+                background-color:#DFCFC0;
+            }
+            .sroty .more a::after {
+                display: none;
+            }
+            .sroty .more a::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23956034'/%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 21px;
+            }
+            .sroty .more a:hover::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23956034'/%3E%3C/svg%3E ");
+            }
+} /*media*/
+
+
+footer {
+    background-color: #DFCFC0;
+    padding: 80px 0 110px 0;
+    color:rgba(85, 85, 85, 80);
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* copyright 정렬의 기준 */
+}
+footer h2 {
+    display: none; /* 숨김 */
+}
+footer .slogan {
+    font-family: 'eulyo';
+    font-size: 25px;
+    line-height: 1.2;
+    color: #534B4B;
+}
+footer .f_info .group + .group {
+    margin: 50px 0 0 0;
+}
+footer .f_info .group h3 {
+    font-family: 'eulyo';
+    font-size: 25px;
+    line-height: 1.4;
+    color: #534B4B;
+    margin: 0 0 10px 0 ;
+}
+footer .f_info .group.sns ul {
+    display: flex;
+    gap: 40px ;
+}
+
+footer .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+} 
+footer .copyright .f_logo img {
+    width: 167px;
+}
+footer .copyright .copy {
+    margin: 7px 0 0 0;
+    font-size: 15px;
+    color: rgba(149, 96, 52, 50);
+}
+
+
+@media screen and (max-width:640px){
+                    footer {
+                        padding: 51px 0 56px 0;
+                    }
+                    footer .wrapper {
+                        display: block;
+                    }
+                    footer .slogan {
+                        font-size: 17px;
+                        margin: 0 0 48px 0;
+                    }
+                    footer .f_info .group + .group {
+                        margin: 25 0 0 0;
+                    }
+                    footer .f_info .group h3 {
+                        font-size: 17px;
+                        margin: 0 0 6px 0 ;
+                    }
+                    footer .f_info .group.sns ul {
+                        gap: 5px 34px ; /* 위아래 좌우*/
+                        flex-wrap: wrap; /* 줄 바꿈 허용 */
+                    }
+                    
+                    footer .copyright {
+                        position: relative;
+                        left: auto;
+                        bottom: auto;
+                        margin: 77px 0 0 0;
+                    } 
+                    footer .copyright .f_logo img {
+                        width: 139px;
+                    }
+                    footer .copyright .copy {
+                        margin: 7px 0 0 0;
+                        font-size: 12px;
+                        color: rgba(149, 96, 52, 50);
+                    }
+}/*media*/
