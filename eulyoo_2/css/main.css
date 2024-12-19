@@ -298,7 +298,7 @@ header .tnb .mypage::before {
     top: 15px;
     width: 30px;
     height: 7px;
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='9' viewBox='0 0 32 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8H30L21.1111 1' stroke='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='9' viewBox='0 0 32 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8H30L21.1111 1' stroke='%23DFCFC0'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -398,11 +398,11 @@ header .tnb .mypage::before {
 }
 .interview .tit h2 {
     font-family: 'eulyo';
-    font-weight: 400;
     font-size: 45px;
+    font-weight: 700;
     line-height: 1.2;
     color: #1d1d1d;
-    padding: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
 .interview .list {
     margin:42px 0 0 0;
@@ -644,10 +644,11 @@ header .tnb .mypage::before {
 }
 .sroty .tit h2 {
     font-family: 'eulyo';
-    font-weight: 400;
     font-size: 45px;
+    font-weight: 700;
     line-height: 1.2;
     color: #1d1d1d;
+    margin: 0 0 10px 0;
 }
 .sroty .tit p {
     display: none;
@@ -738,19 +739,41 @@ header .tnb .mypage::before {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+
+.sroty .more a:hover {
+    background-color: #956034;
+    color: #DFCFC0;
+    border-color: #956034;
+}
+.sroty .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='7' viewBox='0 0 28 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 5.75H26.25L20.75 0.5' stroke='%23DFCFC0'/%3E%3C/svg%3E%0A");
+    animation-name: more_ani ;
+    animation-timing-function: linear; /* 가속도 없음,빼야함*/
+    animation-duration: 2s; /* 애니메이션 1번 실행 시간*/
+    animation-iteration-count: infinite; /* 무한반복*/
+}
+/* 화살표가 좌우로 움직이닌 애니메이션*/
+@keyframes more_ani {
+    0% {right:18px;}
+    50% {right:25px;}
+    100% {right:18px;}
+}
+
 @media screen and (min-width:641px){
-    /* 브라우저 사이즈 641 이상에서만 적용 */
-    .sroty .more a:hover {
-        background-color: #956034;
-        color: #DFCFC0;
-    }
-    .sroty .more a:hover::after {
-        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0625 10.9375H5.6875C5.56354 10.9375 5.45964 10.8955 5.37578 10.8115C5.29193 10.7275 5.25 10.6234 5.25 10.4993C5.25 10.3752 5.29193 10.2714 5.37578 10.1878C5.45964 10.1043 5.56354 10.0625 5.6875 10.0625H10.0625V5.6875C10.0625 5.56354 10.1045 5.45964 10.1885 5.37578C10.2725 5.29193 10.3766 5.25 10.5007 5.25C10.6248 5.25 10.7286 5.29193 10.8122 5.37578C10.8957 5.45964 10.9375 5.56354 10.9375 5.6875V10.0625H15.3125C15.4365 10.0625 15.5404 10.1045 15.6242 10.1885C15.7081 10.2725 15.75 10.3766 15.75 10.5007C15.75 10.6248 15.7081 10.7286 15.6242 10.8122C15.5404 10.8957 15.4365 10.9375 15.3125 10.9375H10.9375V15.3125C10.9375 15.4365 10.8955 15.5404 10.8115 15.6242C10.7275 15.7081 10.6234 15.75 10.4993 15.75C10.3752 15.75 10.2714 15.7081 10.1878 15.6242C10.1043 15.5404 10.0625 15.4365 10.0625 15.3125V10.9375Z' fill='%23956034'/%3E%3C/svg%3E ");
-        animation-name: more_ani ;
-        animation-timing-function: linear; /* 가속도 없음,빼야함*/
-        animation-duration: 2s; /* 애니메이션 1번 실행 시간*/
-        animation-iteration-count: infinite; /* 무한반복*/
-    }
+            /* 브라우저 사이즈 641 이상에서만 적용 */
+            .sroty .more a:hover {
+                background-color: #956034;
+                color: #DFCFC0;
+            }
+            .sroty .more a:hover::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='7' viewBox='0 0 28 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 5.75H26.25L20.75 0.5' stroke='%23DFCFC0'/%3E%3C/svg%3E%0A");
+                animation-name: more_ani ;
+                animation-timing-function: linear; /* 가속도 없음,빼야함*/
+                animation-duration: 2s; /* 애니메이션 1번 실행 시간*/
+                animation-iteration-count: infinite; /* 무한반복*/
+            }
 } /**media*/
 
 @media screen and (max-width:640px){
