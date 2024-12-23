@@ -1,0 +1,14 @@
+
+/*웹폰트파일을 이용해서 웹폰트 이름과 두께 등을 선언*/
+@font-face {
+	font-family: 'LaundryGo';
+	font-weight: 400;
+	font-display: swap;
+	src:  url(../fonts/TTLaundryGothicR.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'LaundryGo';
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/TTLaundryGothicB.woff2) format('woff2');
+}
