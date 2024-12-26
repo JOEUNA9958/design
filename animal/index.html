@@ -21,7 +21,7 @@
             모바일에서 메뉴를 열었을때 : menu_mo
             검색을 클릭했을때 (pc/mobile 공통) : sch_open
         -->
-        <header class="menu_mo"> 
+        <header> 
             <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴 열기</button>
@@ -32,27 +32,27 @@
                             꼭 jquery에서 클래스를 추가하는 것으로 구현
                             li:hover로 구현하면 접근성에 안맞음  -->
                         <li>
-                            <a href="#n"><span>찾습니다</span></a>
+                            <a href="https://www.naver.com/"><span>찾습니다</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종신고</span></a></li>
                                 <li><a href="#n"><span>구조정보/목격담</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>구조분양</span></a>
+                            <a href="https://comic.naver.com/index"><span>구조분양</span></a>
                         </li>
                         <li>
-                            <a href="#n"><span>네트워크</span></a>
+                            <a href="https://www.naver.com/"><span>네트워크</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>동물 네트워크</span></a></li>
                                 <li><a href="https://www.animal.go.kr/" target="_blank" title="새창연결"><span>국가보호정보시스템</span></a></li> 
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>재회성공담</span></a>
+                            <a href="https://www.daum.net/"><span>재회성공담</span></a>
                         </li>
                         <li>
-                            <a href="#n"><span>대처방법</span></a>
+                            <a href="https://www.google.co.kr/?hl=ko"><span>대처방법</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종시 대처방법</span></a></li>
                                 <li><a href="#n"><span>구조시 대처방법</span></a></li>
@@ -128,6 +128,297 @@
                     <button class="paly">팝어 다시 시작</button>
                 </div><!--btn_wrap-->
             </section><!--visual-->
+
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab_list">
+                        <ul>
+                            <!--tab하고 panel하고 연결고리가 있어야함   data-tab 이 같으면 같은 내용 -->
+                            <li data-tab="tab01" role="tab" class=" tab01 active"> <button title="선택됨">가족을</button></li>     
+                            <li data-tab="tab02"  role="tab" class="tab02 " ><button>주인을</button></li>
+                        </ul>
+                    </div><!--tab_list-->
+                    <div class="tab_content">
+                        <div data-tab="tab01" role="tabpanel" class="tab_panel panel01 active">
+                            <h3>실종된 (동물)가족을 찾습니다</h3>
+                            <div class="swiper"> 
+                                <ul class="swiper-wrapper"> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>나비 수컷 10살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-07-26</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>미령면 원동촌마을회관</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>눈이 초록색, 수염왼쪽에 갈색점</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate02">종료</strong><span>휴지 암컷 6살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2023-11-10</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>광주광역시 북구 본촌마을길 27</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>코 전체가 검정색</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_03.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate03">종료</strong><span>곰돌이 암컷 2살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-05-05</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 칠곡군 석적읍 포망로</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>오른쪽 눈에 검정 반점이 있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_04.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate04">실종</strong><span>호랑이 암컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2021-01-07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 문경시 중앙로</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>왼쪽얼굴에 검정 반점이있음점</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_05.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate05">실종</strong><span>호랑이 암컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2021-01-07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 문경시 중앙로</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>왼쪽얼굴에 검정 반점이있음점</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_06.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate06">실종</strong><span>호랑이 암컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2021-01-07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 문경시 중앙로</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>왼쪽얼굴에 검정 반점이있음점</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <button class="prev">이전팝업보기</button>
+                                <button class="next">다음팝업보기</button>
+                                <div class="more"><a href="#n">전체보기</a></div>
+                            </div><!--btn_wrap-->
+                        </div> 
+                        <div data-tab="tab02" role="tabpanel" class="tab_panel panel02">
+                            <h3>실종된 동물을 목격 또는 구조했어요</h3>
+                            <div class="swiper"> 
+                                <ul class="swiper-wrapper"> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_01.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_01">구조</strong><span>4살 아리 암컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-20</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>	경기도 이천시 마장면 관리에 있는 발트하임펜션 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>부정교합, 왼쪽코가 잘 막힘</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_02.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_02">목격</strong><span>루피 수컷 10살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>	2024-12-16</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>	부산광역시 금정구 백두한의원 부근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>코색깔이 연하고 혀에 검은점이 있습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_03.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_03">종료</strong><span>렉시 암컷 </span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>	2024-12-19</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>	전라북도 익산시 신동 동북아파트 다동</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>울음소리를 잘안내는 편이에요</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> 
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_04.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_04">구조</strong><span>댕이 암컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>	2024-12-7</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>	경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_05.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_05">구조</strong><span>마미 3살 암컷</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>	2024-11-26</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 서초구 신사역사거리 5번 출구</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>	만지려면 가볍게 물고 할퀴려 합니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_06.jpg" alt="동물사진"></div>
+                                            <h4><strong class="cate01_06">구조</strong><span>테리 수컷 12살</span></h4>
+                                            <ul>
+                                                <li>    
+                                                    <strong>실종날짜</strong>
+                                                    <span>	2024-11-27</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>	서울특별시 강북구 솔샘중학교 옆 등산로</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>
+                                                        잊어버린날 눈이 와서 털이 많이 더러워졌을것 같습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>  
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <button class="prev">이전팝업보기</button>
+                                <button class="next">다음팝업보기</button>
+                                <div class="more"><a href="#n">전체보기</a></div>
+                            </div>
+                        </div>
+                    </div><!--tab_content-->
+                </div>
+            </section><!--find-->
+            <section class="slogan">
+                <div class="wrapper">
+                    <h2>구조가 필요한 동물 발견 시 대처요령</h2>
+                    <p class="tit">공공장소<span class="txt01"></span>에서 주인 없이 떠도는<br>
+                        동물<span class="txt02"></span>을 발견한 경우<br>
+                        관할 시군구청 또는 동물보호센터<span class="txt03"></span>에<br>
+                        신고<span class="txt04"></span>하시기 바랍니다.</p>
+                    <p class="sub_txt">소유자를 알 수 없는 동물을 신고하지 않고 포획하여 죽이는 경우<br>
+                        동물보호법 제10조제3항제2호를 위반하여 3년 이하 징역이나 3천만원 이하 벌금이 부과됩니다.</p>
+                </div><!--wrapper-->
+            </section><!--slogan-->
         </main><!--container-->
         <footer></footer>
     </div><!--wrap-->

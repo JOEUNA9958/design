@@ -115,6 +115,22 @@ header.fixed .logo a::before{
                 }
                 header .gnb .gnb_wrap  ul.depth2 > li > a span {
                     position: relative;
+                    display: inline-block;
+                }
+                header .gnb .gnb_wrap  ul.depth2 > li > a[target="_blank"] span {
+                    padding-right: 21px;
+                }
+                header .gnb .gnb_wrap  ul.depth2 > li > a[target="_blank"] span::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 9px;
+                    width: 19px;
+                    height: 19px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.20262 16.2291C3.8027 16.2291 3.46419 16.0905 3.18711 15.8135C2.91003 15.5364 2.77148 15.1979 2.77148 14.7979V4.20189C2.77148 3.80196 2.91003 3.46346 3.18711 3.18638C3.46419 2.90929 3.8027 2.77075 4.20262 2.77075H8.60231C8.7708 2.77075 8.91191 2.82762 9.02565 2.94136C9.13926 3.05496 9.19606 3.19601 9.19606 3.3645C9.19606 3.53299 9.13926 3.67404 9.02565 3.78765C8.91191 3.90138 8.7708 3.95825 8.60231 3.95825H4.20262C4.14166 3.95825 4.08585 3.98365 4.03518 4.03445C3.98438 4.08512 3.95898 4.14093 3.95898 4.20189V14.7979C3.95898 14.8589 3.98438 14.9147 4.03518 14.9654C4.08585 15.0162 4.14166 15.0416 4.20262 15.0416H14.7987C14.8596 15.0416 14.9155 15.0162 14.9661 14.9654C15.0169 14.9147 15.0423 14.8589 15.0423 14.7979V10.3983C15.0423 10.2298 15.0992 10.0887 15.2129 9.97492C15.3265 9.86131 15.4676 9.80451 15.6361 9.80451C15.8046 9.80451 15.9456 9.86131 16.0592 9.97492C16.1729 10.0887 16.2298 10.2298 16.2298 10.3983V14.7979C16.2298 15.1979 16.0913 15.5364 15.8142 15.8135C15.5371 16.0905 15.1986 16.2291 14.7987 16.2291H4.20262ZM15.0423 4.79247L8.11227 11.7227C8.00262 11.8322 7.8648 11.8883 7.69882 11.8909C7.53296 11.8935 7.39264 11.8374 7.27785 11.7227C7.16319 11.6079 7.10586 11.4689 7.10586 11.3055C7.10586 11.1422 7.16319 11.0031 7.27785 10.8883L14.2081 3.95825H11.6777C11.5092 3.95825 11.3682 3.90138 11.2546 3.78765C11.1409 3.67404 11.084 3.53299 11.084 3.3645C11.084 3.19601 11.1409 3.05496 11.2546 2.94136C11.3682 2.82762 11.5092 2.77075 11.6777 2.77075H15.5142C15.7183 2.77075 15.8885 2.83903 16.025 2.9756C16.1615 3.11203 16.2298 3.2823 16.2298 3.48642V7.32284C16.2298 7.49133 16.1729 7.63238 16.0592 7.74598C15.9456 7.85972 15.8046 7.91659 15.6361 7.91659C15.4676 7.91659 15.3265 7.85972 15.2129 7.74598C15.0992 7.63238 15.0423 7.49133 15.0423 7.32284V4.79247Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 19px;
                 }
                 header .gnb .gnb_wrap  ul.depth2 > li > a span:hover::after {
                     content: "";
@@ -321,7 +337,6 @@ header.fixed .logo a::before{
                     background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.21522 1.40581L0.891094 8.71531C0.820969 8.78556 0.734906 8.81825 0.632906 8.81338C0.531031 8.80863 0.444969 8.77113 0.374719 8.70088C0.304594 8.63075 0.269531 8.54713 0.269531 8.45C0.269531 8.35288 0.304594 8.26925 0.374719 8.19913L7.68441 0.875H1.09022C0.983969 0.875 0.894906 0.839 0.823031 0.767C0.751156 0.695 0.715219 0.605812 0.715219 0.499437C0.715219 0.393062 0.751156 0.304062 0.823031 0.232437C0.894906 0.160812 0.983969 0.125 1.09022 0.125H8.35941C8.53103 0.125 8.67491 0.183062 8.79103 0.299187C8.90716 0.415312 8.96522 0.559187 8.96522 0.730812V8C8.96522 8.10625 8.92922 8.19531 8.85722 8.26719C8.78522 8.33906 8.69603 8.375 8.58966 8.375C8.48328 8.375 8.39428 8.33906 8.32266 8.26719C8.25103 8.19531 8.21522 8.10625 8.21522 8V1.40581Z' fill='white'/%3E%3C/svg%3E ");
                     background-size: 8px;
                 }
-
                 header.fixed .tnb .search .search_open:hover::after {
                     background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.53282 5.21263C3.50408 4.01397 3.89616 2.98815 4.70907 2.13517C5.52211 1.28231 6.52796 0.841503 7.72661 0.812758C8.92527 0.784013 9.95109 1.1761 10.8041 1.98901C11.6569 2.80204 12.0977 3.80789 12.1265 5.00654C12.1552 6.2052 11.7631 7.23102 10.9502 8.084C10.1372 8.93686 9.13135 9.37767 7.93269 9.40641C7.41172 9.41891 6.90534 9.33871 6.41355 9.16583C5.92177 8.99294 5.49926 8.76069 5.14605 8.46908L0.82273 13.0048C0.754182 13.0766 0.669043 13.1162 0.567314 13.1235C0.465457 13.1307 0.373709 13.0954 0.29207 13.0176C0.210428 12.9396 0.168443 12.8521 0.166115 12.755C0.163789 12.658 0.201533 12.5687 0.279345 12.4869L4.60266 7.95114C4.27451 7.5839 4.01712 7.1587 3.83048 6.67554C3.64384 6.19237 3.54463 5.70474 3.53282 5.21263ZM4.28261 5.19465C4.30647 6.18949 4.66907 7.02116 5.37042 7.68966C6.07165 8.35817 6.91975 8.68049 7.91471 8.65663C8.90968 8.63277 9.74135 8.27016 10.4097 7.56881C11.0782 6.86746 11.4006 6.01936 11.3767 5.02452C11.3528 4.02956 10.9902 3.19789 10.2889 2.52951C9.58765 1.86101 8.73955 1.53868 7.74459 1.56254C6.74963 1.5864 5.91796 1.94901 5.24958 2.65036C4.58107 3.35159 4.25875 4.19968 4.28261 5.19465Z' fill='white'/%3E%3C/svg%3E%0A");                
                     background-size: 12px;
@@ -372,6 +387,7 @@ header.fixed .logo a::before{
                 position: absolute; /* header를 기준으로 정렬 */
                 left: 0;
                 top: 0;
+                z-index: 10;
                 width: 100%;
                 height: 100dvh; /* 브라우저 높이와 동일하게 */
                 background-color: #fff;
@@ -396,6 +412,7 @@ header.fixed .logo a::before{
                 color: #1d1d1d;
                 position: relative; /*after 정렬의 기준 */
             }
+
             /* 하위메뉴를 가지고 있는 a 의 경우 */
             header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a::after {
                 content: "";
@@ -403,6 +420,7 @@ header.fixed .logo a::before{
                 right: 15px;
                 top: 15px ;
                 width: 21px;
+                z-index: 1;
                 height: 21px;
                 background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6881 11.5021L14.1918 7.87885C14.3109 7.7558 14.4622 7.69128 14.6456 7.68529C14.8288 7.67945 14.9849 7.73883 15.1139 7.86342C15.2427 7.98815 15.3087 8.14078 15.3117 8.32129C15.3147 8.50181 15.2539 8.65656 15.1293 8.78554L11.2632 12.7833C11.1827 12.8665 11.0972 12.9256 11.007 12.9608C10.9167 12.9961 10.8188 13.0145 10.7134 13.0163C10.608 13.0181 10.5096 13.0029 10.4182 12.9707C10.3268 12.9385 10.2394 12.8822 10.1561 12.8018L6.15834 8.93573C6.03529 8.81659 5.97077 8.66532 5.96478 8.48194C5.95894 8.2987 6.01832 8.14259 6.1429 8.01361C6.26764 7.88477 6.42026 7.81885 6.60078 7.81582C6.7813 7.8128 6.93604 7.87358 7.06502 7.99817L10.6881 11.5021Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
                 background-position: center center;
@@ -419,6 +437,26 @@ header.fixed .logo a::before{
                 font-size: 17px;
                 padding: 12px 0;
             }
+            header .gnb .gnb_wrap  ul.depth2 > li > a  span {
+                display: inline-block;
+                position: relative;
+            }
+            header .gnb .gnb_wrap  ul.depth2 > li > a[target="_blank"] span {
+                padding-right: 21px;
+            }
+            header .gnb .gnb_wrap  ul.depth2 > li > a[target="_blank"] span::before {
+                content: "";
+                position: absolute;
+                right: 14px;
+                top: 1px;
+                width: 19px;
+                height: 19px;
+                background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.20262 16.2291C3.8027 16.2291 3.46419 16.0905 3.18711 15.8135C2.91003 15.5364 2.77148 15.1979 2.77148 14.7979V4.20189C2.77148 3.80196 2.91003 3.46346 3.18711 3.18638C3.46419 2.90929 3.8027 2.77075 4.20262 2.77075H8.60231C8.7708 2.77075 8.91191 2.82762 9.02565 2.94136C9.13926 3.05496 9.19606 3.19601 9.19606 3.3645C9.19606 3.53299 9.13926 3.67404 9.02565 3.78765C8.91191 3.90138 8.7708 3.95825 8.60231 3.95825H4.20262C4.14166 3.95825 4.08585 3.98365 4.03518 4.03445C3.98438 4.08512 3.95898 4.14093 3.95898 4.20189V14.7979C3.95898 14.8589 3.98438 14.9147 4.03518 14.9654C4.08585 15.0162 4.14166 15.0416 4.20262 15.0416H14.7987C14.8596 15.0416 14.9155 15.0162 14.9661 14.9654C15.0169 14.9147 15.0423 14.8589 15.0423 14.7979V10.3983C15.0423 10.2298 15.0992 10.0887 15.2129 9.97492C15.3265 9.86131 15.4676 9.80451 15.6361 9.80451C15.8046 9.80451 15.9456 9.86131 16.0592 9.97492C16.1729 10.0887 16.2298 10.2298 16.2298 10.3983V14.7979C16.2298 15.1979 16.0913 15.5364 15.8142 15.8135C15.5371 16.0905 15.1986 16.2291 14.7987 16.2291H4.20262ZM15.0423 4.79247L8.11227 11.7227C8.00262 11.8322 7.8648 11.8883 7.69882 11.8909C7.53296 11.8935 7.39264 11.8374 7.27785 11.7227C7.16319 11.6079 7.10586 11.4689 7.10586 11.3055C7.10586 11.1422 7.16319 11.0031 7.27785 10.8883L14.2081 3.95825H11.6777C11.5092 3.95825 11.3682 3.90138 11.2546 3.78765C11.1409 3.67404 11.084 3.53299 11.084 3.3645C11.084 3.19601 11.1409 3.05496 11.2546 2.94136C11.3682 2.82762 11.5092 2.77075 11.6777 2.77075H15.5142C15.7183 2.77075 15.8885 2.83903 16.025 2.9756C16.1615 3.11203 16.2298 3.2823 16.2298 3.48642V7.32284C16.2298 7.49133 16.1729 7.63238 16.0592 7.74598C15.9456 7.85972 15.8046 7.91659 15.6361 7.91659C15.4676 7.91659 15.3265 7.85972 15.2129 7.74598C15.0992 7.63238 15.0423 7.49133 15.0423 7.32284V4.79247Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 19px;
+            }
+
             /******** 1차 메뉴가 열렸을때 *********/
             header .gnb .gnb_wrap ul.depth1 > li.open > a {
                 color: #21460F;
@@ -435,7 +473,7 @@ header.fixed .logo a::before{
                 position: absolute; /* header를 기준으로 정렬 */
                 right: 0;
                 top: 0;
-                z-index: 10;
+                z-index: 20;
                 width: 61px;
                 height: 52px;
                 font-size: 0;
@@ -462,6 +500,7 @@ header.fixed .logo a::before{
                 position: fixed; /* header 고정 - fixed 죽어도 body를 기준으로 정렬 */
                 left: 21px;
                 top: 14px;
+                z-index: 20;
                 background-color: #21460F;
                 border-radius: 25px;
                 color: #fff;
@@ -726,7 +765,452 @@ header.fixed .logo a::before{
                 }
 } /*media*/
 
+.find {
+    margin: 153px 0 0 0;
+}
+.find  h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 29px 0;
+}
+.find .tab_list ul {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+.find .tab_list ul li button {
+    font-size: 25px;
+    padding: 10px 27px 11px 27px;
+    border: 1px solid #1d1d1d;
+    border-radius: 35px;
+}
+.find .tab_list ul li.active button {
+    font-size: 25px;
+    padding: 10px 27px 11px 27px;
+    background-color: #21460F;
+    border-color: #21460F;
+    border-radius: 35px;
+    color: #fff;
+}
+.find .tab_list ul li.tab02.active button {
+    background-color: #FFE5C3;
+    border-color: #FFE5C3;
+    color: #1d1d1d;
+}
+.find .tab_content {
+    margin:75px 0 0 0;
+}
+.find .tab_content .tab_panel {
+    display: none; /* 숨김 */
+}
+.find .tab_content .tab_panel.active {
+    display: block;
+} 
+.find .tab_content .tab_panel h3 {
+    display: none;
+}
+.find .tab_content .tab_panel .swiper ul li a {
+    display: block;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo {
+    height: 340px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.find .tab_content .tab_panel .swiper ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.find .tab_content .tab_panel .swiper ul li a h4 {
+    margin: 20px 0 20px 0;
+    display: flex;
+    font-size: 17px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong {
+    padding: 6px 19px 6px 19px ;
+    border-radius: 20px;
+    background-color: #21460F;
+    color: #fff;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate02 {
+    background-color: #8E8E8E;
+    color: #fff;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate03 {
+    background-color: #8E8E8E;
+    color: #fff;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 span {
+    display: block;
+    width: calc(100% - 85px);
+    /* 한줄 제한 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 0;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li strong {
+    color: #555;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li span {
+    display: block;
+    width: calc(100% - 82px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate01_01 {
+    background-color: #FFE5C3;
+    color: #1d1d1d;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate01_02 {
+    background-color: #F5AD4F;
+    color: #fff;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate01_03 {
+    background-color: #8E8E8E;
+    color: #fff;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate01_04 {
+    background-color: #FFE5C3;
+    color: #1d1d1d;
+}
+.find .tab_content .tab_panel .btn_wrap {
+    margin: 90px 0 110px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.find .tab_content .tab_panel .btn_wrap button {
+    font-size: 0;
+    line-height: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #3d3d3d;
+    color: #3d3d3d;
+    position: relative;
+}
+.find .tab_content .tab_panel .btn_wrap button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5388 13.4153L17.0905 17.9159C17.2451 18.0689 17.3249 18.2619 17.3299 18.4949C17.3347 18.7277 17.2571 18.9251 17.0971 19.0871C16.9369 19.2489 16.7421 19.3305 16.5128 19.3318C16.2835 19.3331 16.0879 19.2537 15.9259 19.0937L10.9037 14.1277C10.7992 14.0242 10.7252 13.9149 10.6818 13.7997C10.6384 13.6846 10.6163 13.5601 10.6155 13.4262C10.6148 13.2922 10.6355 13.1675 10.6776 13.0519C10.7197 12.9362 10.7925 12.8261 10.8958 12.7214L15.8618 7.69926C16.0148 7.54468 16.2078 7.46488 16.4408 7.45986C16.6736 7.45504 16.871 7.53264 17.033 7.69268C17.1948 7.8529 17.2764 8.04765 17.2777 8.27693C17.279 8.50621 17.1996 8.70187 17.0396 8.8639L12.5388 13.4153Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.find .tab_content .tab_panel .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='27' viewBox='0 0 28 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3061 13.416L10.8071 8.86282C10.6543 8.70799 10.5768 8.51407 10.5745 8.28106C10.5724 8.04824 10.6523 7.85175 10.8142 7.6916C10.9763 7.53162 11.172 7.45233 11.4012 7.45371C11.6305 7.45509 11.8252 7.53673 11.9854 7.69865L16.9494 12.7228C17.0527 12.8275 17.1254 12.9377 17.1674 13.0533C17.2095 13.1689 17.2302 13.2937 17.2294 13.4276C17.2286 13.5615 17.2064 13.686 17.1629 13.8012C17.1195 13.9163 17.0455 14.0256 16.9409 14.129L11.9168 19.093C11.762 19.2458 11.5681 19.3234 11.3351 19.3257C11.1022 19.3278 10.9057 19.2479 10.7456 19.086C10.5856 18.9239 10.5063 18.7282 10.5077 18.4989C10.5091 18.2696 10.5907 18.0749 10.7526 17.9148L15.3061 13.416Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+}
 
+.find .tab_content .tab_panel .btn_wrap .more a {
+    display: block;
+    line-height: 30px; /* 그 높이에글자가 위아래로 정렬*/
+    height: 30px;
+    padding: 0 35px 0 20px;
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    position: relative;
+}
+.find .tab_content .tab_panel .btn_wrap .more a::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.50033 8.49984H4.16699C4.02533 8.49984 3.9066 8.45189 3.81083 8.356C3.71494 8.26012 3.66699 8.14134 3.66699 7.99967C3.66699 7.85789 3.71494 7.73917 3.81083 7.6435C3.9066 7.54773 4.02533 7.49984 4.16699 7.49984H7.50033V4.1665C7.50033 4.02484 7.54827 3.90612 7.64416 3.81034C7.74005 3.71445 7.85883 3.6665 8.00049 3.6665C8.14227 3.6665 8.26099 3.71445 8.35666 3.81034C8.45244 3.90612 8.50033 4.02484 8.50033 4.1665V7.49984H11.8337C11.9753 7.49984 12.094 7.54778 12.1898 7.64367C12.2857 7.73956 12.3337 7.85834 12.3337 8C12.3337 8.14178 12.2857 8.2605 12.1898 8.35617C12.094 8.45195 11.9753 8.49984 11.8337 8.49984H8.50033V11.8332C8.50033 11.9748 8.45238 12.0936 8.35649 12.1893C8.2606 12.2852 8.14183 12.3332 8.00016 12.3332C7.85838 12.3332 7.73966 12.2852 7.64399 12.1893C7.54821 12.0936 7.50033 11.9748 7.50033 11.8332V8.49984Z' fill='%233D3D3D'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+
+/*마우스 오버 스타일 */
+.find .tab_content .tab_panel .btn_wrap .more a:hover {
+    background-color: #FFE5C3;
+    border-radius: 30px;
+}
+.find .tab_content .tab_panel .btn_wrap button:hover::before {
+    background-color: #FFE5C3;
+    border-radius: 30px;
+}
+
+
+
+@media screen and (max-width:640px){ 
+                    .find {
+                        margin: 45px 0 0 0;
+                    }
+                    .find  h2 {
+                        font-size: 25px;
+                        margin: 0 0 15px 0;
+                    }
+                    .find .tab_list ul {
+                        gap: 10px;
+                    }
+                    .find .tab_list ul li button {
+                        padding: 3px 17px 3px 17px;
+                        border: 1px solid #1d1d1d;  
+                        font-size: 13px;
+                        border-radius: 20px;
+                        color: #1d1d1d;
+                    }
+                    .find .tab_list ul li.active button {
+                        font-size: 13px;
+                        padding: 3px 17px 3px 17px;
+                        background-color: #21460F;
+                        border-color: #21460F;
+                        border-radius: 20px;
+                        color: #fff;
+                    }
+                    .find .tab_list ul li.tab02.active button {
+                        background-color: #FFE5C3;
+                        border-color: #FFE5C3;
+                        color: #1d1d1d;
+                    }
+                    .find .tab_content {
+                        margin: 25px 0 0 0;
+                    }
+                    .find .tab_content .tab_panel .swiper ul li {
+                        width: 153px;
+                    }
+                    .find .tab_content .tab_panel .swiper ul li a .photo {
+                        height: 340px;
+                        border-radius: 10px;
+                    }
+                    .find .tab_content .tab_panel .swiper ul li a h4 {
+                        margin: 15px 0 15px 0;
+                        display: flex;
+                        font-size: 13px;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-weight: 400;
+                    }
+                    .find .tab_content .tab_panel .swiper ul li a h4 strong {
+                        padding: 3px 10px 2px 10px ;
+                        border-radius: 13px;
+                        background-color: #21460F;
+                        color: #fff;
+                    }
+                    .find .tab_content .tab_panel .swiper ul li a h4 span {
+                        display: block;
+                        font-size: 15px;
+                        width: calc(100% - 45px);
+                    }
+                    .find .tab_content .tab_panel .swiper ul li a ul li span {
+                        display: block;
+                        width: calc(100% - 42px);
+                    }
+                    
+                    .find .tab_content .tab_panel .swiper ul li a ul li strong {
+                        display: none;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap {
+                        margin: 22px 0 40px 0;
+                        gap: 4px;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap button {
+                        width: 23px;
+                        height: 23px;
+                        border-radius: 50%;
+                        border: 1px solid #3d3d3d;
+                        color: #3d3d3d;
+                        position: relative;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap button::before {
+                        background-size: 23px;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap button.next::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='28' height='27' viewBox='0 0 28 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3061 13.416L10.8071 8.86282C10.6543 8.70799 10.5768 8.51407 10.5745 8.28106C10.5724 8.04824 10.6523 7.85175 10.8142 7.6916C10.9763 7.53162 11.172 7.45233 11.4012 7.45371C11.6305 7.45509 11.8252 7.53673 11.9854 7.69865L16.9494 12.7228C17.0527 12.8275 17.1254 12.9377 17.1674 13.0533C17.2095 13.1689 17.2302 13.2937 17.2294 13.4276C17.2286 13.5615 17.2064 13.686 17.1629 13.8012C17.1195 13.9163 17.0455 14.0256 16.9409 14.129L11.9168 19.093C11.762 19.2458 11.5681 19.3234 11.3351 19.3257C11.1022 19.3278 10.9057 19.2479 10.7456 19.086C10.5856 18.9239 10.5063 18.7282 10.5077 18.4989C10.5091 18.2696 10.5907 18.0749 10.7526 17.9148L15.3061 13.416Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+                    }
+                    
+                    .find .tab_content .tab_panel .btn_wrap .more a {
+                        display: block;
+                        line-height: 22px; /* 그 높이에글자가 위아래로 정렬*/
+                        height: 23px;
+                        padding: 0 25px 0 10px;
+                        border: 1px solid #3d3d3d;
+                        border-radius: 15px;
+                        position: relative;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap .more a::before {
+                        content: "";
+                        left: 26px;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.56217 7.43766H3.64551C3.52155 7.43766 3.41767 7.39571 3.33386 7.31181C3.24996 7.22791 3.20801 7.12398 3.20801 7.00002C3.20801 6.87596 3.24996 6.77208 3.33386 6.68837C3.41767 6.60457 3.52155 6.56266 3.64551 6.56266H6.56217V3.646C6.56217 3.52204 6.60413 3.41816 6.68803 3.33435C6.77193 3.25045 6.87586 3.2085 6.99982 3.2085C7.12388 3.2085 7.22776 3.25045 7.31147 3.33435C7.39527 3.41816 7.43717 3.52204 7.43717 3.646V6.56266H10.3538C10.4778 6.56266 10.5817 6.60461 10.6655 6.68852C10.7494 6.77242 10.7913 6.87635 10.7913 7.00031C10.7913 7.12436 10.7494 7.22825 10.6655 7.31195C10.5817 7.39576 10.4778 7.43766 10.3538 7.43766H7.43717V10.3543C7.43717 10.4783 7.39522 10.5822 7.31132 10.666C7.22742 10.7499 7.12349 10.7918 6.99953 10.7918C6.87547 10.7918 6.77159 10.7499 6.68788 10.666C6.60408 10.5822 6.56217 10.4783 6.56217 10.3543V7.43766Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: 14px;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap .more a:hover {
+                        background-color: #FFE5C3;
+                        border-radius: 30px;
+                    }
+                    .find .tab_content .tab_panel .btn_wrap button:hover::before {
+                        background-color: #FFE5C3;
+                        border-radius: 30px;
+                    }
+}/*media*/
+
+.slogan {
+    margin: 108px 0 0 0;
+    background-color: #F7F7F7;
+    padding: 135px 0 197px 0;
+}
+.slogan  h2 {
+    display: none;
+}
+.slogan .tit {
+    color: #1d1d1d;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+.slogan .tit span {
+    display: inline-block;
+    height: 1em;
+    position: relative; /* before 정렬의 기준*/
+}
+.slogan .tit span::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.slogan .tit .txt01 {
+    width: 2.5em; /* 글자 1개가 들어가는 경우 em */
+}
+.slogan .tit .txt02 {
+    width: 2em;
+}
+.slogan .tit .txt03 {
+    width: 2em;
+}
+.slogan .tit .txt04 {
+    width: 2em;
+}
+.slogan .sub_txt {
+    font-size: 20px;
+    color: #3d3d3d;
+    text-align: center;
+    margin: 24px 0 0 0;
+}
+.slogan .tit span.txt01::before {
+    background-image: url(../images/slogan_1.png);
+    height: 2.5em;
+    bottom: -0.2em;
+}
+.slogan .tit span.txt02::before {
+    background-image: url(../images/slogan_2.png);
+    height: 2.5em;
+    bottom: -0.3em;
+}
+.slogan .tit span.txt03::before {
+    background-image:url(../images/slogan_3.png) ;
+    height: 3em;
+    bottom: -0.4em;
+}
+.slogan .tit span.txt04::before {
+    background-image: url(../images/slogan_4.png);
+    height: 3em;
+    bottom: -0.6em;
+}
+
+@media screen and (max-width:640px){ 
+                .slogan {
+                    margin: 39px 0 0 0;
+                    background-color: #F7F7F7;
+                    padding: 137px 0 126px 0;
+                }
+                .slogan  h2 {
+                    display: none;
+                }
+                .slogan .tit {
+                    color: #1d1d1d;
+                    font-size: 20px;
+                }
+                .slogan .tit br {
+                    display: none;
+                }
+                .slogan .tit span {
+                    display: inline-block;
+                    height: 1em;
+                    position: relative; /* before 정렬의 기준*/
+                }
+                .slogan .tit span::before {
+                    content: "";
+                    position: absolute;
+                    left: 5%;
+                    bottom: 0;
+                    width: 90%;
+                    background-position: bottom center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .slogan .tit .txt01 {
+                    width: 2.5em; /* 글자 1개가 들어가는 경우 em */
+                }
+                .slogan .tit .txt02 {
+                    width: 2em;
+                }
+                .slogan .tit .txt03 {
+                    width: 2em;
+                }
+                .slogan .tit .txt04 {
+                    width: 2em;
+                }
+                .slogan .sub_txt {
+                    font-size: 13px;
+                    color: #3d3d3d;
+                    text-align: center;
+                    margin: 19px 0 0 0;
+                }
+                .slogan .tit span.txt01::before {
+                    background-image: url(../images/slogan_1.png);
+                    height: 2.5em;
+                    bottom: -0.2em;
+                }
+                .slogan .tit span.txt02::before {
+                    background-image: url(../images/slogan_2.png);
+                    height: 2.5em;
+                    bottom: -0.3em;
+                }
+                .slogan .tit span.txt03::before {
+                    background-image:url(../images/slogan_3.png) ;
+                    height: 3em;
+                    bottom: -0.4em;
+                }
+                .slogan .tit span.txt04::before {
+                    background-image: url(../images/slogan_4.png);
+                    height: 3em;
+                    bottom: -0.6em;
+                }
+}/*media*/
 
 footer {
     margin-bottom: 1000px;
