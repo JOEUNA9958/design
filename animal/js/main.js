@@ -31,7 +31,6 @@ $(document).ready(function(){
         $(this).hide() //stop버튼 숨김
         $('.visual .btn_wrap .paly').show() //play 나타남
     })
-
     $('.visual .btn_wrap .paly').on('click' , function(){
         // console.log('시작 버튼 누름')
         visual_swiper.autoplay.start();  /* 재생 기능 */
@@ -42,7 +41,7 @@ $(document).ready(function(){
     /********** pc인지 mobile인지 구분 (시작) **********/
     function device_chk(){
         window_w = $(window).width()
-        if(window_w > 640){
+        if(window_w > 1200){
             device_status = 'pc'
         }else{
             device_status = 'mobile'
@@ -193,7 +192,12 @@ $(document).ready(function(){
         slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            641: {    /* 1300px 이상일때 적용 */
+
+            641: {    /* 1000~ 641px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1001: {    /* 1001px 이상일때 적용 */
                 slidesPerView: 4,
                 spaceBetween: 24,
             },
@@ -212,6 +216,10 @@ $(document).ready(function(){
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
             641: {    /* 1300px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1001: {    /* 1001px 이상일때 적용 */
                 slidesPerView: 4,
                 spaceBetween: 24,
             },
@@ -243,6 +251,48 @@ $(document).ready(function(){
         $('.find .tab_content').find('[data-tab="'+tab_name+'"]').addClass('active')
     })
 
+    /*** 입양 swiper 팝업 시작 ****/
 
+    const adopt_swiper = new Swiper('.adopt .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            641: {    /* 641px~ 1000 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+            1001: {    /*1300~  1001px 이상일때 적용 */
+                slidesPerView: 5,
+                spaceBetween: 24,
+            },
+            1301: {    /* 1300px 이상일때 적용 */
+                slidesPerView: 6,
+                spaceBetween: 24,
+            },
+        },
+        centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.adopt .btn_wrap .next',
+            prevEl: '.adopt .btn_wrap .prev',
+        },
+    });
+    /*** 입양 swiper 팝업 끝 ****/
 
+    const review_swiper = new Swiper('.review .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            641: {    /* 641px ~1001px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1001: {    /* 1001px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+    });
+    
 })
