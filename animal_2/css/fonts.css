@@ -1,0 +1,14 @@
+
+/*웹폰트파일을 이용해서 웹폰트 이름과 두께 등을 선언*/
+@font-face {
+	font-family: 'BMJUA';
+	font-weight: 400;
+	font-display: swap;
+	src:  url(../fonts/BMJUA_otf.otf) format('woff2');
+}
+@font-face {
+	font-family: 'BMJUA';
+	font-weight: 400;
+	font-display: swap;
+	src:  url(../fonts/BMJUA_ttf.ttf) format('woff2');
+}
