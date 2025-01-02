@@ -6,7 +6,7 @@
 body, html {
     font-family: "Montserrat", "Pretendard","맑은고딕", sans-serif ; /*sans-serif 고딕서체 */
     /* 먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글어 지원 안됌, 그럼 자동으로 두번째 폰트로 표시됨 */
-    font-size: 17px;
+    font-size: var(--base-font-size);
     font-weight: 400;
     color: #555;
     line-height: 1.4; /*배수 - 글자크기에 몇배 */
@@ -36,20 +36,25 @@ body, html {
                     /* 원래 너 하던대로해 - block요소 - 감싸는 요소의 넓이의 100% - 100%주면 margin과 충돌 그래서 auto*/
                     margin: 0 20px; 
                 }
-                body, html {
-                    font-size: 16px;
-                }
 }
-@media screen and (max-width:1000px){ 
-                body, html {
-                    font-size: 15px;
-                }
-}
-@media screen and (max-width:640px){ 
-                /* 브라우저 넓이기준 640px이하에서만 실행*/
-                body, html {
-                    font-size: 13px;
-                }
-                
-}/*media*/
 
+:root {
+    --base-font-size: 17px;
+    --header-h: 100px;
+}
+@media screen and (max-width:1300px){ 
+    :root {
+        --base-font-size: 16px;
+    }
+}
+@media screen and (max-width:1000px){
+    :root {
+        --base-font-size: 15px;
+    }
+}
+@media screen and (max-width:768px){ 
+    :root {
+        --base-font-size: 13px;
+        --header-h: 56px;
+    }
+}
