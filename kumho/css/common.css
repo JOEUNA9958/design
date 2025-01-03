@@ -41,6 +41,8 @@ body, html {
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
+    --header-depth2-h: 292px;
+    --main_color: #EB2020;
 }
 @media screen and (max-width:1300px){ 
     :root {

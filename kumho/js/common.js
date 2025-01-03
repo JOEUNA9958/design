@@ -7,6 +7,8 @@
 $(document).ready(function(){
     let scrolling = 0 //현재 스크롤 된 값
     let prev_scroll // 이전에 스크롤 된 값
+    let window_w //브라우저 넓이 
+    let device_status //pc , 모바일이냐 상태 체크 저장 
 
     /******header에.fixed랑.scroll_down 추가 시작  ****
     * 스크롤이 1이라도 되면 fixed 클래스 추가
@@ -25,10 +27,10 @@ $(document).ready(function(){
             $('header').addClass('fixed')
             if((prev_scroll - scrolling) < 0){
                 $('header').addClass('scroll_down')
-                console.log('내려가고 있어')
+                // console.log('내려가고 있어')
             }else{
                 $('header').removeClass('scroll_down')
-                console.log('올라가고 있어')
+                // console.log('올라가고 있어')
             }
         }else{
             $('header').removeClass('fixed')
@@ -44,6 +46,109 @@ $(document).ready(function(){
         scroll_chk() // 함수실행
     })
 
+     /****************header.fixed.scroll_down 추가 종료  *****************/
+
+      /**pc 버전 메뉴에 마우스 오버 / 시작  **
+       * header .gnb_wrap ul.depth1 > li에 마우스를 올리면
+       * header에는 menu_pc 클래스 추가
+       * 1차 메뉴 li에는 over 클래스 추가
+       * pc 버전일때만 구현 
+       * **/
+
+    function resize_chk(){
+        window_w = $(window).width()
+        if(window_w > 1000){
+            device_status = 'pc'
+        }else{
+            device_status = 'mobile'
+        }
+        // console.log(device_status)
+    }
+    resize_chk() // 실행 - 문서가 로딩된 이후 1번 실행 
+    $(window).resize(function(){ //브라우저가 리사이즈 할때마다
+        resize_chk() //실행
+    })
+
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
+        if(device_status == 'pc'){
+            $('header').addClass('menu_pc')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+            $(this).addClass('over')
+        }
+    })
+    $('header').on('mouseleave', function(){
+        $('header').removeClass('menu_pc')
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
+    // 메뉴 다음에 존재하는 링크에 포커스가 되었을때 메뉴를 아웃시킴
+    $('header .global').on('focusin' , function(){
+        $('header').removeClass('menu_pc')
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
+      /**pc 버전 메뉴에 마우스 오버 / 시작 **/
+
+    /******** 언어 선택 열기 *********/       
+    /**header .global에 open 클래스 추가
+     * header .global  button에서 title명을 바꿔줘야함
+     * 1번 클릭하면 열리고 다시 클릭하면 닫힘 
+     * header .global 을 클릭했을때
+     * header .global에 open 클래스가 있는지 체크
+     *      */
+    $('header .global').on('click', function(){
+        if(device_status == 'pc'){
+            if($(this).hasClass('open') == true){ //열려있는 상태
+                // console.log('열린상태')
+                $(this).removeClass('open')
+                $(this).find('button').attr('title', '언어선택 열기 버튼')
+            }else{
+                // console.log('닫힌상태')
+                $(this).addClass('open')
+                $(this).find('button').attr('title', '언어선택 닫기 버튼')
+            }
+        }
+    })
+    /******** 언어 선택 닫기 *********/      
+
+    /******** 모바일 2차 메뉴 열고 닫기 시작  *********
+     * header .gnb .gnb_wrap ul.depth1 > li > a 를 클릭했을때
+     * 1. 클릭 이벤트를삭제 (페이지 이동 막기 )
+     * 1차 메뉴 li에 open 클래스를 추가하거나 삭제 
+     * >> 열려있으면 닫고, 닫혀있으면 (다른애들을 모두 닫고 나만 열기)
+     * /
+
+    
+    /******** 모바일 2차 메뉴 열고 닫기  *********/
+
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault(); //a의 클릭 막기
+            if($(this).parent().hasClass('open') == true){ // open이 있으면 
+                $(this).parent().removeClass('open')
+                // $(this).next().slideUp()
+                // console.log('open있어요, 열려있어요')
+            }else{
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $(this).parent().addClass('open')
+                // $(this).next().slideDown()
+                // console.log('open없어요, 닫혀있어요')
+            }
+        }
+    })
+
+    /******** 모바일 메뉴 열기 닫기 *
+     * header .gnb .gnb_open >> 클릭하면 열리고 header에 menu_mo 클래스 추가 
+     * header .gnb .gnb_close >>클릭하면 닫힘 header에 menu_mo 클래스 삭제
+     * 
+     * 
+     * **/
+
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_mo')
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_mo')
+    })
+
 })//$(document).ready
 
-    /******header.fixed.scroll_down 추가 종료  ******/
+   
