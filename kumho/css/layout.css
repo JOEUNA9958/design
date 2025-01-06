@@ -263,7 +263,9 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     background-color: #fff;
                 }
                 header.menu_pc .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-                    display: block; /* 나타남 */
+                    display: block !important; 
+                    /* 2차메뉴를 모바일에서 jquery로 slide 효과를 줘서 style =display: none; 이라고 써놓는 경우,
+                    일반적인 css보다 우선순위가 높음. 그래서 css에서 !important를 주면 우선위를 높일수 있음  */
                 }
 }/*media*/
 
@@ -331,14 +333,13 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     background-size: contain;
                 }
                 header  .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
-                    /* display: none; 숨김 */
-                    overflow: hidden;
-                    height: 0;
+                    display: none;
+                    /* overflow: hidden;
+                    height: 0; */
                     background-color: var(--main_color);
                     color: #fff;
                     font-size: 1.3077rem;
-                    transition: height 0.5s;
-                    /* padding: 1.0588em 0 1.375em 1.3529em ; */
+                    padding: 1.0588em 0 1.375em 1.3529em ;
                 }
                 header  .gnb .gnb_wrap ul.depth1 > li ul.depth2 > li > a {
                     display: block;
@@ -354,7 +355,7 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                 }
                 header  .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
                     /* display: block; 나타남 */ /*2차안열림*/
-                    height: 200px;
+                    /* height: 200px; */
                 }
                 header .gnb .gnb_close {
                     /* display: none;  숨김 */

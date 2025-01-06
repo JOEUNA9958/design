@@ -122,20 +122,23 @@ $(document).ready(function(){
     $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
         if(device_status == 'mobile'){
             e.preventDefault(); //a의 클릭 막기
-            if($(this).parent().hasClass('open') == true){ // open이 있으면 
+            if($(this).parent().hasClass('open') == true){ // open이 있으면 (닫아야함)
                 $(this).parent().removeClass('open')
-                // $(this).next().slideUp()
-                // console.log('open있어요, 열려있어요')
-            }else{
+                $(this).next().slideUp()
+                /*
+                    <a></a> ----$(this)
+                    <ul class = "depth2"></ul> -----$(this).next()로 선택가능 >
+                */
+            }else{ //open 이 없으면 (열기)
                 $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2').slideUp()
                 $(this).parent().addClass('open')
-                // $(this).next().slideDown()
-                // console.log('open없어요, 닫혀있어요')
+                $(this).next().slideDown()
             }
         }
     })
 
-    /******** 모바일 메뉴 열기 닫기 *
+    /******** 모바일 메뉴 열기 닫기 시작 *
      * header .gnb .gnb_open >> 클릭하면 열리고 header에 menu_mo 클래스 추가 
      * header .gnb .gnb_close >>클릭하면 닫힘 header에 menu_mo 클래스 삭제
      * 
