@@ -66,7 +66,6 @@ header.fixed,header.menu_pc  {
     color: #1d1d1d;
     border-bottom: 1px solid rgba(216, 216, 216, 0.5);
     transition: 0.3s;
-
 }
 header.fixed.scroll_down, header.menu_pc.scroll_down  {
     transform: translateY(-100%);
@@ -522,7 +521,7 @@ footer .family_site.open button::after {
    transform: rotate(180deg);
 }
 footer .f_nav {
-    margin: 5.5294em 0 2.3529em 0;
+    margin:0 0 2.3529em 0;
 }
 footer .f_nav ul {
     display: flex;
