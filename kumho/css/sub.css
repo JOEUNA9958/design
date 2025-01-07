@@ -31,20 +31,20 @@
                     color: #fff;
                 }
 }
-@media screen and (max-width:1000px){ 
-    header .gnb .gnb_wrap ul.depth1 > li.active > a {
-        color: var(--main_color);
-        font-weight: 700;
-        font-size: 1.5385rem;
-    }
-    header .gnb .gnb_wrap ul.depth1 > li.active  ul.depth2 {
-        display: block;
-    }
-    header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
-        font-weight: 700;
-        text-decoration: underline;
-    }
+@media screen and (max-width:1000px){  /* 1000px 이하일때만*/
+                header .gnb .gnb_wrap ul.depth1 > li.active > a {
+                    color: var(--main_color);
+                    font-weight: 700;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li.active  ul.depth2 {
+                    display: block;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
 }
+
 .sub_visual {
     height: 29.3529em;
     background: url(../images/sub/sub_visual01.jpg) no-repeat center center / cover;
