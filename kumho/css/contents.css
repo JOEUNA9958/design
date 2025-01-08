@@ -2,3 +2,66 @@
     contents.css
     콘텐츠 페이지 (인사말, 연력, 찾아오시는길) 스타일 저장
 */
+
+/*회사소개 > ceo */
+.cnt_ceo .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.cnt_ceo .inner h2 {
+    font-size: 2.0588rem;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 2.0em 0 0.8571em 0;
+}
+.cnt_ceo .sign {
+    display: flex;
+}
+.cnt_ceo .sign strong{
+    color: #1d1d1d;
+    font-size: 1.1765rem;
+    margin: 1em 1em 8em 0;
+}
+.cnt_ceo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cnt_ceo .photo  { /*왼쪽 사진*/
+    width: 51.03%;
+}
+.cnt_ceo .inner { /* 오른쪽 글자 */
+    width: 44.52%;
+}
+
+@media screen and (max-width:1000px){
+                .cnt_ceo .wrapper {
+                    display: block;
+                }
+                .cnt_ceo .inner h2 {
+                    font-size: 1.9231rem;
+                    font-weight: 700;
+                    color: #1d1d1d;
+                    margin: 0.8em 0  0.8em 0;
+                }
+                .cnt_ceo .sign {
+                    display: flex;
+                    margin: 1.5em 0 0 0;
+                }
+                .cnt_ceo .sign strong {
+                    color: #1d1d1d;
+                    font-size: 1.1538em;
+                } 
+                .cnt_ceo .photo img {
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .cnt_ceo .photo  { /*왼쪽 사진*/
+                    width: auto;
+                }
+                .cnt_ceo .inner { /* 오른쪽 글자 */
+                    width: auto;
+                }
+}
