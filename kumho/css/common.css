@@ -38,6 +38,15 @@ body, html {
                 }
 }
 
+::selection {
+    background-color:var(--main_color) ;
+    color: #fff;
+}
+::-moz-selection {
+    background-color:var(--main_color);
+    color: #fff;
+}
+
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
