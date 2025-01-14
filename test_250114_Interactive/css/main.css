@@ -1,0 +1,131 @@
+@import url(default.css); /* default.css 브라우저가 태그에 주는 기본스타일을 모두 초기화*/
+@import url(fonts.css); /* main.css 메인페이지에만 적용되는 스타일 입력, 다른 css import */
+@import url(common.css); /* 글자의 기본 스타일 및 wrapper 설정 */
+@import url(layout.css); /* layout.css header / footer 모든 페이지의 공통 스타일 적용*/
+
+.txt_ani {
+    margin: 200px 0 500px ; 
+}
+.txt_ani .txt_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_ani .txt_wrap .row {
+    font-size: 3vw;
+    font-weight: 700;
+    color: #ededed;
+    white-space: nowrap; 
+    position: relative; /* span */
+}
+.txt_ani .txt_wrap .row span {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    animation-name: txt_ani;
+    animation-duration: 2s;
+    animation-iteration-count: 1; /* 1번 실행 */
+    animation-fill-mode: forwards; /* 종료 후 유지 */
+}
+.txt_ani .txt_wrap .row:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+.txt_ani .txt_wrap .row:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+@keyframes txt_ani {
+    0% {width: 0; }
+    100% { width: 100%; }
+}
+
+.txt_slide .txt_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_slide .txt_wrap .row {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ededed;
+    position: relative; /* span */
+    white-space: nowrap;   
+}
+.txt_slide .txt_wrap .row span {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+@media screen and (max-width:1300px){ 
+        .txt_slide .txt_wrap .row {
+            font-size: 5vw;
+        }
+} /*media*/
+
+
+.photo_resize {
+    margin: 150px 0 0 0 ;
+}
+.photo_resize .photo {
+    overflow: hidden;
+    height: 330px;
+    width: 50%;
+    margin: 0 auto;
+}
+.photo_resize .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bg_fixde {
+    margin: 500px 0 0 0;
+    background: url(../images/bg_fixde.jpg) no-repeat  center center / cover ;  
+    background-attachment: fixed; /* 이미지가 엄청 커야함 1920 - 1080 사이즈 */
+    height: 700px; 
+}
+.bg_fixde h2 {
+    padding:  115px 0 0 0;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.bg_change {
+    margin: 300px 0 0 0;
+}
+.bg_change.black {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.bg_change .video_fit .tit {
+    padding: 130px 0 120px 0;
+}
+.bg_change .video_fit .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px 0 ;
+}
+.bg_change .video_fit .video_wrap {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bg_change .video_fit .video_wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+body {
+    margin: 0 0 100vh 0 ;
+}
