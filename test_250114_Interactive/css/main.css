@@ -98,13 +98,10 @@
 }
 .bg_change {
     margin: 300px 0 0 0;
-}
-.bg_change.black {
-    background-color: #1d1d1d;
-    color: #fff;
+    transition: 0.5s;
 }
 .bg_change .video_fit .tit {
-    padding: 130px 0 120px 0;
+    padding: 130px 0 0 0;
 }
 .bg_change .video_fit .tit h2 {
     color: #1d1d1d;
@@ -112,17 +109,151 @@
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px 0 ;
+    transition: color 0.5s;
 }
-.bg_change .video_fit .video_wrap {
-    width: 80%;
-    max-width: 1024px;
-    margin: 0 auto;
+.bg_change .video_fit .video_area {
+    height: 200vh;
+    position: relative; /* video_wrap */
+}
+.bg_change .video_fit .video_area .video_wrap {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.bg_change .video_fit .video_area[data-status="before"] .video_wrap {
+    position: absolute; /* video_area */
+    top: 0;
+}
+.bg_change .video_fit .video_area[data-status="fixde"] .video_wrap {
+    position: fixed;
+    top: 0;
+}
+.bg_change .video_fit .video_area[data-status="after"] .video_wrap {
+    position: absolute; 
+    bottom: 0;
+}
+.bg_change .video_fit .video_area .video_wrap .video_inner {
     overflow: hidden;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /*.video_wrap 영역의 좌우에 가운데, 위아래 가운데*/
+    width: 80%;
+    height: 80%;
+    transition: 0.2s;
 }
-.bg_change .video_fit .video_wrap video {
+.bg_change .video_fit .video_area .video_wrap .video_inner video {
+    /* video 태그는 이미지랑 조금 비슷함 */
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* 검은색 배경으로 변경되었을때 */
+.bg_change.black {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.bg_change.black .video_fit .tit h2 {
+    color: #fff;
+}
+
+@media screen and (max-width:1300px){ 
+    .txt_ani .txt_wrap .row {
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width:1000px){ 
+    .bg_fixde h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.scroll_event {
+    padding : 300px 0 150px 0;
+}
+.scroll_event .event_wrap {
+    position: relative; /* h2 정렬의 기준 */
+    display: flex;
+    justify-content: flex-end;
+}
+.scroll_event .event_wrap h2 {
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+    font-size: 8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    transform: 0.2s;
+}
+.scroll_event .event_wrap .photo {
+    overflow: hidden;
+    border-radius: 1.2em;
+    max-width: 42.6471em;
+    width: 100%;
+    height: 23.7647em;
+}
+.scroll_event .event_wrap .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:640px){ 
+        .scroll_event .event_wrap h2 {
+            font-size: 4rem;
+        }
+}
+
+.book.best{
+    margin: 15em 0 0 0;
+}
+.book .list,
+.best .list {
+    position: relative; 
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+
+.book .list .popup .popup_wrap .popup_item,
+.best .list  .swiper ul li a { /* 팝업 1개 */
+    width: 10.5882em;
+    margin-right: 24px;
+}
+.book .list .popup .popup_wrap .popup_item a,
+.best .list  .swiper .swiper-wrapper .swiper-slide a {
+    display: block;
+}
+.book .list .popup .popup_wrap .popup_item a .photo,
+.best .list  .swiper ul li a .photo  {
+    overflow: hidden;
+    height: 11em;
+    border-radius: 0.3em;
+}
+.book .list .popup .popup_wrap .popup_item a .photo img,
+.best .list  .swiper ul li a  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book .list .popup .popup_wrap .popup_item a h2,
+.best .list  .swiper ul li a h2 {
+    margin: 0.5em 0 0 0;
+    font-size:1.4706rem ;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.book .list .popup .popup_wrap .popup_item a span,
+.best .list  .swiper ul li a  a span {
+    display: none; /*안보임*/
+    margin: 0.9em 0 0 0;
+}
+
+@media screen and (max-width:1300px){ 
+    .book .list {
+        left: 20px;
+        width: calc(100% - 20px);
+    }
 }
 
 
