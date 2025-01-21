@@ -273,6 +273,7 @@ header .logo a {
             height: calc(100dvh - var(--header-h));
             overflow-y: auto;
             background-color: #fff;
+            color: #1d1d1d;
         }
         header .tnb {
             position: absolute; /* header 기준으로 정렬 */
