@@ -50,17 +50,19 @@ body, html {
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
-    --main_color: #127C82;
-    --sub_color: #24235F;
+    --main-color: #127C82;
+    --sub-color: #24235F;
+    --section-min-height: 700px;
 }
 @media screen and (max-width:1300px){ 
     :root {
         --base-font-size: 16px;
     }
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:1024px){
     :root {
         --base-font-size: 15px;
+        --section-min-height:500px; /* 나중에 0으로 바꿀꺼야*/
     }
 }
 @media screen and (max-width:768px){ 
