@@ -23,10 +23,11 @@
     <div id="wrap">
         <!--메뉴에 마우스를 올리면 : menu_pc
             모바일에서 메뉴를 클릭해서 열면 : menu_mo
-            배경이 흰색이라 header의 글씨가 검은색으로 바뀌어야할때 : dark 클래스추가 -->
-        <header class="menu_mo">
+            배경이 흰색이라 header의 글씨가 검은색으로 바뀌어야할때 : dark 클래스추가
+            모바일에서 조금이라도 스크롤 되면 header에 fixde  -->
+        <header class="fixde">
             <h1 class="logo"><a href="index.html">생명의숲 forest for life</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_nav">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
@@ -88,7 +89,7 @@
         </header>
         <div id="fullpage">
             <section class="visual section fp-auto-height-responsive"> 
-                <h2>팝업</h2>
+                <h2 id="skip_content">팝업</h2>
                 <!--fp-auto-height-responsive 모바일에서 콘텐츠의 높이를 브라우저-->
                 <div class="swiper"> 
                     <ul class="swiper-wrapper"> 
@@ -101,11 +102,11 @@
                             <div class="visual_txt">
                                 <h3>생명의숲은 숲을 통해 사회문제를 해결하고,<br>
                                     거리의 숲을 만들기를 꿈꿉니다.</h3>
-                                <p>모두가 누리는 5분 거리의 숲</p>
+                                <p>#모두가 누리는 #5분 거리의 숲</p>
                             </div><!--visual_txt-->
                         </li> 
                         <li class="swiper-slide">
-                            <div class="photo"> <img src="images/main/visual02.jpg" alt=""></div><!--photo-->
+                            <div class="photo"> <img src="images/main/visual3.jpg" alt=""></div><!--photo-->
                             <div class="visual_txt">
                                 <h3>기념하고 싶은 날! 서울 곳곳에 <br>
                                     나무 한그루 심어보는 건 어떠세요?</h3>
@@ -113,11 +114,10 @@
                             </div><!--visual_txt-->
                         </li> 
                         <li class="swiper-slide">
-                            <div class="photo"> <img src="images/main/visual03.jpg" alt=""></div><!--photo-->
+                            <div class="photo"> <img src="images/main/visual4.jpg" alt=""></div><!--photo-->
                             <div class="visual_txt">
-                                <h3>우리가 지켜야할 <br>
-                                    생명의 숲과 나무 할아버지 이야기</h3>
-                                <p>고목나무 이야기</p>
+                                <h3>생명의숲과 나무 할아버지 박상진교수의<br> 우리가 지켜야할 고목나무이야기</h3>
+                                <p>#지키자#고목나무</p>
                             </div><!--visual_txt-->
                         </li> 
                         <li class="swiper-slide">
@@ -129,7 +129,7 @@
                             </div><!--visual_txt-->
                         </li> 
                     </ul>
-                    <div class="swiper-pagination"></div>
+                    <div class="paging"></div>
                 </div><!--swiper-->
             </section>
             <section class="tree section fp-auto-height-responsive"> 
@@ -141,18 +141,28 @@
             <section class="story section fp-auto-height-responsive"> 
                 story
             </section>
+
             <footer class="section fp-auto-height"><!-- fp-auto-height 높이제한-->
                 footer
             </footer>
         </div><!--fullpage-->
-        <nav class="quick_nav">
+        <div class="quick_link">
+            <ul>
+                <li class="link1"><a href="#n"><span>마이트리</span></a></li>
+                <li class="link2"><a href="#n"><span>해피빈</span></a></li>
+                <li class="link3"><a href="#n"><span>같이가치</span></a></li>
+            </ul>
+            <button class="top"><span>TOP</span></button>
+        </div><!--quick_link-->
+        <!--배경이 흰색이라 글자가 검은색으로 들어갈때 dark 클래스 추가 -->
+        <nav class="quick_nav dark">
             <ul>
                 <li><a href="#main"><span>Main</span></a></li>
                 <li><a href="#tree"><span>나무심기</span></a></li>
                 <li><a href="#introduce"><span>숲 활동</span></a></li>
-                <li><a href="#story"><span>활동이야기</span></a></li>
+                <li class="active"><a href="#story"><span>활동이야기</span></a></li>
             </ul>
-        </nav><!--quick_nav-->
+        </nav> 
     </div><!--wrap-->
 </body>
 </html>
