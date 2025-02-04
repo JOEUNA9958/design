@@ -4,11 +4,11 @@
 */
 
 body, html {
-    font-family: "Paperlogy", "Pretendard","맑은고딕", sans-serif ; /*sans-serif 고딕서체 */
+    font-family:"Pretendard",'Gmarket Sans',"맑은고딕", sans-serif ; /*sans-serif 고딕서체 */
     /* 먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글어 지원 안됌, 그럼 자동으로 두번째 폰트로 표시됨 */
     font-size: var(--base-font-size);
     font-weight: 400;
-    color: #555;
+    color: #3d3d3d;
     line-height: 1.4; /*배수 - 글자크기에 몇배 */
     letter-spacing: 0; /* 자간 */
     word-break: keep-all; /*단어별로 (여백기준) 줄바꿈*/
@@ -39,33 +39,31 @@ body, html {
 }
 
 ::selection {
-    background-color:#72FAFA ;
+    background-color:var(--main_color) ;
     color: #fff;
 }
 ::-moz-selection {
-    background-color:#72FAFA;
+    background-color:var(--main_color);
     color: #fff;
 }
 
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
-    --main-color: #127C82;
-    --sub-color: #24235F;
-    --section-min-height: 700px;
+    --header-depth2-h: 369px;
+    --main_color: #01875F;
 }
 @media screen and (max-width:1300px){ 
     :root {
         --base-font-size: 16px;
     }
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1000px){
     :root {
         --base-font-size: 15px;
-        --section-min-height: 0; /* 나중에 0으로 바꿀꺼야*/
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:768px){ 
     :root {
         --base-font-size: 13px;
         --header-h: 56px;

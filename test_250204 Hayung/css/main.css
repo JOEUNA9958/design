@@ -1,0 +1,107 @@
+@import url(default.css); /* default.css 브라우저가 태그에 주는 기본스타일을 모두 초기화*/
+@import url(fonts.css); /* main.css 메인페이지에만 적용되는 스타일 입력, 다른 css import */
+@import url(common.css); /* 글자의 기본 스타일 및 wrapper 설정 */
+@import url(layout.css); /* layout.css header / footer 모든 페이지의 공통 스타일 적용*/
+
+.visual {
+    position: relative;
+}
+.visual  .senile {
+    position: absolute;
+    left: 0;
+    top: 0 ;
+    z-index: 10;
+    width: 479px;
+    height: 186px;
+    margin:  736px 0 0 0;
+    color: #1d1d1d;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+.visual .senile .tit h2,
+.visual .senile .list h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 37px 0 19px 0;
+
+
+}
+.visual .senile .tit span,
+.visual .senile .list span  {
+    font-size: 17px;
+    color: #989898;
+}
+.visual .swiper ul li {
+    position: relative;
+}
+.visual .swiper ul li .photo {
+    overflow: hidden;
+    height: 919px;
+}
+.visual .swiper ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .swiper ul li .visual_txt {
+    position: absolute; /* */
+    left: 0;
+    width: 100%;
+    top: 354px;
+}
+.visual .swiper ul li .visual_txt  h3 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    padding: 0 0 15px 0;
+}
+.visual .swiper ul li .visual_txt p {
+    color: rgba(255, 255, 255, 0.7);
+}
+.visual .btn_prev {
+    position: absolute; /* swiper*/
+    left: 20px;
+    top: 539px;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .btn_prev::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 34px;
+    height: 69px;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='70' viewBox='0 0 35 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.08333 34.6307L33.5833 61.4248C34.4167 62.3362 34.8194 63.3994 34.7917 64.6146C34.7639 65.8297 34.3333 66.893 33.5 67.8044C32.6667 68.7157 31.6944 69.1714 30.5833 69.1714C29.4722 69.1714 28.5 68.7157 27.6667 67.8044L2 39.8255C1.33333 39.0964 0.833333 38.2762 0.5 37.3648C0.166667 36.4534 0 35.5421 0 34.6307C0 33.7193 0.166667 32.808 0.5 31.8966C0.833333 30.9852 1.33333 30.165 2 29.4359L27.6667 1.36592C28.5 0.454553 29.4861 0.0140599 30.625 0.0444387C31.7639 0.0748175 32.75 0.545689 33.5833 1.45705C34.4167 2.36842 34.8333 3.43168 34.8333 4.64683C34.8333 5.86198 34.4167 6.92524 33.5833 7.8366L9.08333 34.6307Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .btn_next {
+    position: absolute;
+    right: 50px;
+    top: 539px;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+}
+.visual .btn_next::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 34px;
+    height: 69px;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='70' viewBox='0 0 36 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.7468 34.3247L1.80632 8.02112C0.958002 7.12644 0.537653 6.07135 0.545269 4.85585C0.552885 3.64034 0.965732 2.56872 1.78381 1.64097C2.60189 0.713224 3.56639 0.238327 4.67732 0.216283C5.78825 0.194238 6.76787 0.630556 7.61618 1.52524L33.7427 28.9903C34.4214 29.706 34.9349 30.5162 35.2833 31.4208C35.6317 32.3254 35.8135 33.2333 35.8286 34.1445C35.8437 35.0557 35.6922 35.9702 35.374 36.8881C35.0559 37.8059 34.5696 38.6359 33.9151 39.3781L8.71828 67.9527C7.9002 68.8805 6.92156 69.3405 5.78236 69.3327C4.64315 69.3249 3.64939 68.8737 2.80108 67.979C1.95276 67.0843 1.51853 66.0295 1.49837 64.8146C1.47821 63.5996 1.87717 62.5283 2.69525 61.6005L26.7468 34.3247Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
