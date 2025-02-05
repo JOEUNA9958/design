@@ -9,12 +9,11 @@
 }
 .visual .senile {
     position: absolute;
-    left: 0;
-    top: 0 ;
+    right: 0;
+    bottom: 0 ;
     z-index: 10;
     width: 958px;
     height: 186px;
-    margin:  736px 0 0 962px;
     color: #1d1d1d;
     background-color: #fff;
     display: flex;
@@ -134,33 +133,7 @@
     background-size: contain;
 }
 /*.visual 끝*/
-@media screen and (max-width:1200px){
-    .visual .swiper ul li .visual_txt  h3 {
-        font-size: 45px;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #fff;
-        padding: 0 0 5px 30px;
-    }
-    .visual .swiper ul li .visual_txt p {
-        color: rgba(255, 255, 255, 0.7);
-        padding: 0 0  0 30px ;
-    }
-    .service .tit strong {
-        font-size: 15px;
-        color: #858585;
-        padding: 0 0 0 309px;
-    }
-    .service .tit h3 {
-        font-size: 45px;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #1d1d1d;
-        padding: 0 0 0 309px;
-        margin: 10px 0 0 0;
-    }
 
-}
 /*service 시작*/
 .service {
     padding: 141px 0 200px;
@@ -287,4 +260,110 @@
 .banner .inner .more .span {
     border: 1px solid #fff;
     padding: 15px 130px 15px 14px ; 
+}
+/* .banner 종료*/
+
+/* gallery 시작 */
+.gallery {
+    padding: 140px 0 170px;
+}
+.gallery .wrapper {
+    text-align: center;
+}
+.gallery .wrapper .tit h3 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    align-items: center;
+}
+.gallery .wrapper .tit p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #858585;
+    margin: 15px 0 70px 0;
+}
+
+@media screen and (max-width:1200px){
+            .visual .swiper ul li .visual_txt  h3 {
+                font-size: 45px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #fff;
+                padding: 0 0 5px 30px;
+            }
+            .visual .swiper ul li .visual_txt p {
+                color: rgba(255, 255, 255, 0.7);
+                padding: 0 0  0 30px ;
+            }
+            .service .tit strong {
+                font-size: 15px;
+                color: #858585;
+                padding: 0 0 0 309px;
+            }
+            .service .tit h3 {
+                font-size: 45px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #1d1d1d;
+                padding: 0 0 0 309px;
+                margin: 10px 0 0 0;
+            }
+}
+
+/*.communtiy 시작*/
+.communtiy {
+    padding: 145px 0 270px 0;
+    background-color: #F7F9FA;
+    position: relative;
+}
+.communtiy .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.communtiy .wrapper .tit h3 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.communtiy .wrapper .tit p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #858585;
+    margin: 15px 0 0 0 ;
+}
+.communtiy .wrapper .list h3 {
+    font-size: 17px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 0 0 7px 0;
+}
+.communtiy .wrapper .list ul li strong {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1d1d1d;
+    border-bottom: 1px solid #1d1d1d;
+}
+.communtiy .wrapper .list ul li span {
+    font-size: 35px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.communtiy .wrapper .list .off {
+    font-size: 17px;
+    color: #858585;
+    margin: 16px 0 0 0;
+}
+
+.communtiy .inner .more {
+    display: flex;
+    align-items: center;
+    color: #1d1d1d;
+    font-size: 17px;
+    font-weight: 400;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
