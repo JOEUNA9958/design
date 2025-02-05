@@ -6,7 +6,7 @@ $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
         // autoplay: {  /* 팝업 자동 실행 */
-        //     delay: 2500,
+        //     delay: 5000,
         //     disableOnInteraction: true,
         // },
 
