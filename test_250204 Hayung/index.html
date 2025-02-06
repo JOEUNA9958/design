@@ -30,7 +30,7 @@
             모바일에서 메뉴를 열었을때 : menu_mo
             검색을 클릭했을때 (pc/mobile 공통) : sch_open
         -->
-        <header>
+        <header> 
             <h1 class="logo"><a href="index.html">하융노인요양센터</a></h1>
             <nav class="gnb" id="skip_nav">
                 <button class="gnb_open">메뉴열기</button>
@@ -80,32 +80,19 @@
             </nav><!--gnb-->
             <div class="tnb">
                 <div class="search">
-                    <button class="search_open" title="검색열기">검색</button>
-                    <div class="search_wrap">
-                        <h2>검색어를 입력해주세요</h2>
-                        <div class="search_area">
-                            <form>
-                                <fieldset>
-                                    <div class="inner">
-                                        <legend>검색</legend>
-                                        <label for="keyword">검색어입력</label>
-                                        <input type="text" id="keyword" class="keyword"> <!--검색어 입력창-->
-                                        <input type="submit" class="btn"> <!-- 검색버튼 -->
-                                    </div><!--inner-->
-                                </fieldset>
-                            </form>
-                        </div><!--search_area-->
-                    <button class="search_close">검색닫기</button>
-                    </div><!--search_wrap-->
+                    <div class="search_area">
+                        <form>
+                            <fieldset>
+                                <legend>검색</legend>
+                                <div class="inner">
+                                    <label for="keyword">검색어입력</label>
+                                    <input type="text" id="keyword" class="keyword" placeholder="검색어를입력해주세요"> <!--검색어 입력창-->
+                                    <input type="submit" class="btn"> <!-- 검색버튼 -->
+                                </div><!--inner-->
+                            </fieldset>
+                        </form>
+                    </div><!--search_area-->
                 </div><!--search-->
-                <div class="global">
-                        <button title="언어선택 열기버튼">한국어</button>
-                        <div class="list">
-                            <ul>
-                                <li class="active"><a href="#n">한국어</a></li>
-                            </ul>
-                        </div>
-                </div><!--global-->
             </div><!--tnb-->
         </header>
 
@@ -304,22 +291,30 @@
         </main>
 
         <footer>
-            <div class="wrapper"> 
-                <div class="list">
-                    <div class="f_nav">
-                        <ul>
-                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
-                            <li><a href="">인사말</a></li>
-                            <li><a href="">오시는길</a></li>
-                            <li><a href="">노인장기요양보험</a></li>
-                            <li><a href="">신청절차</a></li>
-                            <li><a href="">방문요양</a></li>
-                        </ul>
-                    </div>
+            <div class="footer-menu "> 
+                <div class="wrapper">
+                    <ul class="f_nav">
+                        <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">오시는길</a></li>
+                        <li><a href="">노인장기요양보험</a></li>
+                        <li><a href="">신청절차</a></li>
+                        <li><a href="">방문요양</a></li>
+                    </ul>
                 </div>
-                <address>주 소 : 충청남도 공주시 먹자2길1 (1, 2층) Tel : 041-960-0064  Fax : 041-960-0065  E-mail : nanyoung2582@daum.net</address>
-                <div class="copyright">Copyright © 하융노인요양센터 All Rights Reserved.</div>
-            </div><!--wrapper-->
+        </footer>
+        <footer class="add">
+             <div class="container">
+                <div class="wrapper">
+                    <address>
+                        <strong>주 소 : 충청남도 공주시 먹자2길1 (1, 2층)</strong>
+                        <strong>Tel : 041-960-0064</strong>
+                        <strong>Fax : 041-960-0065</strong>
+                        <strong> E-mail : nanyoung2582@daum.net</strong>
+                    </address>
+                    <div class="copyright">Copyright © 하융노인요양센터 All Rights Reserved.</div>
+                </div> 
+            </div>
         </footer>
     </div><!--wrap-->
 </body>

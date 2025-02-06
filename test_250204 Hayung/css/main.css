@@ -134,15 +134,34 @@
 }
 /*.visual 끝*/
 
+@media screen and (min-width:1201px){ /* 1201px 이상일때*/
+                .visual .swiper ul li .visual_txt  h3 {
+                    font-size: 45px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    color: #fff;
+                    padding: 0 0 5px 0;
+                }
+}
+@media screen and (max-width:1200px){ /* 이하일때 */
+                .visual .swiper ul li .visual_txt  h3 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    color: #fff;
+                    padding: 0 0 5px 0;
+                }
+}
+
 /*service 시작*/
 .service {
     padding: 141px 0 200px;
+    position: relative;
 }
 .service .wrapper {
     display: flex;
     justify-content: space-between;
     width: 1920px;
-    position: relative;
 }
 .service .tit {
     padding: 100px 0 0 0;
@@ -172,8 +191,6 @@
 }
 .service .list ul li a .photo {
     overflow: hidden;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
 }
@@ -209,6 +226,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+/*서비스 마우스 오버 스타일 */
+.service .list ul li a:hover h3 {
+    color: #01875F;
+    text-decoration: underline;
+}
+.service .list ul li a:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.073 12.5002H5.5C5.35767 12.5002 5.23875 12.4525 5.14325 12.357C5.04775 12.2615 5 12.1425 5 12.0002C5 11.8579 5.04775 11.739 5.14325 11.6435C5.23875 11.548 5.35767 11.5002 5.5 11.5002H17.073L13.3385 7.7657C13.241 7.6682 13.19 7.55345 13.1855 7.42145C13.181 7.28928 13.232 7.16812 13.3385 7.05795C13.4487 6.94762 13.5676 6.89154 13.6953 6.8897C13.8228 6.8877 13.9417 6.94187 14.052 7.0522L18.4345 11.4347C18.5218 11.522 18.5831 11.6112 18.6182 11.7022C18.6536 11.7932 18.6712 11.8925 18.6712 12.0002C18.6712 12.1079 18.6536 12.2072 18.6182 12.2982C18.5831 12.3892 18.5218 12.4784 18.4345 12.5657L14.052 16.9482C13.9545 17.0457 13.8387 17.0967 13.7048 17.1012C13.5708 17.1057 13.4487 17.0528 13.3385 16.9425C13.232 16.8323 13.1778 16.7144 13.176 16.5887C13.174 16.463 13.2282 16.345 13.3385 16.2347L17.073 12.5002Z' fill='%2301875F'/%3E%3C/svg%3E%0A");
 }
 /*.service 종료*/
 
@@ -256,10 +281,34 @@
 .banner .inner .more .strong {
     border: 1px solid #fff;
     padding: 15px 130px 15px 14px ;
+    position: relative;
 }
 .banner .inner .more .span {
     border: 1px solid #fff;
     padding: 15px 130px 15px 14px ; 
+    position: relative;
+}
+.banner .inner .more .strong::before,
+.banner .inner .more .span::before {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.073 12.5002H5.5C5.35767 12.5002 5.23875 12.4525 5.14325 12.357C5.04775 12.2615 5 12.1425 5 12.0002C5 11.8579 5.04775 11.739 5.14325 11.6435C5.23875 11.548 5.35767 11.5002 5.5 11.5002H17.073L13.3385 7.7657C13.241 7.6682 13.19 7.55345 13.1855 7.42145C13.181 7.28928 13.232 7.16812 13.3385 7.05795C13.4487 6.94762 13.5676 6.89154 13.6953 6.8897C13.8228 6.8877 13.9417 6.94187 14.052 7.0522L18.4345 11.4347C18.5218 11.522 18.5831 11.6112 18.6182 11.7022C18.6536 11.7932 18.6712 11.8925 18.6712 12.0002C18.6712 12.1079 18.6536 12.2072 18.6182 12.2982C18.5831 12.3892 18.5218 12.4784 18.4345 12.5657L14.052 16.9482C13.9545 17.0457 13.8387 17.0967 13.7048 17.1012C13.5708 17.1057 13.4487 17.0528 13.3385 16.9425C13.232 16.8323 13.1778 16.7144 13.176 16.5887C13.174 16.463 13.2282 16.345 13.3385 16.2347L17.073 12.5002Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.banner .inner .more .strong:hover,
+.banner .inner .more .span:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #1d1d1d;
+}
+.banner .inner .more .strong:hover::before,
+.banner .inner .more .span:hover::before  {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.073 12.5002H5.5C5.35767 12.5002 5.23875 12.4525 5.14325 12.357C5.04775 12.2615 5 12.1425 5 12.0002C5 11.8579 5.04775 11.739 5.14325 11.6435C5.23875 11.548 5.35767 11.5002 5.5 11.5002H17.073L13.3385 7.7657C13.241 7.6682 13.19 7.55345 13.1855 7.42145C13.181 7.28928 13.232 7.16812 13.3385 7.05795C13.4487 6.94762 13.5676 6.89154 13.6953 6.8897C13.8228 6.8877 13.9417 6.94187 14.052 7.0522L18.4345 11.4347C18.5218 11.522 18.5831 11.6112 18.6182 11.7022C18.6536 11.7932 18.6712 11.8925 18.6712 12.0002C18.6712 12.1079 18.6536 12.2072 18.6182 12.2982C18.5831 12.3892 18.5218 12.4784 18.4345 12.5657L14.052 16.9482C13.9545 17.0457 13.8387 17.0967 13.7048 17.1012C13.5708 17.1057 13.4487 17.0528 13.3385 16.9425C13.232 16.8323 13.1778 16.7144 13.176 16.5887C13.174 16.463 13.2282 16.345 13.3385 16.2347L17.073 12.5002Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
 }
 /* .banner 종료*/
 
@@ -283,43 +332,29 @@
     color: #858585;
     margin: 15px 0 70px 0;
 }
-
-@media screen and (max-width:1200px){
-            .visual .swiper ul li .visual_txt  h3 {
-                font-size: 45px;
-                font-weight: 700;
-                line-height: 1.2;
-                color: #fff;
-                padding: 0 0 5px 30px;
-            }
-            .visual .swiper ul li .visual_txt p {
-                color: rgba(255, 255, 255, 0.7);
-                padding: 0 0  0 30px ;
-            }
-            .service .tit strong {
-                font-size: 15px;
-                color: #858585;
-                padding: 0 0 0 309px;
-            }
-            .service .tit h3 {
-                font-size: 45px;
-                font-weight: 700;
-                line-height: 1.2;
-                color: #1d1d1d;
-                padding: 0 0 0 309px;
-                margin: 10px 0 0 0;
-            }
+.gallery .wrapper .swiper .visual_txt h4 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #1d1d1d;
+    margin: 15px 0 70px 0;
 }
+.gallery .wrapper .swiper .visual_txt h4:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+/* gallery 끝 */
+
+
 
 /*.communtiy 시작*/
 .communtiy {
     padding: 145px 0 270px 0;
     background-color: #F7F9FA;
-    position: relative;
 }
 .communtiy .wrapper {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .communtiy .wrapper .tit h3 {
     font-size: 50px;
@@ -362,13 +397,14 @@
     font-weight: 400;
     gap: 10px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 5px;
+    bottom: -86px;
 }
 .communtiy .inner .more .strong {
     background-color: #1d1d1d;
     padding: 15px 28px 15px 55px ;
     color: #fff;
+    position: relative;
 }
 .communtiy .inner .more .strong a::after {
     content: "";
@@ -382,12 +418,12 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.communtiy  .inner .more .span {
+.communtiy  .inner  .more .span {
     color: #1d1d1d;
     background-color: #D9D9D9;
     padding: 15px 28px 15px 55px ; 
 }
-.communtiy .inner .more .span a::before {
+.communtiy .inner  .more .span a::before {
     content: "";
     position: absolute;
     left: 190px;
@@ -399,26 +435,59 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+/* 마우스 오버하기 */
+.communtiy .inner .more .strong:hover,
+.communtiy  .inner  .more .span:hover {
+    background-color: #fff;
+    border: 1px solid #1d1d1d;
+    color: #1d1d1d;
+}
+.communtiy .inner .more .strong:hover a::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 18L3.7 20.3C3.38333 20.6167 3.02083 20.6875 2.6125 20.5125C2.20417 20.3375 2 20.025 2 19.575V4C2 3.45 2.19583 2.97917 2.5875 2.5875C2.97917 2.19583 3.45 2 4 2H20C20.55 2 21.0208 2.19583 21.4125 2.5875C21.8042 2.97917 22 3.45 22 4V16C22 16.55 21.8042 17.0208 21.4125 17.4125C21.0208 17.8042 20.55 18 20 18H6ZM5.15 16H20V4H4V17.125L5.15 16ZM8 11C8.28333 11 8.52083 10.9042 8.7125 10.7125C8.90417 10.5208 9 10.2833 9 10C9 9.71667 8.90417 9.47917 8.7125 9.2875C8.52083 9.09583 8.28333 9 8 9C7.71667 9 7.47917 9.09583 7.2875 9.2875C7.09583 9.47917 7 9.71667 7 10C7 10.2833 7.09583 10.5208 7.2875 10.7125C7.47917 10.9042 7.71667 11 8 11ZM12 11C12.2833 11 12.5208 10.9042 12.7125 10.7125C12.9042 10.5208 13 10.2833 13 10C13 9.71667 12.9042 9.47917 12.7125 9.2875C12.5208 9.09583 12.2833 9 12 9C11.7167 9 11.4792 9.09583 11.2875 9.2875C11.0958 9.47917 11 9.71667 11 10C11 10.2833 11.0958 10.5208 11.2875 10.7125C11.4792 10.9042 11.7167 11 12 11ZM16 11C16.2833 11 16.5208 10.9042 16.7125 10.7125C16.9042 10.5208 17 10.2833 17 10C17 9.71667 16.9042 9.47917 16.7125 9.2875C16.5208 9.09583 16.2833 9 16 9C15.7167 9 15.4792 9.09583 15.2875 9.2875C15.0958 9.47917 15 9.71667 15 10C15 10.2833 15.0958 10.5208 15.2875 10.7125C15.4792 10.9042 15.7167 11 16 11Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
+}
+/* .communtiy 끝*/
 
-footer {
-    padding: 45px 0 85px ;
-    font-size: 20px;
-    background-color: #34373F;
-    color: rgba(255, 255, 255, 0.5);
+/* footer 시작 */
+footer .footer-menu {
+    padding-top: 45px;
+    padding-bottom: 55px;
+    background-color: #272A31;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px  solid #272A31;
+    font-size: 17px;
 }
-footer .wrapper .list {
-    background-color: #272A31 ;
-}
-footer .f_nav ul {
+footer .wrapper .f_nav {
     display: flex;
-    gap: 35px;
-    padding: 0 0 100px 0  ;
+    gap: 40px;
 }
-footer .f_nav ul  .privacy {
-    font-size: 20px;
+footer .wrapper .f_nav li {
+    position: relative;
+}
+footer .wrapper .f_nav li::before {
+    content: "";
+    position: absolute;
+    right: -24px;
+    top: 6px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .wrapper .f_nav .privacy {
+    font-size: 17px;
     font-weight: 700;
     color: #fff;
 }
-footer address {
-    margin: 0 0 15px 0;
+footer .container {
+    padding-top: 45px;
+    padding-bottom: 75px;
+    background-color: #34373F;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px  solid #34373F;
+    font-size: 17px;
 }
+footer.add .container .copyright { 
+    margin: 15px 0 0 0;
+ }

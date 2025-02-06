@@ -13,14 +13,13 @@ $(document).ready(function(){
         //effect: "fade", /* fade 효과 */
     
         loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-    
-    
         navigation: {  /* 이전, 다음 버튼 */
             nextEl: '.visual .btn_prev',  /* 다음 버튼의 클래스명 */
             prevEl: '.visual .btn_next',  
         },
     
     });
+
 
     /* gallery 시작 */
     const gallery_swiper = new Swiper('.gallery .swiper', { /* 팝업을 감싼는 요소의 class명 */
