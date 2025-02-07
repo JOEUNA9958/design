@@ -24,12 +24,6 @@
         <!-- 내부 링크 href = "#skip_nav"라고 주면 id="skip_nav" 이동 -->
     </div><!--skipnav-->
     <div id="wrap">
-            <!--
-            header에 마우스를 올렸을때 & 스크롤을 내렸을때(pc/ mobile 공통) : fixed
-            pc에서 메뉴에 마우스를 오버했을때 : menu_pc
-            모바일에서 메뉴를 열었을때 : menu_mo
-            검색을 클릭했을때 (pc/mobile 공통) : sch_open
-        -->
         <header> 
             <h1 class="logo"><a href="index.html">하융노인요양센터</a></h1>
             <nav class="gnb" id="skip_nav">
@@ -80,36 +74,56 @@
             </nav><!--gnb-->
             <div class="tnb">
                 <div class="search">
-                    <div class="search_area">
                         <form>
                             <fieldset>
                                 <legend>검색</legend>
                                 <div class="inner">
                                     <label for="keyword">검색어입력</label>
-                                    <input type="text" id="keyword" class="keyword" placeholder="검색어를입력해주세요"> <!--검색어 입력창-->
+                                    <input type="text" id="keyword" class="keyword" placeholder="검색"> <!--검색어 입력창-->
                                     <input type="submit" class="btn"> <!-- 검색버튼 -->
                                 </div><!--inner-->
                             </fieldset>
                         </form>
-                    </div><!--search_area-->
                 </div><!--search-->
             </div><!--tnb-->
         </header>
 
         <main class="container">
             <section class="visual">
-                <div class="senile">
-                    <div class="tit">
-                        <h2>요양보험</h2>
-                        <span>노인성 질병으로 일상생활을 혼자서 하기 어려운 </span>
-                        <p>노인들에게 서비스를 제공하는 사회보험제도</p>   
-                    </div><!--tit-->
-                    <div class="list">
-                        <h2>방문요양</h2>
-                        <span>방문요양센터만 하는 곳을 재가복지센터라고 하며</span>
-                        <p>노인분들의 일상생활을 지원하는 서비스를 제공</p>    
-                    </div><!--list-->
-                </div><!--senile-->
+                <div class="bottom-right">
+                    <div class="box_wrap">
+                        <div class="box_01">
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a href="#n">
+                                            <h2>요양보험</h2>
+                                            <p>노인이 필요로 하는 돌봄 서비스를 제공하는 보험 제도</p>  
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!--list-->
+                            <div class="more">
+                                <div class="strong"><a href="#n">자세히보기</a></div>
+                            </div>
+                        </div><!--box_01-->
+                        <div class="box_02">
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a href="#n">
+                                            <h2>방문요양</h2>
+                                            <p>집에서 요양보호사가 돌봄 서비스를 제공하는 활동</p>  
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="more">
+                                <div class="strong"><a href="#n">자세히보기</a></div>
+                            </div>
+                            </div><!--tit-->
+                        </div><!--box_02-->
+                    </div><!--box_wrap-->
+                </div><!--bottom-right-->
                 <div class="swiper"> 
                     <ul class="swiper-wrapper"> 
                         <li class="swiper-slide">
@@ -119,7 +133,7 @@
                                     <h3>방문요양서비스를<br>
                                         전문적으로 하는<br>
                                         하융노인요양센터입니다.</h3>
-                                    <p>방문요양센터만 하는 곳은 재가복지센터라고도 불리며, 노인분들의 일상생활을 지원하는 서비스를 제공합니다. </p>
+                                    <p>방문요양센터만 하는 곳은 재가복지센터라고도 불리며, <br> 노인분들의 일상생활을 지원하는 서비스를 제공합니다. </p>
                                 </div><!--wrapper-->
                             </div><!--visual_txt-->
                         </li> 
