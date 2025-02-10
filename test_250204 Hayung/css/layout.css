@@ -170,15 +170,15 @@ header .logo a {
                     display: none; /*pc일때만*/
                 }
                 header {
-                    height: 100px;
+                    height: 56px;
                     padding: 0 20px;
                     border-bottom:  1px solid rgba(255, 255, 255, 0.3);
                     color: #fff;
                 }
                 header .gnb .gnb_open {
                     display: block;
-                    width: 29px;
-                    height: 27px;
+                    width: 24px;
+                    height: 24px;
                     font-size: 0;
                     line-height: 0;
                     position: relative; /* before*/
@@ -197,12 +197,11 @@ header .logo a {
                 }
                 header .gnb  .gnb_close {
                     display:none;
-                    width: 25px;
-                    height: 25px;
+                    width: 24px;
+                    height: 24px;
                     font-size: 0;
                     line-height: 0;
                     position: relative;
-                    
                 }
                 header .gnb  .gnb_close::before {
                     content: "";
@@ -251,12 +250,11 @@ header .logo a {
                 }
                 header .gnb  .gnb_close {
                     display: none;
-                    width: 25px;
-                    height: 25px;
+                    width: 24px;
+                    height: 24px;
                     font-size: 0;
                     line-height: 0;
                     position: relative;
-                    
                 }
                 header .gnb  .gnb_close::before {
                     content: "";
