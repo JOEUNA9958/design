@@ -1,0 +1,200 @@
+/*
+    sub .css
+    서브 레이아웃 (공통사항, tab, sub_visual ) 스타일
+    다른 css끌여들임
+*/
+@import url(default.css); /* default.css 브라우저가 태그에 주는 기본스타일을 모두 초기화*/
+@import url(fonts.css); /* main.css 메인페이지에만 적용되는 스타일 입력, 다른 css import */
+@import url(common.css); /* 글자의 기본 스타일 및 wrapper 설정 */
+@import url(layout.css); /* layout.css header / footer 모든 페이지의 공통 스타일 적용*/
+@import url(contents.css);
+
+
+.container .sub_visual {
+    height: 583px;
+    background: url(../images/contents_img/visual_01.jpg) no-repeat  center / cover;
+    color: #fff;
+    position: relative;
+}
+.container .sub_visual .wrapper strong {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 240px 0 5PX 0;
+    text-align: center;
+}
+.container .sub_visual .wrapper span {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width:1300px){ 
+    .container .sub_visual .wrapper strong {
+        font-size: 45px;
+        padding: 240px 0 5PX 0;
+        text-align: center;
+    }
+}
+
+/**********.sub_visual 모바일 시작 ***********/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+
+    .container .sub_visual {
+        height: 350px;
+        background: url(../images/contents_img/visual_01.jpg) no-repeat  center / cover;
+        color: #fff;
+        position: relative;
+    }
+    .container .sub_visual .wrapper strong {
+        font-size: 25px;
+        padding: 170px 0 5px 0;
+        text-align: center;
+    }
+    .container .sub_visual .wrapper span {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+/* .container .sub_visual 끝*/
+
+
+.container .lnb {
+    border-bottom: 1px solid #ddd;
+    height: 86px;
+    background-color: #F7F9FA;
+}
+.container .lnb .wrapper ul {
+    display: flex;
+    justify-content: space-between;
+}
+.container .lnb .lnb_open,
+.container .lnb .lnb_close {
+    display: none;
+}
+.container .lnb .wrapper ul li{
+    width: 50%;
+    text-align: center;
+}
+.container .lnb .wrapper ul li a {
+    display: block;
+    height: 86px;
+    padding: 28px 0 28px 0;
+    font-size: 20px;
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.container .lnb .wrapper ul li.active{
+    border-bottom: 3px solid #1d1d1d;
+}
+.container .lnb .wrapper ul li.active:hover  {       
+    border-bottom: 3px solid #1d1d1d;
+}
+
+@media screen and (max-width:1300px){ 
+    .container .lnb .wrapper ul li a {
+        font-size: 17px;
+    }
+    .container .lnb .wrapper ul li.active{
+        border-bottom: 2px solid #1d1d1d;
+    }
+    .container .lnb .wrapper ul li.active:hover  {       
+        border-bottom: 2px solid #1d1d1d;
+    }
+}
+
+/********** 모바일 시작 ***********/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+    .container .lnb {
+        height: 80px;
+    }
+    .container .lnb .wrapper {
+        position: relative;
+    }
+    .container .lnb .wrapper ul {
+        display: none;
+    }
+    .container .lnb .lnb_open {
+        background-color: #F7F9FA;
+        display: block;
+        font-size: 25px;
+        font-weight: 400;
+        color: #01875F;
+        width: auto;
+        padding: 25px 0 0 0;
+    }
+
+    .container .lnb .wrapper .lnb_open::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 28px;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9995 12.9467L16.0725 8.8735C16.211 8.73517 16.3851 8.66433 16.5947 8.661C16.8042 8.65783 16.9815 8.72867 17.1265 8.8735C17.2713 9.0185 17.3438 9.19417 17.3438 9.4005C17.3438 9.60683 17.2713 9.7825 17.1265 9.9275L12.6322 14.4217C12.5386 14.5152 12.4398 14.5813 12.336 14.6198C12.2322 14.6583 12.12 14.6775 11.9995 14.6775C11.879 14.6775 11.7668 14.6583 11.663 14.6198C11.5592 14.5813 11.4604 14.5152 11.3667 14.4217L6.8725 9.9275C6.73417 9.789 6.66333 9.61492 6.66 9.40525C6.65683 9.19575 6.72767 9.0185 6.8725 8.8735C7.0175 8.72867 7.19317 8.65625 7.3995 8.65625C7.60583 8.65625 7.7815 8.72867 7.9265 8.8735L11.9995 12.9467Z' fill='%2301875F'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container .lnb .wrapper ul li.active{
+        border-bottom: 0;
+    }
+    .container .lnb .wrapper ul li.active:hover  {       
+        border-bottom: 0;
+    }
+    .container .lnb .lnb_close  {
+        display: none;
+    }
+}
+
+
+
+
+.sub .f_top {
+    margin: 500px 0 0 0;
+    background-color: #01875F;
+    color: #fff;
+}
+.sub .f_top .con_wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.sub .f_sub {
+    padding: 60px 0 90px ;
+    background-color: #272A31;
+}
+.sub .f_sub ul {
+    display: flex;
+    margin: 0 0 30px 0;
+}
+.sub .f_sub ul li {
+    gap: 30px;
+}
+
+.sub .f_sub .f_nav {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px 35px;
+}
+.sub .f_sub ul li {
+    position: relative;
+}
+.sub .f_sub ul li.privacy {
+    font-weight: 700;
+    color: #fff;
+}
+.sub .f_sub ul li::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 6px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sub .f_sub ul li:last-child::after {
+    display: none;
+}
