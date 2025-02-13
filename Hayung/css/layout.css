@@ -358,7 +358,6 @@ header.fixed .logo a {
 }
 
 @media screen and (max-width:768px) {
-
                 header .logo a {
                     width: 83px;
                     height: 28px;
