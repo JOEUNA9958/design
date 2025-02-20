@@ -356,3 +356,126 @@
     }
 }
 /* 오시는 길 끝 */
+
+/* 노인요양보험제도 시작 */
+.contents .business_tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 0 50px 0;
+}
+.cts_business_01 .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.cts_business_01 .list ul li {
+    width: 50%;
+    padding-right: 25px;
+}
+.cts_business_01 .list ul li.left_box .inner,
+.cts_business_01 .list ul li.right_box .inner{
+    border-top: 2px solid #1d1d1d;
+}
+.cts_business_01 .list ul li .inner h2 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding: 40px 0 33px 0;
+}
+.cts_business_01 .list ul li.left_box .inner p {
+    padding: 0 0 50px 0;
+}
+.cts_business_01 .list ul li.right_box .inner p {
+    padding: 0 0 25px 0;
+}
+.cts_business_01 .list ul li .inner .photo {
+    height: 290px;
+    overflow: hidden;
+}
+.cts_business_01 .list ul li .inner .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cts_business_01 .list ul li.left_box .inner .left_tit strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding: 87px 0 19px 0 ;
+}
+.cts_business_01 .list ul li.right_box .inner .right_tit strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding: 87px 0 19px 0 ;
+}
+@media screen and (max-width:1300px){  /*이하일때*/ 
+                .contents .business_tit h2 {
+                    font-size: 45px;
+                    padding: 0 0 40px 0;
+                }
+                .cts_business_01 .list ul li .inner h2 {
+                    font-size: 20px;
+                    padding: 30px 0 25px 0;
+                }
+                .cts_business_01 .list ul li.left_box .inner p, 
+                .cts_business_01 .list ul li.right_box .inner p {
+                    padding: 0 0 30px 0;
+                }
+                .cts_business_01 .list ul li .inner .photo {
+                    height: auto;
+                }
+                .cts_business_01 .list ul li.left_box .inner .left_tit strong,
+                .cts_business_01 .list ul li.right_box .inner .right_tit strong {
+                    font-size: 20px;
+                    padding: 70px 0 10px 0 ;
+                }
+}
+
+/******모바일 시작 ********/
+@media screen and (max-width:1000px){ 
+                .cts_business_01 {
+                    margin:  0 0 150px 0;
+                }
+                .contents .business_tit h2 {
+                    font-size: 25px;
+                    padding: 0 0 40px 0;
+                }
+                .cts_business_01 .list ul {
+                    display: block;
+                }
+                .cts_business_01 .list ul li {
+                    width: auto;
+                    padding-right: 0;
+
+                }
+                .cts_business_01 .list ul li.left_box .inner {
+                    border-top: 2px solid #1d1d1d;
+                }
+                .cts_business_01 .list ul li.right_box .inner {
+                    margin: 50px 0 0 0;
+                    border-top: 2px solid #1d1d1d;
+                }
+                .cts_business_01 .list ul li .inner h2 {
+                    font-size: 20px;
+                    padding: 25px 0 10px 0;
+                }
+                .cts_business_01 .list ul li.left_box .inner p,
+                .cts_business_01 .list ul li.right_box .inner p {
+                    padding: 0 0 25px 0;
+                }
+
+                .cts_business_01 .list ul li .inner .photo {
+                    height: auto;
+                }
+ 
+                .cts_business_01 .list ul li.left_box .inner .left_tit strong,
+                .cts_business_01 .list ul li.right_box .inner .right_tit strong {
+                    font-size: 20px;
+                    padding: 25px 0 10px 0 ;
+                }
+
+}
