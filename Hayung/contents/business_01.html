@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script><!--jquery 라이브러리-->
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <link rel="stylesheet" href="../css/sub.css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>하융노인요양센터</title>
+</head>
+<body>
+    <div class="skipnav">
+        <a class="cnt" href="#skip_content">본문바로가기</a>
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부 링크 href = "#skip_nav"라고 주면 id="skip_nav" 이동 -->
+    </div><!--skipnav-->
+    <div id="wrap">
+        <!--  pc버전 메뉴에 마우스를 올리면 header에 menu_pc 클래스추가 
+              mobile버전 메뉴를 클릭하면 header에 menu_mobile 클래스 추가
+              
+              홈페이지가 스크롤되면 header에 fixed 클래스가 추가-->
+        <header> 
+            <h1 class="logo"><a href="../index.html">하융노인요양센터</a></h1>
+            <nav class="gnb" id="skip_nav">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!--pc : over
+                            모바일은 open-->
+                        <li>
+                            <a href="company_01.html"><span>기관소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="company_01.html"><span>인사말</span></a></li>
+                                <li><a href="company_02.html"><span>오시는길</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="business_01.html"><span>요양보험</span></a>
+                            <ul class="depth2">
+                                <li><a href="business_01.html"><span>노인장기요양보험제도</span></a></li>
+                                <li><a href="business_02.html"><span>장기요양신청절차</span></a></li>
+                                <li><a href="business_03.html"><span>무료등급신청대행</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="business_04.html"><span>방문요양</span></a>
+                            <ul class="depth2">
+                                <li><a href="business_04.html"><span>방문요양</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="community_01.html"><span>커뮤니티</span></a>
+                            <ul class="depth2">
+                                <li><a href="community_01.html"><span>공지사항</span></a></li>
+                                <li><a href="community_02.html"><span>사진첩</span></a></li>
+                                <li><a href="community_03.html"><span>자료실</span></a></li>
+                                <li><a href="community_04.html">온라인문의<span></span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="community_05.html"><span>봉사활동</span></a>
+                            <ul class="depth2">
+                                <li><a href="community_05.html"><span>봉사활동</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                    </ul><!--depth1-->
+                </div><!--gnb_wrap-->
+                <button class="gnb_close">버튼닫기</button>
+            </nav><!--gnb-->
+            <div class="tnb">
+                <div class="search">
+                        <form>
+                            <fieldset>
+                                <legend>검색</legend>
+                                <div class="inner">
+                                    <label for="keyword">검색어입력</label>
+                                    <input type="text" id="keyword" class="keyword" placeholder="검색"> <!--검색어 입력창-->
+                                    <input type="submit" class="btn"> <!-- 검색버튼 -->
+                                </div><!--inner-->
+                            </fieldset>
+                        </form>
+                </div><!--search-->
+            </div><!--tnb-->
+        </header>
+        <div class="container">
+            <div class="sub_visual bg2"> <!-- ####################### 1차메뉴마다 배경 claSS명 바꿔주기 ####################### -->
+                <!--  기관소개 bg1, 요양보험 bg2, 방문요양 bg3, 커뮤니티 bg4, 봉사활동 bg5   -->
+                <div class="wrapper">
+                    <strong>Long-term Care</strong><!-- ####################### 1차메뉴마다 단어 바꿔주기 ####################### -->
+                    <span>노인장기요양보험</span>
+                </div><!--wrapper-->
+            </div><!--sub_visual--> 
+            <nav class="lnb"> <!-- 모바일에서 메뉴가 열리면 open 클래스 추가 -->
+                <div class="wrapper">
+                    <button class="lnb_open">노인장기요양보험제도</button> <!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                    <ul>
+                        <!-- ####################### 선택된 메뉴에 active 클래스 주기, 1차메뉴마다 하단 메뉴 변경 ####################### -->
+                        <li class="active"><a href="business_01.html"><span>노인장기요양보험제도</span></a></li>
+                        <li><a href="business_02.html"><span>장기요양신청절차</span></a></li>
+                        <li><a href="business_03.html"><span>무료등급신청대행</span></a></li>
+                    </ul>
+                    <button class="lnb_close">노인장기요양보험제도</button><!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                </div>
+            </nav>
+        </div><!--container-->
+
+        <div class="contents">
+            <div class="business_tit">
+                <div class="wrapper">
+                    <h2>노인장기요양보험제도</h2> <!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                </div>
+            </div><!--page_tit-->
+            <div class="cts_business_01"><!-- ####################### cts_파일명 ####################### -->
+                <!--- cts_페이지명 -->
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <li class="left_box">
+                                <div class="inner">
+                                    <h2>노인장기요양보험에 대해 아시나요?</h2>
+                                    <p>노인장기요양보험은 2008년 7월에 시행되어 건강보험, 국민연금, 고용보험, 산재보험에 이은 우리나라 제5의 사회보험으로 불리는 사회보장제도 입니다.</p>
+                                    <div class="photo"><img src="../images/contents_img/left_box01.jpg" alt="로고"></div>
+                                    <div class="left_tit">
+                                        <strong>보험제도</strong>
+                                        <span>노인장기요양보험은 고령이나 노인성 질병들의 사유로 일상생활을 영위하기 어려운 노인 등에게 신체활동 또는 가사활동 지원들의 장기요양급여를 제공하는 사회보험 제도입니다.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="right_box">
+                                <div class="inner">
+                                    <h2>노인장기요양보험의 필요성</h2>
+                                    <p>1. 인구고령화로 인한 수발보호 노인의 증가<br>
+                                        2. 저출산, 핵사족화, 여성의 사회진출 등의 영향으로 가족수발의 한계<br>
+                                        3. 노인 수발 비용의 과중한 부담</p>
+                                    <div class="photo"><img src="../images/contents_img/right_box01.jpg" alt="노인"></div>
+                                    <div class="right_tit">
+                                        <strong>필요성</strong>
+                                        <span>인구고령화로 인한 노인인구수 증가로 수발보호 필요노인이 증가하였고, 의료비 등 노인 수발 비용의 과중한 부담으로 노인가정의 부담 경감이 필요하였기에 국가 차원에서 노인장기요양보험이 제정되었습니다.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->  
+            </div><!--page_contents  cts_company_02-->
+        </div><!--contents-->
+
+
+
+        <footer class="sub">
+            <div class="contact">
+                <div class="wrapper">
+                    <ul>
+                        <li class="tel">
+                            <div class="inner">
+                                <h2><span>상담문의</span><strong>041-960-0064</strong></h2>
+                                <p><span>평일 : 09:00 ~ 18:00 </span><strong>점심 : 12:00 ~ 13:00</strong></p>
+                            </div>
+                        </li>
+                        <li class="day">
+                            <div class="inner">
+                                <h2><strong>휴무일</strong></h2>
+                                <p><span>매주 토요일, 일요일</span> <strong>공휴일 휴무</strong></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--contact-->
+                <div class="f_top">
+                    <div class="wrapper">
+                        <ul class="f_nav">
+                            <li class="privacy"><a href="#n">개인정보처리방침 </a></li>
+                            <li><a href="#n">인사말</a></li>
+                            <li><a href="#n">오시는길</a></li>
+                            <li><a href="#n">노인장기요양보험</a> </li>
+                            <li><a href="#n">신청절차</a></li>
+                            <li><a href="#n">방문요양</a></li>    
+                        </ul>
+                    </div>
+                </div><!--f_top-->
+                <div class="f_sub">
+                    <div class="wrapper">
+                         <div class="f_info">
+                            <address>주 소 : 충청남도 공주시 먹자2길1 (1, 2층)</address>
+                            <span>Tel : 041-960-0064</span>
+                            <span>Fax : 041-960-0065</span>
+                            <span>E-mail : nanyoung2582@daum.net</span>
+                        </div>   
+                        <div class="copyright">Copyright © 하융노인요양센터 All Rights Reserved. </div> 
+                    </div>
+                </div>
+        </footer>
+    </div><!--wrap-->
+</body>
+</html>

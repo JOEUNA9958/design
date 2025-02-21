@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script><!--jquery 라이브러리-->
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <link rel="stylesheet" href="../css/sub.css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>하융노인요양센터</title>
+</head>
+<body>
+    <div class="skipnav">
+        <a class="cnt" href="#skip_content">본문바로가기</a>
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부 링크 href = "#skip_nav"라고 주면 id="skip_nav" 이동 -->
+    </div><!--skipnav-->
+    <div id="wrap">
+        <!--  pc버전 메뉴에 마우스를 올리면 header에 menu_pc 클래스추가 
+              mobile버전 메뉴를 클릭하면 header에 menu_mobile 클래스 추가
+              
+              홈페이지가 스크롤되면 header에 fixed 클래스가 추가-->
+        <header> 
+            <h1 class="logo"><a href="../index.html">하융노인요양센터</a></h1>
+            <nav class="gnb" id="skip_nav">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!--pc : over
+                            모바일은 open-->
+                        <li>
+                            <a href="company_01.html"><span>기관소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="company_01.html"><span>인사말</span></a></li>
+                                <li><a href="company_02.html"><span>오시는길</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="business_01.html"><span>요양보험</span></a>
+                            <ul class="depth2">
+                                <li><a href="business_01.html"><span>노인장기요양보험제도</span></a></li>
+                                <li><a href="business_02.html"><span>장기요양신청절차</span></a></li>
+                                <li><a href="business_03.html"><span>무료등급신청대행</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="business_04.html"><span>방문요양</span></a>
+                            <ul class="depth2">
+                                <li><a href="business_04.html"><span>방문요양</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="community_01.html"><span>커뮤니티</span></a>
+                            <ul class="depth2">
+                                <li><a href="community_01.html"><span>공지사항</span></a></li>
+                                <li><a href="community_02.html"><span>사진첩</span></a></li>
+                                <li><a href="community_03.html"><span>자료실</span></a></li>
+                                <li><a href="community_04.html">온라인문의<span></span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                        <li>
+                            <a href="community_05.html"><span>봉사활동</span></a>
+                            <ul class="depth2">
+                                <li><a href="community_05.html"><span>봉사활동</span></a></li>
+                            </ul><!--depth2-->
+                        </li>
+                    </ul><!--depth1-->
+                </div><!--gnb_wrap-->
+                <button class="gnb_close">버튼닫기</button>
+            </nav><!--gnb-->
+            <div class="tnb">
+                <div class="search">
+                        <form>
+                            <fieldset>
+                                <legend>검색</legend>
+                                <div class="inner">
+                                    <label for="keyword">검색어입력</label>
+                                    <input type="text" id="keyword" class="keyword" placeholder="검색"> <!--검색어 입력창-->
+                                    <input type="submit" class="btn"> <!-- 검색버튼 -->
+                                </div><!--inner-->
+                            </fieldset>
+                        </form>
+                </div><!--search-->
+            </div><!--tnb-->
+        </header>
+        <div class="container">
+            <div class="sub_visual bg5"> <!-- ####################### 1차메뉴마다 배경 claSS명 바꿔주기 ####################### -->
+                <!--  기관소개 bg1, 요양보험 bg2, 방문요양 bg3, 커뮤니티 bg4, 봉사활동 bg5   -->
+                <div class="wrapper">
+                    <strong>Cantact Us</strong><!-- ####################### 1차메뉴마다 단어 바꿔주기 ####################### -->
+                    <span>온라인 문의</span>
+                </div><!--wrapper-->
+            </div><!--sub_visual--> 
+            <nav class="lnb"> <!-- 모바일에서 메뉴가 열리면 open 클래스 추가 -->
+                <div class="wrapper">
+                    <button class="lnb_open">봉사활동</button> <!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                    <ul>
+                        <!-- ####################### 선택된 메뉴에 active 클래스 주기, 1차메뉴마다 하단 메뉴 변경 ####################### -->
+                        <li class="active"><a href="community_05.html"><span>봉사활동</span></a></li>
+                    </ul>
+                    <button class="lnb_close">봉사활동</button><!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                </div>
+            </nav>
+        </div><!--container-->
+
+        <div class="contents">
+            <div class="page_tit">
+                <div class="wrapper">
+                    <h2>봉사활동</h2> <!-- ####################### 현재메뉴명 바꿈 ####################### -->
+                </div>
+            </div><!--page_tit-->
+            <div class="cts_community_05"><!-- ####################### cts_파일명 ####################### -->
+                <!--- cts_페이지명 -->
+                <div class="wrapper">
+                    
+                </div><!--wrapper-->  
+                
+            </div><!--page_contents  cts_company_02-->
+        </div><!--contents-->
+
+
+        <footer class="sub">
+            <div class="contact">
+                <div class="wrapper">
+                    <ul>
+                        <li class="tel">
+                            <div class="inner">
+                                <h2><span>상담문의</span><strong>041-960-0064</strong></h2>
+                                <p><span>평일 : 09:00 ~ 18:00 </span><strong>점심 : 12:00 ~ 13:00</strong></p>
+                            </div>
+                        </li>
+                        <li class="day">
+                            <div class="inner">
+                                <h2><strong>휴무일</strong></h2>
+                                <p><span>매주 토요일, 일요일</span> <strong>공휴일 휴무</strong></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--contact-->
+                <div class="f_top">
+                    <div class="wrapper">
+                        <ul class="f_nav">
+                            <li class="privacy"><a href="#n">개인정보처리방침 </a></li>
+                            <li><a href="#n">인사말</a></li>
+                            <li><a href="#n">오시는길</a></li>
+                            <li><a href="#n">노인장기요양보험</a> </li>
+                            <li><a href="#n">신청절차</a></li>
+                            <li><a href="#n">방문요양</a></li>    
+                        </ul>
+                    </div>
+                </div><!--f_top-->
+                <div class="f_sub">
+                    <div class="wrapper">
+                         <div class="f_info">
+                            <address>주 소 : 충청남도 공주시 먹자2길1 (1, 2층)</address>
+                            <span>Tel : 041-960-0064</span>
+                            <span>Fax : 041-960-0065</span>
+                            <span>E-mail : nanyoung2582@daum.net</span>
+                        </div>   
+                        <div class="copyright">Copyright © 하융노인요양센터 All Rights Reserved. </div> 
+                    </div>
+                </div>
+        </footer>
+    </div><!--wrap-->
+</body>
+</html>
