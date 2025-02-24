@@ -1,0 +1,756 @@
+@import url(default.css); /* default.css 브라우저가 태그에 주는 기본스타일을 모두 초기화*/
+@import url(fonts.css); /* main.css 메인페이지에만 적용되는 스타일 입력, 다른 css import */
+@import url(common.css); /* 글자의 기본 스타일 및 wrapper 설정 */
+
+/* Common */
+ 
+body {
+    overflow: hidden;
+ }
+ 
+ .section {
+     height: 100vh;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ /* 섹션 공통 스타일 */
+ .section h2,
+ .section-title,
+ .clients h2,
+ .products-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+ }
+ 
+ .section-desc,
+ .clients-desc,
+ .products-desc {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 70px;
+    text-align: center;
+    word-break: keep-all;
+    line-height: 1.6;
+ }
+ 
+ /* Section 1 - Slider */
+ #slider {
+    background: #000;
+ }
+ 
+ .slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+ }
+ 
+ .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+ }
+ 
+ .slide.active {
+    opacity: 1;
+ }
+ 
+ .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+ }
+ 
+ .slide-1 { background: url('../images/main/slide1.jpg') center/cover no-repeat; }
+ .slide-2 { background: url('../images/main/slide2.jpg') center/cover no-repeat; }
+ .slide-3 { background: url('../images/main/slide3.jpg') center/cover no-repeat; }
+ 
+ .slide-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+ }
+ 
+ .hero-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
+ }
+ 
+ .hero-subtitle {
+    font-size: 24px;
+    color: #ffffff;
+ }
+ 
+ .navigation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    color: white;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+ }
+ 
+ .prev, .next {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 0;
+    pointer-events: all;
+ }
+ 
+ .prev::after, .next::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.3s ease;
+ }
+ 
+ .prev:hover::after, .next:hover::after {
+    width: 100%;
+ }
+ 
+ .counter {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    color: white;
+    font-size: 48px;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+ }
+ 
+ /* Section 2 - Clients */
+ #clients {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .clients-inner {
+     width: 100%;
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 100px 40px;
+     text-align: center;
+ }
+ 
+ .client-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 0;
+     border-right: 1px solid #eee;
+     margin: 0 auto;
+     max-width: 1400px;
+     width: 100%;
+ }
+ 
+ .client-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 50px;
+    border-left: 1px solid #eee;
+ }
+ 
+ .client-column img {
+    max-width: 160px;
+    height: auto;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    filter: grayscale(100%);
+ }
+ 
+ .client-column img:hover {
+    opacity: 1;
+    filter: none;
+ }
+ 
+ /* Section 3 - Products */
+ #products {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+ }
+ 
+ .products-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+ }
+ 
+ .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; /* 추가 */
+    width: 100%; /* 추가 */
+ }
+ 
+ .product-item {
+     width: 25%;
+     position: relative;
+     overflow: hidden;
+     height: 450px;
+ }
+ 
+ .product-thumb {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+ }
+ 
+ .product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ .product-item:hover .product-thumb {
+    transform: scale(1.1);
+ }
+ 
+ .product-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+ }
+ 
+ .product-item:hover .product-content {
+    background: rgba(0,0,0,0.5);
+ }
+ 
+ .product-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+ }
+ 
+ .product-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+ }
+ 
+ 
+ .product-item:hover .product-title,
+ .product-item:hover .product-desc {
+     transform: translateY(-10px);
+ }
+ 
+ .more-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+ }
+ 
+ .more-btn img {
+     margin-left: 10px;
+     height: 18px;
+     object-fit: contain;
+     transition: transform 0.3s ease;
+ }
+ 
+ .more-btn:hover img {
+    transform: translateX(5px);
+ }
+ 
+ /* Section 4 - Portfolio */
+ #portfolio {
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+ }
+ 
+ .portfolio-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+ }
+ 
+ .portfolio-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 30px;
+     margin-top: 60px;
+     position: relative;
+     overflow: hidden; /* 추가 */
+     width: 100%; /* 추가 */
+ }
+ 
+ .portfolio-item {
+    padding: 40px;
+    text-align: center;
+    height: 260px;
+ }
+ 
+ .portfolio-item img {
+    max-width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+ }
+ 
+ .portfolio-brand {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+ }
+ 
+ .portfolio-name {
+    position: relative;
+    padding-top: 15px;
+    color: #666;
+    font-size: 12px;
+ }
+ 
+ .portfolio-name:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background: #999;
+ }
+ 
+ .portfolio-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    padding: 0 -20px;
+ }
+ 
+ .portfolio-prev,
+ .portfolio-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+ }
+ 
+ .portfolio-prev:hover,
+ .portfolio-next:hover {
+    background: rgba(0,0,0,0.5); 
+ }
+ 
+ /* Section 5 - History */
+ #history {
+    background: url('../images/main/img1.jpg') center/cover no-repeat;
+    position: relative;
+ }
+ 
+ #history::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+ }
+ 
+ .history-content {
+     position: relative;
+     z-index: 1;
+     color: white;
+     height: 100%;
+     display: none; /* 기본적으로 숨김 */
+     align-items: center;
+     padding-left: 20%;
+ }
+ 
+ .history-content:first-child {
+     display: flex; /* 첫 번째 슬라이드만 표시 */
+ }
+ 
+ .history-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
+ }
+ 
+ .fp-is-overflow .fp-overflow.fp-auto-height, .fp-is-overflow .fp-overflow.fp-auto-height-responsive, .fp-is-overflow>.fp-overflow {
+     overflow-y: hidden;
+ }
+ 
+ .history-subtitle {
+    font-size: 24px;
+    color: #ffffff;
+ }
+ 
+ .history-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ 
+ .history-prev,
+ .history-next {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+ }
+ 
+ footer {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: #fff;
+     z-index: 100;
+     visibility: hidden;
+     opacity: 0;
+     transition: visibility 0.3s ease, opacity 0.3s ease;
+ }
+ 
+ /* Section 6 - News */
+ #news {
+     background: #fff;
+     display: flex;
+     align-items: center;
+     padding-bottom: 300px; /* 푸터 높이만큼 여백 추가 */
+     height: auto;
+     min-height: 100vh;
+ }
+ 
+ #fullpage {
+     padding-bottom: 0;
+ }
+ 
+ .news-inner {
+    width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+ }
+ 
+ .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+ }
+ 
+ .news-title {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+ }
+ 
+ .news-subtitle {
+    color: #666;
+    font-size: 18px;
+ }
+ 
+ .news-more {
+     display: flex;
+     align-items: center;
+     color: #111;
+     text-decoration: none;
+     font-size: 14px;
+ }
+ 
+ 
+ .news-more img {
+     margin-left: 10px;
+     height: 18px;
+     object-fit: contain;  /* 이미지 비율 유지 */
+ }
+ 
+ .news-list {
+    border-top: 1px solid #eee;
+ }
+ 
+ .news-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+ }
+ 
+ .news-item a {
+    color: #111;
+    text-decoration: none;
+ }
+ 
+ .news-date {
+    color: #999;
+ }
+ 
+ /* Responsive Styles */
+ @media (max-width: 1024px) {
+             .hero-title {
+                 font-size: 40px;
+             }
+             .hero-subtitle {
+                 font-size: 18px;
+             }
+ }
+ 
+ @media (max-width: 768px) {
+             body {
+                 overflow: auto !important;
+             }
+ 
+             #news {
+                 padding-bottom: 0 !important; /* 패딩 제거 */
+             }
+ 
+             footer {
+                 position: relative; /* fixed에서 relative로 변경 */
+                 height: auto;
+                 padding: 40px 20px;
+                 visibility: visible !important; /* 강제로 보이게 설정 */
+                 opacity: 1 !important;
+                 margin-top: 50px;
+             }
+ 
+             #fullpage {
+                 height: auto !important;
+                 transform: none !important;
+             }
+             
+             .section {
+                 height: auto !important;
+                 min-height: 100vh;
+                 padding: 0 !important; /* 패딩 제거 */
+                 position: relative !important;
+                 transform: none !important;
+                 top: auto !important;
+                 left: auto !important;
+             }
+ 
+             .fp-overflow {
+                 height: auto !important;
+                 overflow: visible !important;
+             }
+ 
+             .fp-section {
+                 height: auto !important;
+             }
+ 
+             .fp-slides, .fp-tableCell {
+                 height: auto !important;
+                 position: relative !important;
+                 transform: none !important;
+             }
+ 
+             .hero-title {
+                 font-size: 32px;
+             }
+             .hero-subtitle {
+                 font-size: 16px;
+             }
+             .product-item {
+                 width: 100%;
+                 height: auto;
+             }
+             .clients-inner, .products-inner {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 text-align: center;
+             }
+             .client-grid {
+                 display: flex;
+                 flex-wrap: wrap;
+                 justify-content: center;
+                 gap: 10px;
+             }
+             .client-column {
+                 width: 45%;
+                 padding: 20px;
+             }
+             .portfolio-grid {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+             }
+             #slider {
+                 background: none; /* 검은 배경 제거 */
+             }
+             .slider {
+                 height: 100vh; /* 전체 높이로 설정 */
+                 width: 100%; /* 전체 너비로 설정 */
+             }
+ 
+             .slide {
+                 width: 100%;
+                 height: 100vh;
+             }
+ 
+             .slide-content {
+                 padding-left: 20px; /* 모바일에서 패딩 조정 */
+             }
+             .navigation {
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 top: 65%;
+                 transform: translateY(-50%);
+                 display: flex;
+                 justify-content: space-between;
+                 padding: 0 80px;
+                 color: white;
+                 z-index: 2;
+                 font-family: 'Montserrat', sans-serif;
+                 font-size: 14px;
+                 font-weight: 500;
+                 pointer-events: none;
+             }
+             .product-title {
+                 font-size: 15px;
+                 font-weight: 500;
+                 transform: translateY(0);
+                 transition: transform 0.3s ease;
+                 margin-bottom: 0;
+             }
+             .product-desc {
+                 font-size: 9px;
+                 line-height: 1.6;
+                 margin-bottom: 0;
+             }
+ 
+             .more-btn {
+                 display: inline-flex;
+                 align-items: center;
+                 color: #fff;
+                 text-decoration: none;
+                 font-size: 9px;
+                 transition: all 0.3s ease;
+             }
+ 
+             .product-content {
+                 position: absolute;
+                 top: 30px;
+                 left: 0;
+                 width: 100%;
+                 height: 100%;
+                 color: white;
+                 text-align: left;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: flex-end;
+                 transition: all 0.3s ease;
+             }
+             .history-content {
+                 position: relative;
+                 z-index: 1;
+                 color: white;
+                 height: 100%;
+                 display: none;
+                 align-items: center;
+                 /* padding-left: 20%; */
+             }
+ 
+             .history-content {
+                 position: relative;
+                 z-index: 1;
+                 color: white;
+                 height: 100%;
+                 display: none;
+                 align-items: center;
+                 top: 300px;
+             }
+ 
+             .history-title {
+                 font-size: 25px;
+                 margin-bottom: 20px;
+                 font-weight: 700;
+                 font-family: 'Montserrat', sans-serif;
+                 letter-spacing: -0.02em;
+             }
+             .history-subtitle {
+                 font-size: 11px;
+                 color: #ffffff;
+             }
+             .history-prev, .history-next {
+                 color: #fff;
+                 font-family: 'Montserrat', sans-serif;
+                 font-size: 11px;
+                 cursor: pointer;
+             }
+             .news-more {
+                 display: flex;
+                 align-items: center;
+                 color: #111;
+                 text-decoration: none;
+                 font-size: 11px;
+             }
+         }
+ 
+ /* FullPage.js Controls */
+ .fp-controlArrow,
+ #fp-nav {
+    display: none !important;
+ }
