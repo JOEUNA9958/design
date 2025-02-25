@@ -1339,6 +1339,15 @@
 }
 /******모바일 시작 *****/
 @media screen and (max-width:1000px){  /* 모바일 시작 */
+    .cts_business_04 .rating .rating_list ul li {
+        font-size: 13px;
+    }
+    .cts_business_04  .cost .cost_list ul li h3{
+        font-size: 13px;
+    }
+    .cts_business_04 .Myself h2 {
+        font-size: 20px;
+    }
     .cts_business_04 .Myself .unit {
         font-size: 13px;
         margin: 20px 0 0 0 ;
