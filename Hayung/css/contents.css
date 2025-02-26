@@ -1484,12 +1484,18 @@
         width: auto;
         height: auto;
         font-size: 13px;
-        padding-top: 50px;
+        padding: 10px 0 10px 0;
     }
     .cts_business_04 .cost h2 {
         font-size: 20px;
         margin: 50px 0 40px 0;
     }
+    .cts_business_04 .rating .rating_list ul li.list01::before,
+    .cts_business_04 .rating .rating_list ul li.list02::before,
+    .cts_business_04 .rating .rating_list ul li.list03::before {
+        display: none;
+    }
+
     .cts_business_04 .cost .cost_list ul li {
         width: auto;
         height: auto;
@@ -1517,10 +1523,9 @@
     }
     .cts_business_04 .time .time_list ul li {
         height: auto;
-        width: auto;
-        position: relative;
+        width: 100px;
         font-size: 13px;
-        padding-top: 50px;
+        padding: 10px 0 10px 0;
     }
     .cts_business_04 .time .time_list ul li h3 {
         font-size: 17px;
@@ -1528,6 +1533,11 @@
     }
     .cts_business_04 .time .time_list ul li p {
         font-size: 13px;
+    }
+    .cts_business_04 .time .time_list ul li.list1::before,
+    .cts_business_04 .time .time_list ul li.list2::before,
+    .cts_business_04 .time .time_list ul li.list3::before {
+        display: none;
     }
 }
 
