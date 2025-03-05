@@ -1,0 +1,153 @@
+/* 서브페이지 공통 비주얼 영역 */
+.sub-visual {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.sub-visual h2 {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.sub-visual p {
+    font-size: 18px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 서브 비주얼 메뉴 */
+.sub-visual-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sub-visual-menu-item {
+    flex: 1;
+    max-width: 200px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+
+.sub-visual-menu-item:last-child {
+    border-right: none;
+}
+
+.sub-visual-menu-item a {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sub-visual-menu-item:hover {
+    background: #fff;
+}
+
+.sub-visual-menu-item:hover a {
+    color: #000;
+}
+
+.sub-visual-menu-item.active {
+    background: #fff;
+}
+
+.sub-visual-menu-item.active a {
+    color: #000;
+}
+
+.sub-visual-menu-item a span {
+    line-height: 1.4;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .sub-visual {
+        height: 350px;
+    }
+
+    .sub-visual h2 {
+        font-size: 36px;
+    }
+
+    .sub-visual p {
+        font-size: 16px;
+    }
+
+    .sub-visual-menu-item {
+        max-width: none;
+    }
+
+    .sub-visual-menu-item a {
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-visual {
+        height: 300px;
+    }
+
+    .sub-visual h2 {
+        font-size: 32px;
+    }
+
+    .sub-visual p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .sub-visual-menu {
+        flex-wrap: wrap;
+    }
+
+    .sub-visual-menu-item {
+        width: 50%;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .sub-visual-menu-item:nth-child(2n) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 359px) {
+    .sub-visual h2 {
+        font-size: 28px;
+    }
+
+    .sub-visual-menu-item a {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,37 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* Pretendard */
+@import url('//cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* Font Classes */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-pretendard {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+/* Default Font Settings */
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+/* Montserrat 폰트 적용 */
+h1, h2, h3, h4, h5, h6,
+.nav-link,
+.full-menu-title,
+.portfolio-title h2,
+.portfolio-pagination,
+.portfolio-info {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Pretendard 폰트 적용 */
+.portfolio-item h3,
+.portfolio-subtitle,
+.portfolio-desc,
+p {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+} 
