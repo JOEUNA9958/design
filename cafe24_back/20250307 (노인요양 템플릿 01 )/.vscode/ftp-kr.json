@@ -1,0 +1,16 @@
+{
+    "host": "thebarun01.mycafe24.com",
+    "username": "thebarun01",
+    "password": "whdmsdk!!0808",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

@@ -79,7 +79,7 @@
 }
 .container .lnb ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .container .lnb .lnb_open,
 .container .lnb .lnb_close {
