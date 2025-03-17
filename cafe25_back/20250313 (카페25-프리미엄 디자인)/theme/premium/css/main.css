@@ -1,0 +1,852 @@
+@import url(common.css); /* 글자의 기본 스타일 및 wrapper 설정 */
+@import url(default02.css); /* default.css 브라우저가 태그에 주는 기본스타일을 모두 초기화*/
+@import url(fonts.css); /* main.css 메인페이지에만 적용되는 스타일 입력, 다른 css import */
+@import url(layout.css); /* layout.css header / footer 모든 페이지의 공통 스타일 적용*/
+
+
+.main_swiper {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+/******메인 background 넣기*******/
+.visual {
+background: url(/img/contents_img/visual01.jpg) no-repeat center center / cover;
+}
+.remember {
+    background: url(/img/contents_img/visual02.jpg) no-repeat center center / cover;
+}
+.premium {
+    background: url(/img/contents_img/visu03.jpg) no-repeat center center / cover;
+}
+.notice {
+    background: url(/img/contents_img/visual04.jpg) no-repeat center center / cover;
+}
+
+
+
+/****visual 시작******/
+.visual  {
+    display: flex;
+    align-items: center;
+}
+.visual  .visual_txt {
+    width: 100%;
+}
+.visual  .visual_txt  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffff;
+}
+.visual  .visual_txt  p {
+    margin:  5px 0 52px 0 ;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+}
+.visual  .visual_txt .more  {
+    position: relative;
+}
+.visual .visual_txt .more a {
+    border: 1px solid #D5D5D5;
+    padding: 12px 71px 12px 28px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+.visual  .visual_txt .more::before {
+    content: "";
+    position: absolute;
+    left: 114px;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 마우스 오버시*/
+.visual .visual_txt .more a:hover {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.visual .visual_txt .more a:hover::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+
+
+/********visual. animation 시작 ********/
+.swiper-slide-active.visual .visual_txt h2 {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+
+.swiper-slide-active.visual .visual_txt p {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 2s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.visual .more {
+    animation-name: mmmm ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 2s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+@keyframes move { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 100px); opacity: 0;}  /* 애니메이션을 시작할때의 속성 / 왼쪽에 좌우, 오른쪽이 위아래 , 안보일때는 opacity: 0/ 보일때는 opacity: 1 */
+	100% { transform:translate(0, 0); opacity: 1;} /* 애니메이션이 종료될때의 속성 */
+}
+@keyframes mmmm { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 100px); opacity: 0;}  /* 애니메이션을 시작할때의 속성 / 왼쪽에 좌우, 오른쪽이 위아래 , 안보일때는 opacity: 0/ 보일때는 opacity: 1 */
+
+	100% { transform:translate(0, 0); opacity: 1;} /* 애니메이션이 종료될때의 속성 */
+}
+
+
+
+/******모바일 시작 1111111111*****/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+    .visual  .visual_txt  h2 {
+        font-size: 35px;
+    }
+    .visual  .visual_txt  p {
+        margin:  5px 0 45px 0 ;
+        font-size: 14px;
+    }
+    .visual  .visual_txt .more  {
+        position: relative;
+    }
+    .visual  .visual_txt .more a {
+        padding: 12px 71px 12px 28px;
+        font-size: 14px;
+    }
+}
+
+/*****모바일22222222*****/
+@media screen and (max-width: 600px){ 
+    .visual .visual_txt {
+        top: 260px;
+    }
+    .visual  .visual_txt  h2 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #ffff;
+    }
+    .visual .visual_txt  p {
+        margin:  5px 0 30px 0 ;
+        font-size: 14px;
+    }
+    .visual .visual_txt .more  {
+        position: relative;
+    }
+    .visual  .visual_txt .more a {
+        padding: 8px 15px 8px 15px;
+        font-size: 14px;
+    }
+    .visual  .visual_txt .more::before {
+        display: none;
+    }
+}
+/*******visual 끝 ****/
+
+
+
+
+
+
+
+
+
+/***********remember 시작*************/
+.remember {
+    display: flex;
+    align-items: center;
+}
+.remember .rem_txt  {
+    width: 100%;
+}
+.remember .rem_txt .wrapper {
+    text-align: center;
+}
+.remember .rem_txt  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffff;
+    text-align: center;
+}
+.remember  .rem_txt  p {
+    margin:  10px 0 47px 0 ;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.remember .rem_txt .list {
+    display: flex;
+    justify-content: center;
+}
+
+.remember .rem_txt .list  a .photo {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+}
+.remember .rem_txt .list a .photo img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:  0.5s;
+}
+.remember .rem_txt .list  a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.remember  .rem_txt .list .rem_tit {
+    display: block;
+    background-color: #fff;
+    padding: 35px 60px 0 30px;
+    height: 303px;
+    width: 378px;  
+    text-align: left;
+}
+.remember  .rem_txt .list .rem_tit strong {
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 3px 0;
+}
+.remember .rem_txt .list .rem_tit  span {
+    color: #1d1d1d;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.remember .rem_txt .list .rem_tit p {
+    text-align: left;
+    color: #3d3d3d;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 10px 0 45px 0;
+}
+.remember .rem_txt .list .rem_tit .more  {
+    position: relative;
+}
+.remember .rem_txt .list .rem_tit .more a {
+    border: 1px solid #D5D5D5;
+    background-color: #fff;
+    padding: 13px 70px 13px 26px;
+    color: #1d1d1d;
+    font-size: 15px;
+
+}
+.remember .rem_txt .list .rem_tit .more::before {
+    content: "";
+    position: absolute;
+    left: 114px;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='black' fill-opacity='0.5'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:24px ;
+}
+/***** 마우스오버********/
+.remember  .rem_txt .list .rem_tit .more a:hover {
+    background-color: #1d1d1d;
+    color: #ffff;
+}
+.remember .rem_txt .list .rem_tit  .more:hover:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='white'/%3E%3C/svg%3E ");
+}
+
+
+/********remember. animation 시작 ********/
+.swiper-slide-active.remember .rem_txt h2 {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+
+.swiper-slide-active.remember .rem_txt  {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.remember .rem_txt .list {
+    animation-name: mmmm ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 2.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+@keyframes move { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 100px); opacity: 0;}  /* 애니메이션을 시작할때의 속성 / 왼쪽에 좌우, 오른쪽이 위아래 , 안보일때는 opacity: 0/ 보일때는 opacity: 1 */
+	100% { transform:translate(0, 0); opacity: 1;} /* 애니메이션이 종료될때의 속성 */
+}
+@keyframes mmmm { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 100px); opacity: 0;}  /* 애니메이션을 시작할때의 속성 / 왼쪽에 좌우, 오른쪽이 위아래 , 안보일때는 opacity: 0/ 보일때는 opacity: 1 */
+    50% { transform:translate(0, 80px);  opacity: 0;} /* 중간값은 %를 조절하여 추가/삭제 가능 */
+	100% { transform:translate(0, 0); opacity: 1;} /* 애니메이션이 종료될때의 속성 */
+}
+
+/******모바일 시작 1111111111*******/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+        /********remember 시작 ********/
+        .remember  .rem_txt {
+            top: 140px;
+        }
+        .remember .rem_txt  h2 {
+            font-size: 35px;
+        }
+        .remember .rem_txt  p {
+            margin:  10px 0 30px 0 ;
+        }
+        .remember  .rem_txt .list {
+            display: inline-block;
+        }
+        .remember  .rem_txt .list  .photo {
+            font-size: 0;
+            line-height: 0;
+
+        }
+        .remember  .rem_txt .list .rem_tit {
+            display: block;
+            padding: 20px 0 0 0;
+            height: 190px;
+            width: 505px;  
+            text-align: center;
+        }
+
+        .remember  .rem_txt .list .rem_tit strong {
+            font-size: 25px;
+            margin: 0 0 3px 0;
+            font-weight: 700    ;
+        }
+        .remember  .rem_txt .list .rem_tit  span {
+            display: none;
+        }
+        .remember  .rem_txt .list .rem_tit p {
+            color: #3d3d3d;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 10px 0 28px 0;
+            text-align: center;
+        }
+        .remember  .rem_txt .list .rem_tit .more  {
+            position: relative;
+        }
+        .remember .rem_txt .list .rem_tit .more a {
+            border: 1px solid #D5D5D5;
+            background-color: #fff;
+            padding: 13px 55px 13px 26px;
+            color: #1d1d1d;
+        }
+        .remember .rem_txt .list .rem_tit .more::before {
+            content: "";
+            position: absolute;
+            left: 283px;
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='black' fill-opacity='0.5'/%3E%3C/svg%3E ");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size:24px ;
+            transition: 0.5s;
+        }
+        /***** 마우스오버********/
+        .remember  .rem_txt .list .rem_tit .more a:hover {
+            transform: rotate(360deg);
+            background-color: #1d1d1d;
+            color: #ffff;
+        }
+        .remember  .rem_txt .list .rem_tit  .more:hover:before {
+            transform: rotate(360deg);
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='white'/%3E%3C/svg%3E ");
+        }
+}
+
+/*****모바일22222222*****/
+@media screen and (max-width: 600px){ 
+            /********remember 시작 ********/
+            .remember  .rem_txt {
+                top: 100px;
+            }
+            .remember .rem_txt  h2 {
+                font-size: 25px;
+            }
+            .remember .rem_txt  p {
+                margin:  10px 0 20px 0 ;
+                font-size: 14px;
+            }
+            .remember .rem_txt .list {
+                display: inline-block;
+                width: 300px;
+            }
+            .remember  .rem_txt .list .photo {
+                font-size: 0;
+                line-height: 0;
+            }
+            .remember  .rem_txt .list .photo  img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .remember  .rem_txt .list .rem_tit {
+                display: block;
+                padding: 17px 0 0 0;
+                height: 190px;
+                width: auto;  
+                text-align: center;
+            }
+            .remember  .rem_txt .list .rem_tit strong {
+                font-size: 25px;
+                margin: 0 0 3px 0;
+                font-weight: 700    ;
+            }
+            .remember .rem_txt .list .rem_tit  span {
+                display: none;
+            }
+            .remember .rem_txt .list .rem_tit p {
+                color: #3d3d3d;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4;
+                margin: 10px 5px 28px 5px;
+            }
+            .remember  .rem_txt .list .rem_tit .more  {
+                position: relative;
+            }
+            .remember .rem_txt .list .rem_tit .more a {
+                border: 1px solid #D5D5D5;
+                background-color: #fff;
+                padding: 8px 28px 8px 26px;
+                color: #1d1d1d;
+            }
+            .remember  .rem_txt .list .rem_tit .more::before {
+                display: none;
+            }
+            /***** 마우스오버********/
+            .remember  .rem_txt .list .rem_tit .more a:hover {
+                background-color: #1d1d1d;
+                color: #ffff;
+            }
+            .remember .rem_txt .list .rem_tit  .more:hover:before {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.15 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.15L13.3 8.15001C13.1 7.95001 13.0042 7.71668 13.0125 7.45001C13.0208 7.18335 13.1167 6.95001 13.3 6.75001C13.5 6.55001 13.7375 6.44585 14.0125 6.43751C14.2875 6.42918 14.525 6.52501 14.725 6.72501L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L14.725 17.275C14.525 17.475 14.2875 17.5708 14.0125 17.5625C13.7375 17.5542 13.5 17.45 13.3 17.25C13.1167 17.05 13.0208 16.8167 13.0125 16.55C13.0042 16.2833 13.1 16.05 13.3 15.85L16.15 13Z' fill='white'/%3E%3C/svg%3E ");
+            }
+}   
+/************remember 끝***********/
+
+
+
+
+
+
+
+
+
+
+/**********premium 시작***********/
+.premium {
+    display: flex;
+    align-items: center;
+}
+.premium .wrapper {
+    text-align: center;
+}
+.premium .pre_txt {
+    width: 100%;
+}
+.premium .pre_txt  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffff;
+}
+.premium .pre_txt  p {
+    margin:  10px 0 30px 0 ;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+}
+.premium .pre_txt .list  a .photo {
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.premium .pre_txt .list a .photo img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:  0.5s;
+}
+.premium .pre_txt .list  a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.premium .pre_txt .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.premium  .pre_txt .list ul li {
+    width: 32%;
+}
+
+.premium  .pre_txt .list ul li .pre_tit {
+    background-color: #fff;
+    color: #1d1d1d;
+    text-align: center;
+}
+.premium .pre_txt .list ul li .pre_tit h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 15px 0 0 0;
+}
+.premium .pre_txt .list ul li .pre_tit p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #3d3d3d;
+    margin: 10px 0 22px 0;
+}
+.premium  .pre_txt .list ul li .pre_tit .more {
+    position: relative;
+    padding: 10px 0 35px 0;
+} 
+.premium  .pre_txt .list ul li .pre_tit .more a {
+    position: relative;
+    border: 1px solid #D5D5D5;
+    background-color: #fff;
+    color: #3d3d3d;
+    border-radius: 30px;
+    padding: 12px 40px 12px 18px;
+    font-size: 15px;
+}
+.premium  .pre_txt .list ul li .pre_tit .more a:hover {
+    background-color: #1d1d1d;
+    border-color: #1d1d1d;
+    color: #fff;
+}
+.premium  .pre_txt .list ul li .pre_tit .more a::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0833 11.9163H4.58334V10.083H10.0833V4.58301H11.9167V10.083H17.4167V11.9163H11.9167V17.4163H10.0833V11.9163Z' fill='%23D5D5D5'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+.swiper-wrapper .swiper-slide .pre_txt .list ul li .pre_tit .more:hover:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0833 11.9163H4.58334V10.083H10.0833V4.58301H11.9167V10.083H17.4167V11.9163H11.9167V17.4163H10.0833V11.9163Z' fill='%23D5D5D5'/%3E%3C/svg%3E ");
+
+}
+
+
+
+/******** premium animation 시작 ********/
+.swiper-slide-active.premium .pre_txt h2 {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+
+.swiper-slide-active.premium .pre_txt  {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.premium .pre_txt .list .bg1  {
+    animation-name: mmmm ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 2s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.premium .pre_txt .list .bg2  {
+    animation-name: mmmm ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 2.5s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.premium .pre_txt .list .bg3  {
+    animation-name: mmmm ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 3s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+
+@keyframes mmmm { /* 애니메이션을 효과를 미리 설정함 */
+	0% { transform:translate(0, 100px); opacity: 0;}  /* 애니메이션을 시작할때의 속성 / 왼쪽에 좌우, 오른쪽이 위아래 , 안보일때는 opacity: 0/ 보일때는 opacity: 1 */
+    50% { transform:translate(0, 80px);  opacity: 0;} /* 중간값은 %를 조절하여 추가/삭제 가능 */
+	100% { transform:translate(0, 0); opacity: 1;} /* 애니메이션이 종료될때의 속성 */
+}
+
+/**********모바일시작1111111111*******/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+
+            .premium .pre_txt {
+                margin: 55px 0 0 0;
+            }
+            .premium  .pre_txt  h2 {
+                font-size: 35px;
+            }
+            .premium  .pre_txt  p {
+                font-size: 14px;
+                
+            }
+            .premium .pre_txt .list .photo {
+                width: 35%;
+                height: 130px;
+            }
+            .premium .pre_txt .list .photo img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .premium  .pre_txt .list ul {
+                display: block;
+            }
+            .premium .pre_txt .list ul li {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                margin: 0 0 15px 0;
+            }
+            .premium  .pre_txt .list ul li .pre_tit {
+                width: 65%;
+                text-align: left;
+                padding: 10px 0 0 15px;
+            }
+            .premium .pre_txt .list ul li .pre_tit h3 {
+                font-size: 25px;
+                padding: 5px 0 0 0;
+            }
+            .premium .pre_txt .list ul li .pre_tit p {
+                font-size: 14px;
+                /*2줄제한*/
+                line-height: 1.4;
+                height: 2.8em;
+                overflow: hidden;
+                margin: 5px 0 0 0;
+            }
+            
+            .premium  .pre_txt .list ul li .pre_tit .more {
+                display: block;
+                position: relative;
+                padding: 5px 0 15px 0;
+            } 
+            .premium  .pre_txt .list ul li .pre_tit .more a {
+                position: relative;
+                border: 1px solid #D5D5D5;
+                background-color: #fff;
+                color: #3d3d3d;
+                border-radius: 30px;
+                padding: 5px 10px 5px 10px;
+                font-size: 14px;
+            }
+            .premium  .pre_txt .list ul li .pre_tit .more a:hover {
+                background-color: #1d1d1d;
+                border-color: #1d1d1d;
+                color: #fff;
+            }
+            .premium  .pre_txt .list ul li .pre_tit .more a::before {
+                display: none;
+            }
+
+}       
+/*********premium 끝**********/
+
+
+
+
+
+
+
+/********notice 시작************/
+.notice {
+    display: flex;
+    align-items: center;
+}
+.notice .no_txt {
+    width: 100%;
+}
+.notice .no_txt  .wrapper {
+    text-align: center;
+}
+.notice .no_txt  h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffff;
+    text-align: center;
+}
+.notice .no_txt  p {
+    margin:  10px 0 45px 0 ;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.notice .no_txt .list ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 19px;
+}
+.notice .no_txt .list ul li {
+    background-color: #D5D5D5;
+    color: #1d1d1d;
+    width: 32%;
+    height: 216px;
+}
+.notice .no_txt .list ul li strong {
+    display: none; /*모바일에서만*/
+}
+.notice .no_txt .list ul li  a {
+    text-align: center;
+    display: block;
+    padding: 35px 30px 50px 30px;
+}
+.notice .no_txt .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+
+    /***1줄제한***/
+    white-space: nowrap;   /* 텍스트를 한 줄로 유지 */
+    overflow: hidden;      /* 넘치는 텍스트를 숨김 */
+    text-overflow: ellipsis; /* 넘칠 경우 "..."으로 생략 */
+
+}
+.notice .no_txt .list ul li a p {  
+    font-size: 17px;
+    color: #3d3d3d;
+    text-align: left;
+
+    /***1줄제한***/
+    white-space: nowrap;   /* 텍스트를 한 줄로 유지 */
+    overflow: hidden;      /* 넘치는 텍스트를 숨김 */
+    text-overflow: ellipsis; /* 넘칠 경우 "..."으로 생략 */
+}
+.notice .no_txt .list ul li a span {
+    font-size: 15px;
+    color: #3d3d3d;
+    position: relative;
+    padding-left: 25px;
+}
+
+.notice .no_txt .list ul li a span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.54167 15.5837C3.15208 15.5837 2.81858 15.4449 2.54115 15.1675C2.26372 14.8901 2.125 14.5566 2.125 14.167V4.25033C2.125 3.86074 2.26372 3.52724 2.54115 3.2498C2.81858 2.97237 3.15208 2.83366 3.54167 2.83366H4.25V1.41699H5.66667V2.83366H11.3333V1.41699H12.75V2.83366H13.4583C13.8479 2.83366 14.1814 2.97237 14.4589 3.2498C14.7363 3.52724 14.875 3.86074 14.875 4.25033V14.167C14.875 14.5566 14.7363 14.8901 14.4589 15.1675C14.1814 15.4449 13.8479 15.5837 13.4583 15.5837H3.54167ZM3.54167 14.167H13.4583V7.08366H3.54167V14.167ZM3.54167 5.66699H13.4583V4.25033H3.54167V5.66699ZM8.5 9.91699C8.29931 9.91699 8.13108 9.84911 7.99531 9.71335C7.85955 9.57758 7.79167 9.40935 7.79167 9.20866C7.79167 9.00796 7.85955 8.83974 7.99531 8.70397C8.13108 8.56821 8.29931 8.50033 8.5 8.50033C8.70069 8.50033 8.86892 8.56821 9.00469 8.70397C9.14045 8.83974 9.20833 9.00796 9.20833 9.20866C9.20833 9.40935 9.14045 9.57758 9.00469 9.71335C8.86892 9.84911 8.70069 9.91699 8.5 9.91699ZM5.66667 9.91699C5.46597 9.91699 5.29774 9.84911 5.16198 9.71335C5.02622 9.57758 4.95833 9.40935 4.95833 9.20866C4.95833 9.00796 5.02622 8.83974 5.16198 8.70397C5.29774 8.56821 5.46597 8.50033 5.66667 8.50033C5.86736 8.50033 6.03559 8.56821 6.17135 8.70397C6.30712 8.83974 6.375 9.00796 6.375 9.20866C6.375 9.40935 6.30712 9.57758 6.17135 9.71335C6.03559 9.84911 5.86736 9.91699 5.66667 9.91699ZM11.3333 9.91699C11.1326 9.91699 10.9644 9.84911 10.8286 9.71335C10.6929 9.57758 10.625 9.40935 10.625 9.20866C10.625 9.00796 10.6929 8.83974 10.8286 8.70397C10.9644 8.56821 11.1326 8.50033 11.3333 8.50033C11.534 8.50033 11.7023 8.56821 11.838 8.70397C11.9738 8.83974 12.0417 9.00796 12.0417 9.20866C12.0417 9.40935 11.9738 9.57758 11.838 9.71335C11.7023 9.84911 11.534 9.91699 11.3333 9.91699ZM8.5 12.7503C8.29931 12.7503 8.13108 12.6824 7.99531 12.5467C7.85955 12.4109 7.79167 12.2427 7.79167 12.042C7.79167 11.8413 7.85955 11.6731 7.99531 11.5373C8.13108 11.4015 8.29931 11.3337 8.5 11.3337C8.70069 11.3337 8.86892 11.4015 9.00469 11.5373C9.14045 11.6731 9.20833 11.8413 9.20833 12.042C9.20833 12.2427 9.14045 12.4109 9.00469 12.5467C8.86892 12.6824 8.70069 12.7503 8.5 12.7503ZM5.66667 12.7503C5.46597 12.7503 5.29774 12.6824 5.16198 12.5467C5.02622 12.4109 4.95833 12.2427 4.95833 12.042C4.95833 11.8413 5.02622 11.6731 5.16198 11.5373C5.29774 11.4015 5.46597 11.3337 5.66667 11.3337C5.86736 11.3337 6.03559 11.4015 6.17135 11.5373C6.30712 11.6731 6.375 11.8413 6.375 12.042C6.375 12.2427 6.30712 12.4109 6.17135 12.5467C6.03559 12.6824 5.86736 12.7503 5.66667 12.7503ZM11.3333 12.7503C11.1326 12.7503 10.9644 12.6824 10.8286 12.5467C10.6929 12.4109 10.625 12.2427 10.625 12.042C10.625 11.8413 10.6929 11.6731 10.8286 11.5373C10.9644 11.4015 11.1326 11.3337 11.3333 11.3337C11.534 11.3337 11.7023 11.4015 11.838 11.5373C11.9738 11.6731 12.0417 11.8413 12.0417 12.042C12.0417 12.2427 11.9738 12.4109 11.838 12.5467C11.7023 12.6824 11.534 12.7503 11.3333 12.7503Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-repeat: 17px;
+}
+/********마우스 오버 **********/
+.notice .no_txt .list ul li a:hover  {
+    background-color: #fff;
+}
+
+/******** notice animation 시작 ********/
+.swiper-slide-active.notice .no_txt h2 {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+
+.swiper-slide-active.notice .no_txt  {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-duration: 1s; /* 애니메이션이 동작하는 시간. 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+}
+.swiper-slide-active.notice .no_txt .list {
+    animation-name: move ; /* *keyframe에서 선언한 이름* 필수 */
+    animation-iteration-count: 1; /*애니메이션 반복 횟수 (1, 2, infinite - 무제한)  필수 */
+    animation-delay: 3s;
+}
+
+
+
+
+/**********모바일시작1111111111*******/
+@media screen and (max-width:1000px){  /* 모바일 시작 */
+            .notice .no_txt  h2 {
+                font-size: 35px;
+            }
+            .notice .no_txt  p {
+                margin:  5px 0 25px 0 ;
+                font-size: 14px;
+            }
+            .notice .no_txt .list ul {
+                display: block;
+            }
+            .notice .no_txt .list ul li {
+                background-color: #fff;
+                width: 100%;
+                height: 240px;
+                text-align: center;
+                color: #1d1d1d;
+            }
+            .notice .no_txt .list ul li:nth-child(2),
+            .notice .no_txt .list ul li:nth-child(3){
+                display: none;
+            }
+            
+            
+
+            .notice .no_txt .list ul li strong {
+                display: block; /*모바일에서만*/
+            }
+
+            .notice .no_txt .list ul li  a {
+                display: block;
+                padding: 35px 30px 50px 30px;
+                background-color: #D5D5D5;
+            }
+            .notice .no_txt .list ul li a h3 {
+                font-size: 25px;
+            }
+            .notice .no_txt .list ul li a p {  
+                font-size: 14px;
+                text-align: center;
+            }
+            .notice .no_txt .list ul li a span {
+                font-size: 15px;
+                padding-left: 0;
+
+            }
+            .notice .no_txt .list ul li a strong {
+                border: 1px solid #1d1d1d;
+                background-color: #1d1d1d;
+                color: #fff;
+                padding: 10px 0 10px 0;
+                margin: 30px 0 0 0;
+                font-size: 14px;
+            }
+            .notice .no_txt .list ul li a span::before {
+                display: none;
+            }
+            /********마우스 오버 **********/
+            .notice .no_txt .list ul li a:hover  {
+                border-color: #1d1d1d;
+                background-color: #fff;
+                color: #fff;
+            }
+    
+}
